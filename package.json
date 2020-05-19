@@ -14,18 +14,26 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.21.37",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.22.0",
+    "gatsby-plugin-sass": "^2.3.1",
+    "gatsby-plugin-styled-components": "^3.3.1",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-hello-world.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
+  "main": "gatsby-config.js",
+  "author": ""
 }
