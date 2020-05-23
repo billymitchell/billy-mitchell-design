@@ -19,7 +19,6 @@ const StyledButton = styled.button`
     primary ? "1px solid rgba(255,255,255,0)" : "1px solid rgba(0,0,0,1);"};
   font-size: 16px;
   box-sizing: content-box;
-  margin: ${({ margin }) => margin || "15px"};
   &:hover {
     background-color: #ffffff;
     border: 1px solid #000000;

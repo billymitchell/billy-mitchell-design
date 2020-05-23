@@ -1,6 +1,20 @@
-$brand-color: green;
+:root {
+  --brand-color: #1b302d;
+  --main-bg-color: #000000;
+}
 
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   text-decoration: none;
+}
+
+.main-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1 {
+  font-size: 30px;
 }
