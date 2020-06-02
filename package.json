@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@lottiefiles/lottie-player": "^0.5.1",
     "animate.css": "^4.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.22.0",

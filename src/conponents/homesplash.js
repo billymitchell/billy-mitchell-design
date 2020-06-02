@@ -1,5 +1,4 @@
 import React from "react"
-import "@lottiefiles/lottie-player"
 import styled, { keyframes } from "styled-components"
 import gifBG from "../../static/ezgif-1-4acdfd5cf4.gif"
 import videoBG from "../../static/Billy-Mitchell-Design-Home-Video.mp4"
