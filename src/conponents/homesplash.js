@@ -1,6 +1,10 @@
 import React from "react"
+import "@lottiefiles/lottie-player"
 import styled, { keyframes } from "styled-components"
-import homepagevideo from "../media/Billy-Mitchell-Design-Home-Video.mp4"
+import gifBG from "../../static/ezgif-1-4acdfd5cf4.gif"
+import videoBG from "../../static/Billy-Mitchell-Design-Home-Video.mp4"
+import downArrow from "../../static/Scrolldown-white.gif"
+import ScrollAnimation from "react-animate-on-scroll"
 
 const fadein = keyframes`
     0% {
@@ -10,78 +14,43 @@ const fadein = keyframes`
       opacity: 1;
     }
 `
-
 const HomesplashStyle = styled.div`
   .video-wrapper-home {
     height: 100vh;
-    /* links to javascript file that fixes mobiel height issue */
-    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    overflow: hidden;
     position: relative;
     display: block;
-    overflow: hidden;
-    background-image: url("https://billymitchell.design/wp-content/uploads/2018/06/ezgif-1-4acdfd5cf4.gif");
+    background-image: url(${gifBG});
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .video-container-home {
+  .homepage-video-file {
     position: absolute;
     width: 100%;
     height: 100vh;
-    /* links to javascript file that fixes mobiel height issue */
-    height: calc(var(--vh, 1vh) * 100);
-    overflow: hidden;
-  }
-  .video-container-home #homepage-video-file {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-    pointer-events: none;
+    object-fit: cover;
     animation: ${fadein} 2.5s;
     background-color: #ffffff00;
-  }
-
-  @media (max-aspect-ratio: 16/9) {
-    .video-container-home {
-      width: 300%;
-      left: -100%;
-      transform: scale(1.2);
-    }
-  }
-  @media (min-aspect-ratio: 16/9) {
-    .video-container-home {
-      height: 300%;
-      top: -100%;
-      transform: scale(1.2);
-    }
-  }
-  @media only screen and (max-width: 900px) {
-    .video-container-home {
-      display: none;
-    }
   }
   .overlay-content {
     top: 50%;
     left: 50%;
+    width: 100vw;
     position: absolute;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -35%);
     color: #fff;
-    pointer-events: none;
   }
   .scroll-down-overlay {
     position: absolute;
-    opacity: 0.75;
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 75%
+      rgba(15, 15, 15, 1) 0%,
+      rgba(15, 15, 15, 0) 75%
     );
     width: 100%;
     bottom: 0;
-    height: 30px;
+    height: 75px;
     display: flex;
     justify-content: center;
   }
@@ -89,30 +58,58 @@ const HomesplashStyle = styled.div`
     position: absolute;
     width: 30px;
   }
+  lottie-player {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56.5%) scale(0.75);
+  }
 `
 
 const Homesplash = () => {
   return (
     <HomesplashStyle>
       <div className="video-wrapper-home">
-        <div className="video-container-home">
-          <video
-            crossOrigin="anonymous"
-            autoPlay
-            muted
-            loop
-            id="homepage-video-file"
-          >
-            <source src={homepagevideo} type="video/mp4"></source>
-          </video>
+        <video
+          className="homepage-video-file"
+          crossOrigin="anonymous"
+          autoPlay
+          muted
+          loop
+          id="homepage-video-file"
+        >
+          <source src={videoBG} type="video/mp4"></source>
+        </video>
+        <lottie-player
+          src="https://assets4.lottiefiles.com/private_files/lf30_xRpJ98.json"
+          background="transparent"
+          speed="1"
+          autoplay
+        ></lottie-player>
+        <div className="overlay-content">
+          <div className="main-container-width">
+            <ScrollAnimation
+              animateIn="fadeInUp"
+              duration={1.5}
+              delay={2}
+              className="text-center"
+            >
+              <h1>Billy Mitchell</h1>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn="fadeInUp"
+              duration={1.5}
+              delay={2.5}
+              className="text-center"
+            >
+              <h2>full-stack design</h2>
+            </ScrollAnimation>
+          </div>
         </div>
-        <div className="overlay-content"></div>
         <div className="scroll-down-overlay">
-          <img
-            alt="down arrow"
-            className="scroll-down"
-            src="https://billymitchell.design/wp-content/uploads/2018/11/Scrolldown-white.gif"
-          ></img>
+          <img alt="down arrow" className="scroll-down" src={downArrow}></img>
         </div>
       </div>
     </HomesplashStyle>

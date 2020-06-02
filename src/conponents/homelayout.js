@@ -1,7 +1,6 @@
 import React from "react"
 import Footer from "../conponents/footer"
-import "../../styles/reset.scss"
-import "../../styles/global.scss"
+import "../styles/global.scss"
 import styled from "styled-components"
 
 const Wrapper = styled.div`

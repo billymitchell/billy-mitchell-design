@@ -24,7 +24,7 @@ const HeaderStyle = styled.div`
 
 const Header = () => {
   return (
-    <div className="main-width">
+    <div className="main-container-width">
       <header>
         <HeaderStyle>
           <Link className="logo" to="/">

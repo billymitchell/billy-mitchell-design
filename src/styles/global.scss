@@ -1,0 +1,32 @@
+@import "../styles/reset";
+@import "../styles/colors";
+@import "../styles/typography";
+@import "../styles/button";
+@import "../styles/forms";
+@import "../styles/layout";
+@import "../styles/scroll";
+
+a {
+  color: $brand;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-color: $black;
+}
+
+footer {
+  background-color: $brand-dark;
+}
+
+footer a {
+  color: $white;
+}
+footer a:hover {
+  color: #000000;
+}

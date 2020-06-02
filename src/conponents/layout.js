@@ -1,10 +1,9 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import "../../styles/reset.scss"
-import "../../styles/global.scss"
+import "../styles/global.scss"
 import styled from "styled-components"
-import { Helmet } from "react-helmet"
+import Headertags from "./headertags"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,10 +19,7 @@ const MainContainer = styled.div`
 const Layout = props => {
   return (
     <>
-      <Helmet>
-        <script src="http://billymitchell.design/Homepage-custom-js-css/moble-height.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      </Helmet>
+      <Headertags />
       <Wrapper>
         <MainContainer>
           <Header />

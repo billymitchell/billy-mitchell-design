@@ -1,19 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import GetCurrentDate from "../conponents/getcurrentdate"
+import GetCurrentDate from "./getcurrentdate"
 
 const FooterStyle = styled.div`
-  background-color: #000000;
-  color: #ffffff;
   text-align: center;
-  padding: 15px;
+  .external-social-links {
+    font-size: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .external-social-links a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `
 
 const Footer = () => {
   return (
     <FooterStyle>
       <footer>
-        <div className="main-width">
+        <div className="main-container-width">
           <div className="primary-contact-info">
             <p>
               <a value="email" href="mailto:hello@billymitchell.design">
@@ -25,36 +31,39 @@ const Footer = () => {
               </a>
             </p>
           </div>
-          <div className="external-links">
+          <div className="external-social-links">
             <a
               value="Instagram"
               href="https://www.instagram.com/billymitchelldesign/"
             >
-              <span>Instagram</span>
+              <i className="fab fa-instagram"></i>
             </a>
             <a value="Twitter" href="https://twitter.com/designbilly">
-              <span>Twitter</span>
+              <i className="fab fa-twitter"></i>
             </a>
             <a
               value="Linkedin"
               href="https://www.linkedin.com/in/billymitchelldesign/"
             >
-              <span>Linkedin</span>
+              <i className="fab fa-linkedin-in"></i>
             </a>
             <a
               value="Codepen"
               href="https://codepen.io/Billymitchell/pens/popular/"
             >
-              <span>Codepen</span>
+              <i className="fab fa-codepen"></i>
             </a>
             <a value="github" href="https://github.com/billymitchelldesign">
-              <span>Github</span>
+              <i className="fab fa-github"></i>
             </a>
           </div>
-          <br />
-          Made with ♥ on a rock in space.
-          <br />
-          Copyright © <GetCurrentDate /> Billy Mitchell Design Co.
+          <div className="footer-bottom">
+            <small>
+              Made with ♥ on a rock in space.
+              <br />
+              Copyright © <GetCurrentDate /> Billy Mitchell Design Co.
+            </small>
+          </div>
         </div>
       </footer>
     </FooterStyle>

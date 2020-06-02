@@ -1,0 +1,50 @@
+@import "../styles/typography";
+
+.main-container-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text-container-width {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid-container {
+  display: grid;
+}
+.col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.col-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col-5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.col-gap-5 {
+  gap: 5px;
+}
+.col-gap-10 {
+  gap: 10px;
+}
+.col-gap-15 {
+  gap: 15px;
+}
+.col-gap-20 {
+  gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .small-col-1 {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}
