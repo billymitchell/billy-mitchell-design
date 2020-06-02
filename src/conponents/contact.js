@@ -1,27 +1,74 @@
 import React from "react"
+import { navigate } from "gatsby-link"
 
-const Contact = () => {
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
+export default function Contact() {
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   return (
     <>
       <h3>Contact Me</h3>
       <form
         className="contact"
         name="contact"
-        method="POST"
-        data-netlify-recaptcha="true"
-        enctype="application/x-www-form-urlencoded"
+        method="post"
+        action="/thanks/"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
-        <div className="grid-container col-2 col-gap-5 small-col-1">
-          <input name="name" type="text" placeholder="name" />
-          <input name="email" type="email" placeholder="email" />
-        </div>
-        <textarea name="message" type="text" placeholder="message" />
-        <p class="hidden">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
           <label>
-            Don’t fill this out if you're human: <input name="bot-field" />
+            Don’t fill this out:{" "}
+            <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
+        <div className="grid-container col-2 col-gap-5 small-col-1">
+          <input
+            name="name"
+            type="text"
+            placeholder="name"
+            onChange={handleChange}
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="email"
+            onChange={handleChange}
+          />
+        </div>
+        <textarea
+          name="message"
+          type="text"
+          placeholder="message"
+          onChange={handleChange}
+        />
+
         <div data-netlify-recaptcha="true"></div>
         <button type="submit" className="primary">
           Submit
@@ -30,5 +77,3 @@ const Contact = () => {
     </>
   )
 }
-
-export default Contact
