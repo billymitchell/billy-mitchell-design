@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components"
 import gifBG from "../../static/ezgif-1-4acdfd5cf4.gif"
 import videoBG from "../../static/Billy-Mitchell-Design-Home-Video.mp4"
 import downArrow from "../../static/Scrolldown-white.gif"
-import ScrollAnimation from "react-animate-on-scroll"
+import InViewAnimation from "../conponents/InViewAnimation"
 
 const fadein = keyframes`
     0% {
@@ -89,22 +89,46 @@ const Homesplash = () => {
         ></lottie-player>
         <div className="overlay-content">
           <div className="main-container-width">
-            <ScrollAnimation
-              animateIn="fadeInUp"
-              duration={1.5}
-              delay={2}
-              className="text-center"
+            {/* <InViewWrapper
+              animation="fade-in-up"
+              duration="time-1000ms"
+              delay="delay-0ms"
+              fillmode="forwards"
+              easing="ease-in-out-quad"
+              iteration="loop-1"
             >
-              <h1>Billy Mitchell</h1>
-            </ScrollAnimation>
-            <ScrollAnimation
-              animateIn="fadeInUp"
-              duration={1.5}
-              delay={2.5}
-              className="text-center"
+              <h1 className="text-center">Billy Mitchell</h1>
+            </InViewWrapper>
+            <InViewWrapper
+              animation="fade-in-up"
+              duration="time-1000ms"
+              delay="delay-500ms"
+              fillmode="forwards"
+              easing="ease-in-out-quad"
+              iteration="loop-1"
             >
-              <h2>full-stack design</h2>
-            </ScrollAnimation>
+              <h2 className="text-center">full-stack design</h2>
+            </InViewWrapper> */}
+            <InViewAnimation
+              animation="fade-in-up"
+              duration="time-1000ms"
+              delay="delay-0ms"
+              fillmode="forwards"
+              easing="ease-in-out-quad"
+              iteration="loop-1"
+            >
+              <h1 className="text-center">Billy Mitchell</h1>
+            </InViewAnimation>
+            <InViewAnimation
+              animation="fade-in-up"
+              duration="time-1000ms"
+              delay="delay-250ms"
+              fillmode="forwards"
+              easing="ease-in-out-quad"
+              iteration="loop-1"
+            >
+              <h2 className="text-center">Full-Stack Design</h2>
+            </InViewAnimation>
           </div>
         </div>
         <div className="scroll-down-overlay">

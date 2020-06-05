@@ -20,25 +20,6 @@ $space: 1.35 * $base-font-size;
   font-synthesis: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-.caption,
-.endnote,
-.footnote,
-sup,
-small,
-del,
-s,
-ins {
-  color: $white;
-}
-
 //Font Sizeing
 $h1-font-size: $base-font-size * 5.7292;
 $h2-font-size: $base-font-size * 2.875;
@@ -144,11 +125,12 @@ blockquote {
   margin: $space;
 }
 
-.caption {
+caption {
+  display: block;
   font-size: $caption-font-size;
   line-height: $caption-line-height;
-  margin-top: $space;
-  margin-bottom: $space;
+  margin-top: $caption-line-height * 0.5;
+  margin-bottom: $caption-line-height * 0.5;
 }
 
 .endnote {
@@ -199,7 +181,10 @@ small {
 
 p,
 blockquote {
+  font-family: "Muli", sans-serif;
+  // font-family: "Playfair Display", sans-serif;
   font-variation-settings: "wght" 400;
+  letter-spacing: 0.25px;
 }
 
 //Deleated or subtracted text
@@ -236,7 +221,10 @@ footer {
 
 ul,
 ol {
-  /*TBD*/
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 0.75em;
+  margin-left: 0.55em;
 }
 
 i {

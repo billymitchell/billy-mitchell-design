@@ -1,5 +1,5 @@
 import React from "react"
-import Footer from "../conponents/footer"
+import Footer from "./footer"
 import "../styles/global.scss"
 import styled from "styled-components"
 
@@ -14,7 +14,7 @@ const MainContainer = styled.div`
   flex-grow: 1;
 `
 
-const Homelayout = props => {
+const HomePageLayout = props => {
   return (
     <>
       <Wrapper>
@@ -25,4 +25,4 @@ const Homelayout = props => {
   )
 }
 
-export default Homelayout
+export default HomePageLayout

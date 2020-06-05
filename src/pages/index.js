@@ -1,23 +1,21 @@
 import React from "react"
 import HeaderTags from "../conponents/headertags"
-import Homelayout from "../conponents/homelayout"
+import HomePageLayout from "../conponents/home-page-layout"
 import Homesplash from "../conponents/homesplash"
-import Contact from "../conponents/contact"
+import FullStack from "../conponents/full-stack-design"
+import ContactSection from "../conponents/contact-section"
+import TechStack from "../conponents/techstack"
 
 export default function IndexPage() {
   return (
-    <div>
+    <>
       <HeaderTags />
-      <Homelayout>
+      <HomePageLayout>
         <Homesplash />
-        <section>
-          <div className="text-container-width">
-            <div className="animate">
-              <Contact />
-            </div>
-          </div>
-        </section>
-      </Homelayout>
-    </div>
+        <FullStack />
+        <TechStack />
+        <ContactSection />
+      </HomePageLayout>
+    </>
   )
 }

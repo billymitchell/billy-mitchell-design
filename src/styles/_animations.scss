@@ -1,0 +1,111 @@
+//Animation Inital State Key Name
+.fade-in-up {
+  opacity: 0;
+  animation-name: fade-in-up;
+}
+
+//Animation
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+//Duration
+.time-250ms {
+  animation-duration: 250ms;
+}
+.time-500ms {
+  animation-duration: 500ms;
+}
+.time-750ms {
+  animation-duration: 750ms;
+}
+.time-1000ms {
+  animation-duration: 1000ms;
+}
+.time-1250ms {
+  animation-duration: 1250ms;
+}
+.time-1500ms {
+  animation-duration: 1500ms;
+}
+.time-1750ms {
+  animation-duration: 1750ms;
+}
+.time-2000ms {
+  animation-duration: 2000ms;
+}
+
+//Delay
+.delay-0ms {
+  animation-delay: 0ms;
+}
+.delay-250ms {
+  animation-delay: 250ms;
+}
+.delay-500ms {
+  animation-delay: 500ms;
+}
+.delay-750ms {
+  animation-delay: 750ms;
+}
+.delay-1000ms {
+  animation-delay: 1000ms;
+}
+
+//Fill Mode
+.both {
+  animation-fill-mode: both;
+}
+.forwards {
+  animation-fill-mode: forwards;
+}
+.backwards {
+  animation-fill-mode: backwards;
+}
+.none {
+  animation-fill-mode: none;
+}
+
+//Timeing / Easing
+.linear {
+  animation-timing-function: linear;
+}
+.ease {
+  animation-timing-function: ease;
+}
+.ease-in {
+  animation-timing-function: ease-in;
+}
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+.ease-out {
+  animation-timing-function: ease-out;
+}
+.ease-in-out-cubic {
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+.ease-in-out-quad {
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+//Iteration
+.loop {
+  animation-iteration-count: infinite;
+}
+.loop-1 {
+  animation-iteration-count: 1;
+}
+.loop-2 {
+  animation-iteration-count: 2;
+}
+.loop-3 {
+  animation-iteration-count: 3;
+}

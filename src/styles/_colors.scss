@@ -27,3 +27,106 @@ $gray-4: rgba(181, 178, 179, 1);
 $white: rgba(247, 247, 247, 1);
 
 $transparent: rgba(0, 0, 0, 0);
+
+//Set text color based on bg color
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $black;
+  } @else {
+    @return $white;
+  }
+}
+
+//Set bg color and text color in one
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//Set links color
+a {
+  color: $green;
+}
+footer a {
+  color: $white;
+}
+
+//Blue Color
+.bg-blue-dark {
+  @include set-background($blue-dark);
+}
+.bg-blue {
+  @include set-background($blue);
+}
+.bg-blue-2 {
+  @include set-background($blue-2);
+}
+.bg-blue-3 {
+  @include set-background($blue-3);
+}
+.bg-blue-4 {
+  @include set-background($blue-4);
+}
+.bg-blue-4 {
+  @include set-background($blue-5);
+}
+
+//Brand Color
+.bg-brand-dark {
+  @include set-background($brand-dark);
+}
+.bg-brand {
+  @include set-background($brand);
+}
+.bg-brand-2 {
+  @include set-background($brand-2);
+}
+.bg-brand-3 {
+  @include set-background($brand-3);
+}
+.bg-brand-4 {
+  @include set-background($brand-4);
+}
+.bg-brand-5 {
+  @include set-background($brand-5);
+}
+
+//Greens
+.bg-green-dark {
+  @include set-background($green-dark);
+}
+.bg-green {
+  @include set-background($green);
+}
+.bg-green-2 {
+  @include set-background($brand-2);
+}
+.bg-green-3 {
+  @include set-background($brand-3);
+}
+.bg-green-4 {
+  @include set-background($brand-4);
+}
+.bg-green-5 {
+  @include set-background($brand-5);
+}
+
+//Nutrals
+.bg-black {
+  @include set-background($black);
+}
+.bg-gray-1 {
+  @include set-background($gray-1);
+}
+.bg-gray-2 {
+  @include set-background($gray-2);
+}
+.bg-gray-3 {
+  @include set-background($gray-3);
+}
+.bg-gray-4 {
+  @include set-background($gray-4);
+}
+.bg-white {
+  @include set-background($white);
+}

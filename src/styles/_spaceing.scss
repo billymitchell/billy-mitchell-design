@@ -1,0 +1,54 @@
+@import "../styles/typography";
+
+$units: (
+  0.25,
+  0.5,
+  0.75,
+  1,
+  1.25,
+  1.5,
+  1.75,
+  2,
+  2.25,
+  2.5,
+  2.75,
+  3.25,
+  3.5,
+  3.75,
+  4
+);
+
+//$space is a unit from typography
+
+@each $spacer in $units {
+  .margin-#{$spacer} {
+    margin: #{$spacer} * $space;
+  }
+  .margin-top-#{$spacer} {
+    margin-top: #{$spacer} + $space;
+  }
+  .margin-left-#{$spacer} {
+    margin-left: #{$spacer} + $space;
+  }
+  .margin-right-#{$spacer} {
+    margin-right: #{$spacer} + $space;
+  }
+  .margin-bottom-#{$spacer} {
+    margin-bottom: #{$spacer} + $space;
+  }
+  .padding-#{$spacer} {
+    padding: #{$spacer} + $space;
+  }
+  .padding-top-#{$spacer} {
+    padding-top: #{$spacer} + $space;
+  }
+  .padding-left-#{$spacer} {
+    padding-left: #{$spacer} + $space;
+  }
+  .padding-right-#{$spacer} {
+    padding-right: #{$spacer} + $space;
+  }
+  .padding-bottom-#{$spacer} {
+    padding-bottom: #{$spacer} + $space;
+  }
+}

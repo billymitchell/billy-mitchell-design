@@ -5,9 +5,16 @@
 @import "../styles/forms";
 @import "../styles/layout";
 @import "../styles/scroll";
+@import "../styles/animations";
+@import "../styles/video";
+@import "../styles/images";
 
+html {
+  width: 100vw;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
 a {
-  color: $brand;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
@@ -17,20 +24,43 @@ a {
 }
 
 body {
+  width: 100vw;
+  margin: 0 auto;
+  overflow-x: hidden;
   background-color: $black;
 }
 
 footer {
-  background-color: $brand-dark;
+  padding-top: $space;
+  padding-bottom: $space;
 }
 
-footer a {
-  color: $white;
-}
 footer a:hover {
   color: #000000;
 }
 
 .hidden {
   display: none;
+}
+
+section {
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+.disable-mouse-events {
+  pointer-events: none;
+}
+
+.v-h-center-100vh {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  //Called Mixin function in _colors
+  @include set-background($black);
 }

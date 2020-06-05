@@ -18,7 +18,7 @@ const FooterStyle = styled.div`
 const Footer = () => {
   return (
     <FooterStyle>
-      <footer>
+      <footer className="bg-brand-dark">
         <div className="main-container-width">
           <div className="primary-contact-info">
             <p>
@@ -59,7 +59,8 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
             <small>
-              Made with ♥ on a rock in space.
+              Made with <span style={{ color: "red" }}>♥</span> on a rock in
+              space
               <br />
               Copyright © <GetCurrentDate /> Billy Mitchell Design Co.
             </small>

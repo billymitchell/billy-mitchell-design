@@ -20,7 +20,6 @@ export default function Headertags() {
       render={data => (
         <Helmet>
           <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
-          <script src="../../static/intersection-observer.js"></script>
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
