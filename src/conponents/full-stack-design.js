@@ -1,5 +1,5 @@
 import React from "react"
-import morty from "../../static/Morty.png"
+import morty from "../../static/Morty-cut.png"
 import InViewAnimation from "../conponents/InViewAnimation"
 
 const FullStack = () => {
@@ -44,12 +44,12 @@ const FullStack = () => {
           iteration="loop-1"
         >
           <img src={morty} alt="morty" className="fluid"></img>
-          <caption>
+          <figcaption>
             Image From:{" "}
             <a href="https://uxdesign.cc/why-i-believe-in-full-stack-designers-a4a154f6bac2">
               Why I believe in full stack designers by Damian Horn
             </a>
-          </caption>
+          </figcaption>
         </InViewAnimation>
       </div>
     </section>

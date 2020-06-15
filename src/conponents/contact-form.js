@@ -62,6 +62,7 @@ export default function Contact() {
           />
         </div>
         <textarea
+          className="margin-top-4"
           name="message"
           type="text"
           placeholder="message"
@@ -69,7 +70,7 @@ export default function Contact() {
         />
 
         <div data-netlify-recaptcha="true"></div>
-        <button type="submit" className="primary">
+        <button type="submit" className="primary margin-top-4">
           Submit
         </button>
       </form>

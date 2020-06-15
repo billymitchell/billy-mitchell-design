@@ -8,15 +8,12 @@
 @import "../styles/animations";
 @import "../styles/video";
 @import "../styles/images";
+@import "../styles/spacing";
 
 html {
   width: 100vw;
   margin: 0 auto;
   overflow-x: hidden;
-}
-a {
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
 }
 
 .text-center {
@@ -35,17 +32,13 @@ footer {
   padding-bottom: $space;
 }
 
-footer a:hover {
-  color: #000000;
-}
-
 .hidden {
   display: none;
 }
 
 section {
-  margin-top: $space;
-  margin-bottom: $space;
+  padding-top: $space;
+  padding-bottom: $space;
 }
 
 .disable-mouse-events {
@@ -63,4 +56,13 @@ section {
 section {
   //Called Mixin function in _colors
   @include set-background($black);
+}
+
+.gradient-top {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  height: 4px;
+  width: 100%;
+  background: $brand-gradient;
 }

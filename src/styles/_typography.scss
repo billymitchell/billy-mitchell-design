@@ -17,6 +17,7 @@ $base-font-size: 16px;
 $space: 1.35 * $base-font-size;
 
 * {
+  font-family: "Muli", sans-serif;
   font-synthesis: none !important;
 }
 
@@ -125,7 +126,8 @@ blockquote {
   margin: $space;
 }
 
-caption {
+figcaption {
+  text-align: center;
   display: block;
   font-size: $caption-font-size;
   line-height: $caption-line-height;
@@ -163,26 +165,26 @@ small {
 
 // Definitions
 
+body {
+  font-family: "Muli", sans-serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Muli", sans-serif;
   font-variation-settings: "wght" 800;
 }
 
 footer,
-small {
-  font-family: "Muli", sans-serif;
+footer small {
   font-variation-settings: "wght" 400;
 }
 
 p,
 blockquote {
-  font-family: "Muli", sans-serif;
-  // font-family: "Playfair Display", sans-serif;
   font-variation-settings: "wght" 400;
   letter-spacing: 0.25px;
 }
@@ -215,16 +217,14 @@ q {
   font-variation-settings: "ital" 1;
 }
 
-footer {
-  font-variation-settings: "wght" 400;
-}
-
 ul,
 ol {
   list-style: disc;
   list-style-position: outside;
   padding-left: 0.75em;
   margin-left: 0.55em;
+  margin-top: $space * -0.95;
+  padding-bottom: $space;
 }
 
 i {
@@ -251,7 +251,15 @@ address {
   //TBD
 }
 
-@media only screen and (max-width: 1000px) {
+//Links
+a {
+  font-variation-settings: "wght" 800;
+  transition: all ease-in-out 0.3s;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: auto;
+}
+
+@media only screen and (max-width: 800px) {
   h1 {
     font-size: $h1-mobile-font-size;
     line-height: $h1-mobile-line-height;

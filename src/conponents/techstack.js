@@ -30,24 +30,26 @@ const TeckStack = () => {
           iteration="loop-1"
         >
           <h3>Tech Stack</h3>
-          <p>I use these to bring ideas to life.</p>
+          <p>
+            I use these technologies and applications to bring ideas to life.
+          </p>
         </InViewAnimation>
-        <div className="teck-stack-container grid-container col-5 col-gap-30 small-col-4">
-          <img class="fluid" src={HTML} alt="HTML" />
-          <img class="fluid" src={CSS} alt="CSS" />
-          <img class="fluid" src={Javascript} alt="Javascript" />
-          <img class="fluid" src={ReactLogo} alt="React" />
-          <img class="fluid" src={GatsbyLogo} alt="Gatsby" />
-          <img class="fluid" src={Sass} alt="Sass" />
-          <img class="fluid" src={node} alt="Node JS" />
-          <img class="fluid" src={git} alt="Git Worflow" />
-          <img class="fluid" src={AdobePS} alt="Adobe PS" />
-          <img class="fluid" src={AdobeIL} alt="Adobe IL" />
-          <img class="fluid" src={AdobeID} alt="Adobe ID" />
-          <img class="fluid" src={AdobeAE} alt="Adobe AE" />
-          <img class="fluid" src={AdobePP} alt="Adobe PP" />
-          <img class="fluid" src={XD} alt="Adobe XD" />
-          <img class="fluid" src={Figma} alt="Figma" />
+        <div className="teck-stack-container grid-container col-5 col-gap-30 small-col-4 small-col-gap-">
+          <img className="fluid" src={HTML} alt="HTML" />
+          <img className="fluid" src={CSS} alt="CSS" />
+          <img className="fluid" src={Javascript} alt="Javascript" />
+          <img className="fluid" src={ReactLogo} alt="React" />
+          <img className="fluid" src={GatsbyLogo} alt="Gatsby" />
+          <img className="fluid" src={Sass} alt="Sass" />
+          <img className="fluid" src={node} alt="Node JS" />
+          <img className="fluid" src={git} alt="Git Worflow" />
+          <img className="fluid" src={AdobePS} alt="Adobe PS" />
+          <img className="fluid" src={AdobeIL} alt="Adobe IL" />
+          <img className="fluid" src={AdobeID} alt="Adobe ID" />
+          <img className="fluid" src={AdobeAE} alt="Adobe AE" />
+          <img className="fluid" src={AdobePP} alt="Adobe PP" />
+          <img className="fluid" src={XD} alt="Adobe XD" />
+          <img className="fluid" src={Figma} alt="Figma" />
         </div>
       </div>
     </section>

@@ -1,54 +1,73 @@
-$blue-dark: rgba(46, 74, 95, 1);
-$blue: rgba(5, 129, 196, 1);
-$blue-2: rgba(65, 145, 204, 1);
-$blue-3: rgba(97, 163, 212, 1);
-$blue-4: rgba(125, 183, 221, 1);
-$blue-5: rgba(154, 205, 230, 1);
+$brand-gradient: linear-gradient(
+  90deg,
+  hsla(141, 76%, 38%, 1) 0%,
+  hsla(201, 95%, 39%, 1) 100%
+);
 
-$brand-dark: rgba(26, 53, 42, 1);
-$brand: rgba(1, 85, 58, 1);
-$brand-2: rgba(13, 114, 92, 1);
-$brand-3: rgba(47, 143, 127, 1);
-$brand-4: rgba(97, 177, 166, 1);
-$brand-5: rgba(167, 213, 207, 1);
+$blue-dark: hsla(206, 35%, 28%, 1);
+$blue: hsla(201, 95%, 39%, 1);
+$blue-2: hsla(205, 58%, 53%, 1);
+$blue-3: hsla(206, 57%, 61%, 1);
+$blue-4: hsla(204, 59%, 68%, 1);
+$blue-5: hsla(200, 60%, 75%, 1);
 
-$green-dark: rgba(44, 88, 55, 1);
-$green: rgba(23, 169, 75, 1);
-$green-2: rgba(71, 185, 110, 1);
-$green-3: rgba(119, 198, 146, 1);
-$green-4: rgba(165, 215, 182, 1);
-$green-5: rgba(210, 234, 217, 1);
+$brand-dark: hsla(156, 34%, 15%, 1);
+$brand: hsla(161, 98%, 17%, 1);
+$brand-2: hsla(167, 80%, 25%, 1);
+$brand-3: hsla(170, 51%, 37%, 1);
+$brand-4: hsla(172, 34%, 54%, 1);
+$brand-5: hsla(172, 35%, 75%, 1);
 
-$black: rgba(16, 16, 16, 1);
-$gray-1: rgba(53, 51, 50, 1);
-$gray-2: rgba(88, 84, 84, 1);
-$gray-3: rgba(130, 126, 126, 1);
-$gray-4: rgba(181, 178, 179, 1);
-$white: rgba(247, 247, 247, 1);
+$green-dark: hsla(135, 33%, 26%, 1);
+$green: hsla(141, 76%, 38%, 1);
+$green-2: hsla(141, 45%, 50%, 1);
+$green-3: hsla(141, 41%, 62%, 1);
+$green-4: hsla(140, 38%, 75%, 1);
+$green-5: hsla(138, 36%, 87%, 1);
 
-$transparent: rgba(0, 0, 0, 0);
+$black: hsla(0, 0%, 6%, 1);
+$gray-1: hsla(20, 3%, 20%, 1);
+$gray-2: hsla(0, 2%, 34%, 1);
+$gray-3: hsla(0, 2%, 50%, 1);
+$gray-4: hsla(340, 2%, 70%, 1);
+$white: hsla(0, 0%, 97%, 1);
+
+$transparent: hsla(0, 0%, 0%, 0);
 
 //Set text color based on bg color
-@function set-text-color($color) {
-  @if (lightness($color) > 70) {
+@function set-text-color($bg-color) {
+  //if bg is lighter then 69%
+  @if (lightness($bg-color) > 69) {
+    //Set to black
     @return $black;
   } @else {
+    //Set to white
     @return $white;
   }
 }
 
-//Set bg color and text color in one
-@mixin set-background($color) {
-  background-color: $color;
-  color: set-text-color($color);
+//Set link hover color
+@function set-link-toggle($bg-color) {
+  //if bg color is lighter then 19%
+  @if (lightness($bg-color) > 19) {
+    //bring color closer to max dark by - 50%
+    @return scale-color($bg-color, $lightness: -50%);
+  } @else {
+    //bring color closer to max light by - 25%
+    @return scale-color($bg-color, $lightness: 25%);
+  }
 }
 
-//Set links color
-a {
-  color: $green;
-}
-footer a {
-  color: $white;
+//Set bg color, text color and link hover state
+@mixin set-background($bg-color) {
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+  & a {
+    color: set-text-color($bg-color);
+  }
+  & a:hover {
+    color: set-link-toggle($bg-color);
+  }
 }
 
 //Blue Color
@@ -67,7 +86,7 @@ footer a {
 .bg-blue-4 {
   @include set-background($blue-4);
 }
-.bg-blue-4 {
+.bg-blue-5 {
   @include set-background($blue-5);
 }
 
@@ -130,3 +149,7 @@ footer a {
 .bg-white {
   @include set-background($white);
 }
+
+// footer a:hover {
+//   color: #000000 !important;
+// }
