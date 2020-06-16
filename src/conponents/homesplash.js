@@ -88,47 +88,29 @@ const Homesplash = () => {
           autoplay
         ></lottie-player>
         <div className="overlay-content">
-          <div className="main-container-width">
-            {/* <InViewWrapper
-              animation="fade-in-up"
-              duration="time-1000ms"
-              delay="delay-0ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
-            >
-              <h1 className="text-center">Billy Mitchell</h1>
-            </InViewWrapper>
-            <InViewWrapper
-              animation="fade-in-up"
-              duration="time-1000ms"
-              delay="delay-500ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
-            >
-              <h2 className="text-center">full-stack design</h2>
-            </InViewWrapper> */}
-            <InViewAnimation
-              animation="fade-in-up"
-              duration="time-1000ms"
-              delay="delay-0ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
-            >
-              <h1 className="text-center">Billy Mitchell</h1>
-            </InViewAnimation>
-            <InViewAnimation
-              animation="fade-in-up"
-              duration="time-1000ms"
-              delay="delay-250ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
-            >
-              <h2 className="text-center">Full-Stack Design</h2>
-            </InViewAnimation>
+          <div className="outer-container">
+            <div className="inner-width">
+              <InViewAnimation
+                animation="fade-in-up"
+                duration="time-1000ms"
+                delay="delay-0ms"
+                fillmode="forwards"
+                easing="ease-in-out-quad"
+                iteration="loop-1"
+              >
+                <h1 className="text-center">Billy Mitchell</h1>
+              </InViewAnimation>
+              <InViewAnimation
+                animation="fade-in-up"
+                duration="time-1000ms"
+                delay="delay-250ms"
+                fillmode="forwards"
+                easing="ease-in-out-quad"
+                iteration="loop-1"
+              >
+                <h2 className="text-center">Full-Stack Design</h2>
+              </InViewAnimation>
+            </div>
           </div>
         </div>
         <div className="scroll-down-overlay">

@@ -1,20 +1,25 @@
 @import "../styles/typography";
 
-.main-container-width {
+.block {
+  display: block;
+}
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.inner-width {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
-.text-container-width {
+.inner-text-width {
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .grid-container {
   display: grid;
 }

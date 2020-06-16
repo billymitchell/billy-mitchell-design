@@ -33,7 +33,9 @@ $gray-4: hsla(340, 2%, 70%, 1);
 $white: hsla(0, 0%, 97%, 1);
 
 $transparent: hsla(0, 0%, 0%, 0);
-
+.bg-transparent {
+  background-color: $transparent;
+}
 //Set text color based on bg color
 @function set-text-color($bg-color) {
   //if bg is lighter then 69%

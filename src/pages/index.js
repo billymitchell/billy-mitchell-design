@@ -7,19 +7,26 @@ import ContactSection from "../conponents/contact-section"
 import TechStack from "../conponents/techstack"
 import Companies from "../conponents/companies"
 import Gradient from "../conponents/Gradient"
+import Separator from "../conponents/separator"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 export default function IndexPage() {
   return (
     <>
-      <Gradient />
-      <HeaderTags />
-      <HomePageLayout>
-        <Homesplash />
-        <FullStack />
-        <TechStack />
-        <Companies />
-        <ContactSection />
-      </HomePageLayout>
+      <ParallaxProvider>
+        <Gradient />
+        <HeaderTags />
+        <HomePageLayout>
+          <Homesplash />
+          <FullStack />
+          <Separator className="bg-white" />
+          <TechStack />
+          <Separator className="bg-blue" />
+          <Companies />
+          <Separator className="bg-black" />
+          <ContactSection />
+        </HomePageLayout>
+      </ParallaxProvider>
     </>
   )
 }

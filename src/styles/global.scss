@@ -10,10 +10,12 @@
 @import "../styles/images";
 @import "../styles/spacing";
 
-html {
-  width: 100vw;
-  margin: 0 auto;
-  overflow-x: hidden;
+//Removes Scrollebar
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+* {
+  // outline: 1px solid red;
 }
 
 .text-center {
@@ -21,8 +23,7 @@ html {
 }
 
 body {
-  width: 100vw;
-  margin: 0 auto;
+  min-width: 100%;
   overflow-x: hidden;
   background-color: $black;
 }
@@ -30,6 +31,8 @@ body {
 footer {
   padding-top: $space;
   padding-bottom: $space;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -39,6 +42,8 @@ footer {
 section {
   padding-top: $space;
   padding-bottom: $space;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .disable-mouse-events {
@@ -49,8 +54,10 @@ section {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 section {
@@ -64,5 +71,6 @@ section {
   top: 0px;
   height: 4px;
   width: 100%;
+  overflow-x: hidden;
   background: $brand-gradient;
 }
