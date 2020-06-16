@@ -120,6 +120,10 @@ p {
   margin-bottom: $space;
 }
 
+li {
+  font-size: $peragraph-font-size;
+  line-height: $peragraph-line-height;
+}
 blockquote {
   font-size: $blockquote-font-size;
   line-height: $blockquote-line-height;
