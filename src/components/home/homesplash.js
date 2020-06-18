@@ -1,9 +1,9 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import gifBG from "../../static/ezgif-1-4acdfd5cf4.gif"
-import videoBG from "../../static/Billy-Mitchell-Design-Home-Video.mp4"
-import downArrow from "../../static/Scrolldown-white.gif"
-import InViewAnimation from "../conponents/InViewAnimation"
+import gifBG from "../../../static/ezgif-1-4acdfd5cf4.gif"
+import videoBG from "../../../static/Billy-Mitchell-Design-Home-Video.mp4"
+import downArrow from "../../../static/Scrolldown-white.gif"
+import InViewAnimation from "../utilities/InViewAnimation"
 
 const fadein = keyframes`
     0% {
@@ -97,6 +97,7 @@ const Homesplash = () => {
                 fillmode="forwards"
                 easing="ease-in-out-quad"
                 iteration="loop-1"
+                className="init-invisible"
               >
                 <h1 className="text-center">Billy Mitchell</h1>
               </InViewAnimation>
@@ -107,6 +108,7 @@ const Homesplash = () => {
                 fillmode="forwards"
                 easing="ease-in-out-quad"
                 iteration="loop-1"
+                className="init-invisible"
               >
                 <h2 className="text-center">Full-Stack Design</h2>
               </InViewAnimation>

@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/global.scss"
-import Video from "../conponents/video"
+import Video from "../components/utilities/video"
 
 const Page404 = () => {
   return (

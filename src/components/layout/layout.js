@@ -1,9 +1,8 @@
 import React from "react"
-import Header from "./header"
+import Header from "./header/header"
 import Footer from "./footer"
-import "../styles/global.scss"
+import "../../styles/global.scss"
 import styled from "styled-components"
-import Headertags from "./headertags"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,16 +17,13 @@ const MainContainer = styled.div`
 
 const Layout = props => {
   return (
-    <>
-      <Headertags />
-      <Wrapper>
-        <MainContainer>
-          <Header />
-          {props.children}
-        </MainContainer>
-        <Footer />
-      </Wrapper>
-    </>
+    <Wrapper>
+      <MainContainer>
+        <Header />
+        {props.children}
+      </MainContainer>
+      <Footer />
+    </Wrapper>
   )
 }
 

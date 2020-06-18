@@ -1,7 +1,7 @@
 import React from "react"
-import morty from "../../static/Morty-cut.png"
-import InViewAnimation from "../conponents/InViewAnimation"
-import Parallax from "./Parallax"
+import morty from "../../../static/Morty-cut.png"
+import InViewAnimation from "../utilities/InViewAnimation"
+import Parallax from "../utilities/Parallax"
 
 const FullStack = () => {
   return (
@@ -16,6 +16,7 @@ const FullStack = () => {
               fillmode="forwards"
               easing="ease-in-out-quad"
               iteration="loop-1"
+              className="init-invisible"
             >
               <h3>What is heck is "full-stack design"?</h3>
             </InViewAnimation>
@@ -26,6 +27,7 @@ const FullStack = () => {
               fillmode="forwards"
               easing="ease-in-out-quad"
               iteration="loop-1"
+              className="init-invisible"
             >
               <p>
                 A full-stack designer is an emerging term for someone who has a
@@ -45,6 +47,7 @@ const FullStack = () => {
               fillmode="forwards"
               easing="ease-in-out-quad"
               iteration="loop-1"
+              className="init-invisible"
             >
               <img src={morty} alt="morty" className="fluid"></img>
 

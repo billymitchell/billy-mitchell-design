@@ -1,7 +1,7 @@
 import React from "react"
-import InViewAnimation from "./InViewAnimation"
+import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
-import Parallax from "../conponents/Parallax"
+import Parallax from "../utilities/Parallax"
 
 export default function Companies() {
   return (
@@ -35,6 +35,7 @@ export default function Companies() {
                   fillmode="forwards"
                   easing="ease-in-out-quad"
                   iteration="loop-1"
+                  className="init-invisible"
                 >
                   <h3>Businesses I've Worked With</h3>
                   <p>

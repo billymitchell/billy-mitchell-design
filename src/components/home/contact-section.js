@@ -1,10 +1,10 @@
 import React from "react"
-import ContactFrom from "../conponents/contact-form"
-import Parallax from "../conponents/Parallax"
+import ContactFrom from "../home/contact-form"
+import Parallax from "../utilities/Parallax"
 
 const FullStack = () => {
   return (
-    <section className="v-h-center-100vh ">
+    <section id="contact" className="v-h-center-100vh ">
       <Parallax>
         <div className="outer-container">
           <div className="inner-text-width">

@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/global.scss"
 import ThanksVideo from "../../static/thanks.mp4"
-import InViewAnimation from "../conponents/InViewAnimation"
+import InViewAnimation from "../components/utilities/InViewAnimation"
 
 export default function Thanks() {
   return (

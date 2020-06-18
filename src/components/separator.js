@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Parallax from "./Parallax"
+import Parallax from "../components/utilities/Parallax"
 
 const StyledSeparator = styled.div`
   position: relative;

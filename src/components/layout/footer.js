@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import GetCurrentDate from "./getcurrentdate"
+import GetCurrentDate from "../utilities/getcurrentdate"
 
 const FooterStyle = styled.div`
   text-align: center;
