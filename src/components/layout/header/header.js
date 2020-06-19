@@ -1,13 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import HeaderScripts from "../header/headerscripts"
 import Gradient from "./Gradient"
 import Logo from "../header/logo"
 
 const Header = () => {
   return (
     <>
-      <HeaderScripts />
       <Gradient />
       <header>
         <div className="outer-container">

@@ -1,5 +1,8 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import MetaData from "../components/layout/header/mettadata"
+import Socialimg from "../../static/Logo-Simplified-Shair-link.jpg"
+
 import { ParallaxProvider } from "react-scroll-parallax"
 
 import Homesplash from "../components/home/homesplash"
@@ -12,19 +15,27 @@ import Separator from "../components/separator"
 
 export default function IndexPage() {
   return (
-    <div id="home">
-      <ParallaxProvider>
-        <Layout>
-          <Homesplash />
-          <FullStack />
-          <Separator className="bg-white" />
-          <TechStack />
-          <Separator className="bg-blue" />
-          <Companies />
-          <Separator className="bg-black" />
-          <ContactSection />
-        </Layout>
-      </ParallaxProvider>
-    </div>
+    <>
+      <MetaData
+        title="Billy Mitchell Design"
+        description="Full-Stack Design"
+        url="URL"
+        socialimg={Socialimg}
+      />
+      <div id="home">
+        <ParallaxProvider>
+          <Layout>
+            <Homesplash />
+            <FullStack />
+            <Separator className="bg-white" />
+            <TechStack />
+            <Separator className="bg-blue" />
+            <Companies />
+            <Separator className="bg-black" />
+            <ContactSection />
+          </Layout>
+        </ParallaxProvider>
+      </div>
+    </>
   )
 }

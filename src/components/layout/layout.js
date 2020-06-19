@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header/header"
+import HeaderScripts from "../layout/header/headerscripts"
 import Footer from "./footer"
 import "../../styles/global.scss"
 import styled from "styled-components"
@@ -15,15 +16,18 @@ const MainContainer = styled.div`
   flex-grow: 1;
 `
 
-const Layout = props => {
+const Layout = ({ children }) => {
   return (
-    <Wrapper>
-      <MainContainer>
-        <Header />
-        {props.children}
-      </MainContainer>
-      <Footer />
-    </Wrapper>
+    <>
+      <HeaderScripts />
+      <Wrapper>
+        <MainContainer>
+          <Header />
+          {children}
+        </MainContainer>
+        <Footer />
+      </Wrapper>
+    </>
   )
 }
 
