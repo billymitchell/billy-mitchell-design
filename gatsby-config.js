@@ -16,32 +16,20 @@ module.exports = {
         tables: [
           {
             baseId: `appvr5KrgKiJo1E7M`,
+            tableName: `Project`,
+          },
+          {
+            baseId: `appvr5KrgKiJo1E7M`,
             tableName: `Companies`,
+            tableLinks: [`Project`],
+          },
+          {
+            baseId: `appvr5KrgKiJo1E7M`,
+            tableName: `Education`,
+            tableLinks: [`Project`],
           },
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `pages`,
-    //     path: `${__dirname}/src/pages`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `portfolio`,
-    //     path: `${__dirname}/src/pages/portfolio`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `blog`,
-    //     path: `${__dirname}/src/pages/blog`,
-    //   },
-    // },
-    // `gatsby-plugin-mdx`,
   ],
 }

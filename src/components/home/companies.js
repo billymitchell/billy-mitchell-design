@@ -7,16 +7,15 @@ export default function Companies() {
   return (
     <StaticQuery
       query={graphql`
-        query CompanyData {
+        query {
           allAirtable(
-            filter: { table: { eq: "Companies" } }
-            sort: { fields: [data___Name], order: ASC }
+            filter: { data: { Company_Name: { ne: null } } }
+            sort: { fields: data___Company_Name, order: ASC }
           ) {
             nodes {
-              id
               recordId
               data {
-                Name
+                Company_Name
                 URL
               }
             }
@@ -51,7 +50,7 @@ export default function Companies() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <small>{node.data.Name}</small>
+                      <small>{node.data.Company_Name}</small>
                     </a>
                   ))}
                 </div>
