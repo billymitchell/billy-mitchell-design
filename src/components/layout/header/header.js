@@ -15,21 +15,17 @@ const Header = () => {
             </Link>
             <ul id="menu-items">
               <li>
-                <a
-                  data-scroll
-                  href="#contact"
-                  activeClassName="menu-item-active"
-                >
+                <a data-scroll href="#contact">
                   <small>Contact</small>
                 </a>
               </li>
               <li className="hidden">
-                <Link to="#" activeClassName="menu-item-active">
+                <Link to="/portfolio">
                   <small>Portfolio</small>
                 </Link>
               </li>
               <li className="hidden">
-                <Link to="#" activeClassName="menu-item-active">
+                <Link to="/blog">
                   <small>Blog</small>
                 </Link>
               </li>
