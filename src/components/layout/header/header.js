@@ -19,7 +19,7 @@ const Header = () => {
                   <small>Contact</small>
                 </a>
               </li>
-              <li className="hidden">
+              <li>
                 <Link to="/portfolio">
                   <small>Portfolio</small>
                 </Link>
