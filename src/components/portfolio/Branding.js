@@ -17,7 +17,7 @@ export default () => (
         allAirtable(
           filter: {
             table: { eq: "Project" }
-            data: { Categories: { eq: "Branding" } }
+            data: { Creative_Discipline: { eq: "Branding" } }
           }
         ) {
           nodes {
@@ -27,10 +27,9 @@ export default () => (
               Featured_Image {
                 url
               }
-              Portfolio_Page_URL
               Featured
-              Categories
-              Project_End_Date(formatString: "MM-YYYY")
+              End_Date(formatString: "MM-YYYY")
+              slug
             }
           }
         }
@@ -49,7 +48,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={node.data.Portfolio_Page_URL}>
+              <Link to={`/portfolio/project/${node.data.slug}`}>
                 <img
                   className="fluid"
                   id={node.recordId}

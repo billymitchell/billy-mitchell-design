@@ -9,12 +9,16 @@ const breakpointColumnsObj = {
   700: 2,
   500: 1,
 }
-
 export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allAirtable(filter: { table: { eq: "Project" } }) {
+        allAirtable(
+          filter: {
+            table: { eq: "Project" }
+            data: { Published: { eq: true } }
+          }
+        ) {
           nodes {
             recordId
             data {
@@ -22,10 +26,10 @@ export default () => (
               Featured_Image {
                 url
               }
-              Portfolio_Page_URL
               Featured
-              Categories
-              Project_End_Date(formatString: "MM-YYYY")
+              Creative_Discipline
+              End_Date(formatString: "MM-YYYY")
+              slug
             }
           }
         }
@@ -44,7 +48,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={node.data.Portfolio_Page_URL}>
+              <Link to={`/portfolio/project/${node.data.slug}`}>
                 <img
                   className="fluid"
                   id={node.recordId}

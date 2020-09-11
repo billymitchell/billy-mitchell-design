@@ -9,7 +9,9 @@ export default function Companies() {
       query={graphql`
         query {
           allAirtable(
-            filter: { data: { Company_Name: { ne: null } } }
+            filter: {
+              data: { Company_Name: { ne: null }, Feature: { eq: true } }
+            }
             sort: { fields: data___Company_Name, order: ASC }
           ) {
             nodes {

@@ -42,6 +42,9 @@ export default function Portfolio() {
                 <button value="ui-design" onClick={onButtonClick}>
                   UI Design
                 </button>
+                <button value="Video-Production" onClick={onButtonClick}>
+                  Video Production
+                </button>
               </div>
               {/* pass clicked value to portfolio */}
               <PortfolioContainer clickedValue={clickedValue} />

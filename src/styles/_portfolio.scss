@@ -14,7 +14,7 @@
 }
 
 /* Style your items */
-.my-masonry-grid_column>.portfolio-item {
+.my-masonry-grid_column > .portfolio-item {
   /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 15px;
 }
@@ -87,4 +87,50 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   grid-gap: 10px;
+}
+
+/*Portfolio Page*/
+.portfolio-header-container {
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+
+  .portfolio-header,
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    margin: 0;
+    color: $white;
+  }
+
+  .portfolio-header {
+    width: 100%;
+    object-fit: cover;
+    filter: blur(5px) grayscale(80%) brightness(0.4);
+    height: 20vh;
+  }
+}
+
+.image-container {
+  height: 20vh;
+  position: relative;
+  transform: scale(1.25);
+}
+
+.portfolio-meta-data {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+}
+p {
+  color: $white;
+}
+
+.company {
+  padding-right: 15px;
 }

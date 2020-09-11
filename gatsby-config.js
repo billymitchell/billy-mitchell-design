@@ -17,16 +17,11 @@ module.exports = {
           {
             baseId: `appvr5KrgKiJo1E7M`,
             tableName: `Project`,
+            tableLinks: [`Made_For`],
           },
           {
             baseId: `appvr5KrgKiJo1E7M`,
             tableName: `Companies`,
-            tableLinks: [`Project`],
-          },
-          {
-            baseId: `appvr5KrgKiJo1E7M`,
-            tableName: `Education`,
-            tableLinks: [`Project`],
           },
         ],
       },

@@ -5,6 +5,7 @@ import Development from "../../components/portfolio/Development"
 import Illustration from "../../components/portfolio/Illustration"
 import Publication from "../../components/portfolio/Publication"
 import UiDesign from "../../components/portfolio/UiDesign"
+import VideoProduction from "../../components/portfolio/Video-Production"
 
 const portfolioContainer = ({ clickedValue }) => {
   if (clickedValue === "all") {
@@ -24,6 +25,9 @@ const portfolioContainer = ({ clickedValue }) => {
   }
   if (clickedValue === "ui-design") {
     return <UiDesign />
+  }
+  if (clickedValue === "Video-Production") {
+    return <VideoProduction />
   }
 }
 export default portfolioContainer
