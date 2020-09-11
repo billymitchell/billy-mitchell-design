@@ -18,7 +18,7 @@ export default () => (
               Project_Title
               End_Date
               Live_Web_Project_URL
-              Body_Text
+
               Creative_Discipline
               Job_Type
               Made_For {
@@ -99,7 +99,7 @@ export default () => (
                   alt={data.allAirtable.nodes[0].data.Project_Title}
                 ></img>
                 <div className="inner-text-width">
-                  <p>{data.allAirtable.nodes[0].data.Body_Text}</p>
+                  <p>Test</p>
                 </div>
               </div>
             </div>
