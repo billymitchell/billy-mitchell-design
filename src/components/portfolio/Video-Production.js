@@ -27,10 +27,8 @@ export default () => (
             recordId
             data {
               Project_Title
-              Featured_Image {
-                url
-              }
-              Featured
+              Featured_Image_URL
+
               End_Date(formatString: "MM-YYYY")
               slug
             }
@@ -55,7 +53,7 @@ export default () => (
                 <img
                   className="fluid"
                   id={node.recordId}
-                  src={node.data.Featured_Image[0].url}
+                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_scale,q_auto:best,w_600/${node.data.Featured_Image_URL}`}
                   alt={node.data.Project_Title}
                 />
                 <p className="title">

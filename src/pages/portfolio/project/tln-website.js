@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Layout from "../../../components/layout/layout"
 import MetaData from "../../../components/layout/header/mettadata"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const IfLiveURL = function (data) {
   if (data.allAirtable.nodes[0].data.Live_Web_Project_URL) {
@@ -13,6 +14,8 @@ const IfLiveURL = function (data) {
         </a>
       </div>
     )
+  } else {
+    return <></>
   }
 }
 
@@ -24,6 +27,8 @@ const IfPosition = function (data) {
         {data.allAirtable.nodes[0].data.Position_on_Project}
       </div>
     )
+  } else {
+    return <></>
   }
 }
 
@@ -31,18 +36,11 @@ const renderHeader = function (data) {
   // If no custom html header, use featured image as header
   if (!data.allAirtable.nodes[0].data.Custom_HTML) {
     return (
-      <>
-        {/* <img
-          className="fluid inline-max-content center"
-          src={data.allAirtable.nodes[0].data.Featured_Image_URL}
-          alt={data.allAirtable.nodes[0].data.Project_Title}
-        ></img> */}
-        <img
-          className="fetched-header"
-          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:best/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_Slug}`}
-          alt={data.allAirtable.nodes[0].data.Project_Title}
-        ></img>
-      </>
+      <img
+        className="fluid inline-max-content center"
+        src={`https://res.cloudinary.com/billymitchell/image/upload/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
+        alt={data.allAirtable.nodes[0].data.Project_Title}
+      ></img>
     )
   } else {
     return (
@@ -64,6 +62,8 @@ const ifCustomBodyHTML = function (data) {
         }}
       ></span>
     )
+  } else {
+    return <></>
   }
 }
 
@@ -74,7 +74,7 @@ export default () => (
         allAirtable(
           filter: {
             table: { eq: "Project" }
-            data: { slug: { eq: "funjet-vacations" } }
+            data: { slug: { eq: "tln-website" } }
           }
         ) {
           nodes {
@@ -117,7 +117,7 @@ export default () => (
               <div className="image-container">
                 <img
                   className="portfolio-header"
-                  src={`https://res.cloudinary.com/billymitchell/image/upload/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
+                  src={data.allAirtable.nodes[0].data.Featured_Image_URL}
                   alt={data.allAirtable.nodes[0].data.Project_Title}
                 ></img>
               </div>

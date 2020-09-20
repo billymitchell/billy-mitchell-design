@@ -96,14 +96,14 @@
   overflow: hidden;
 
   .portfolio-header,
-  h1 {
+  h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  h1 {
+  h2 {
     margin: 0;
     color: $white;
   }
@@ -133,4 +133,13 @@ p {
 
 .company {
   padding-right: 15px;
+}
+
+.imported-text {
+  color: $white;
+}
+
+.customHTML {
+  width: 100%;
+  padding: 15px;
 }

@@ -26,5 +26,18 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-transformer-rehype`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-rehype-prismjs`,
+    //         options: {
+    //           divClassNames: "dangerous",
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }

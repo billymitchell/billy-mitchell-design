@@ -207,8 +207,7 @@ ins {
 
 //Stong, Bold, Emphisise
 strong,
-b,
-em {
+b {
   font-variation-settings: "wght" 800;
 }
 
@@ -223,15 +222,22 @@ q {
 
 ul,
 ol {
-  list-style: disc;
   list-style-position: outside;
   padding-left: 0.75em;
   margin-left: 0.55em;
-  margin-top: $space * -0.95;
   padding-bottom: $space;
 }
 
-i {
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+i,
+em {
   font-variation-settings: "ital" 1;
 }
 

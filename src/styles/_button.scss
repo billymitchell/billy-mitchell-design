@@ -26,3 +26,8 @@ button.primary {
     color: $white;
   }
 }
+
+button.small {
+  padding: 3px 10px;
+  font-size: 6px;
+}
