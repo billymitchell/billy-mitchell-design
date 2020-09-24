@@ -1,12 +1,14 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import favicon from "../../../../static/favicon.ico"
 
 const MetaData = ({ title, description, socialimg }) => {
   return (
     <Helmet>
       {/* Primary Meta Tags */}
-      <link rel="icon" href={favicon} />
+      <link
+        rel="icon"
+        href="https://res.cloudinary.com/billymitchell/image/upload/v1600977104/home/favicon_yqmyxw.ico"
+      />
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />

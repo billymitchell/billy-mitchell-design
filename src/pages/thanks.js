@@ -1,6 +1,5 @@
 import React from "react"
 import "../styles/global.scss"
-import ThanksVideo from "../../static/thanks.mp4"
 import InViewAnimation from "../components/utilities/InViewAnimation"
 
 export default function Thanks() {
@@ -19,7 +18,10 @@ export default function Thanks() {
           width="100%"
           height="auto"
         >
-          <source src={ThanksVideo} type="video/mp4"></source>
+          <source
+            src="https://res.cloudinary.com/billymitchell/video/upload/v1600977044/form-submit/thanks_tsj4ng.mp4"
+            type="video/mp4"
+          ></source>
         </video>
       </InViewAnimation>
     </div>

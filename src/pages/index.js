@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import MetaData from "../components/layout/header/mettadata"
-import socialimg from "../../static/Logo-Simplified-Shair-link.jpg"
 
 import { ParallaxProvider } from "react-scroll-parallax"
 
@@ -19,7 +18,7 @@ export default function IndexPage() {
       <MetaData
         title="Billy Mitchell Design"
         description="Full-Stack Design"
-        socialimg={socialimg}
+        socialimg="https://res.cloudinary.com/billymitchell/image/upload/v1600977107/home/Logo-Simplified-Shair-link_i281z4.jpg"
       />
       <div id="home">
         <ParallaxProvider>

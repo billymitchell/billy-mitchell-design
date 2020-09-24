@@ -1,8 +1,5 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import gifBG from "../../../static/ezgif-1-4acdfd5cf4.gif"
-import videoBG from "../../../static/Billy-Mitchell-Design-Home-Video.mp4"
-import downArrow from "../../../static/Scrolldown-white.gif"
 import InViewAnimation from "../utilities/InViewAnimation"
 
 const fadein = keyframes`
@@ -20,7 +17,7 @@ const HomesplashStyle = styled.div`
     overflow: hidden;
     position: relative;
     display: block;
-    background-image: url(${gifBG});
+    background-image: url("https://res.cloudinary.com/billymitchell/image/upload/v1600977111/home/ezgif-1-4acdfd5cf4_opvc85.gif");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -79,7 +76,10 @@ const Homesplash = () => {
           loop
           id="homepage-video-file"
         >
-          <source src={videoBG} type="video/mp4"></source>
+          <source
+            src="https://res.cloudinary.com/billymitchell/video/upload/v1600977112/home/Billy-Mitchell-Design-Home-Video_zgl0dp.mp4"
+            type="video/mp4"
+          ></source>
         </video>
         <lottie-player
           src="https://assets4.lottiefiles.com/private_files/lf30_xRpJ98.json"
@@ -116,7 +116,11 @@ const Homesplash = () => {
           </div>
         </div>
         <div className="scroll-down-overlay">
-          <img alt="down arrow" className="scroll-down" src={downArrow}></img>
+          <img
+            alt="down arrow"
+            className="scroll-down"
+            src="https://res.cloudinary.com/billymitchell/image/upload/v1600977106/home/Scrolldown-white_b7xo4m.gif"
+          ></img>
         </div>
       </div>
     </HomesplashStyle>

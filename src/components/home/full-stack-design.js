@@ -1,5 +1,4 @@
 import React from "react"
-import morty from "../../../static/Morty-cut.png"
 import InViewAnimation from "../utilities/InViewAnimation"
 import Parallax from "../utilities/Parallax"
 
@@ -49,7 +48,11 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <img src={morty} alt="morty" className="fluid"></img>
+              <img
+                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977106/home/Morty-cut_yagbuw.png"
+                alt="morty"
+                className="fluid"
+              ></img>
 
               <figcaption>
                 Image From:{" "}
