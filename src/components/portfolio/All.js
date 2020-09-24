@@ -49,7 +49,7 @@ export default () => (
                 <img
                   className="fluid"
                   id={node.recordId}
-                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_scale,q_auto:best,w_600/${node.data.Featured_Image_URL}`}
+                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_fit,q_auto:best,w_600/${node.data.Featured_Image_URL}`}
                   alt={node.data.Project_Title}
                 />
                 <p className="title">
