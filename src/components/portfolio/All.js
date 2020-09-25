@@ -45,7 +45,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link state={node.data.slug} to={`/portfolio/${node.data.slug}`}>
+              <Link to={`/portfolio/${node.data.slug}`}>
                 <img
                   className="fluid"
                   id={node.recordId}
