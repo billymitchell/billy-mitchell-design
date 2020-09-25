@@ -1,7 +1,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allAirtable {
+      allAirtable(filter: { data: { slug: { ne: null } } }) {
         edges {
           node {
             data {
