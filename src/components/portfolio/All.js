@@ -45,11 +45,11 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={`/portfolio/project/${node.data.slug}`}>
+              <Link state={node.data.slug} to={`/portfolio/${node.data.slug}`}>
                 <img
                   className="fluid"
                   id={node.recordId}
-                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_fit,q_auto:best,w_600/${node.data.Featured_Image_URL}`}
+                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_mfit,f_auto,q_auto:good,w_600/${node.data.Featured_Image_URL}`}
                   alt={node.data.Project_Title}
                 />
                 <p className="title">

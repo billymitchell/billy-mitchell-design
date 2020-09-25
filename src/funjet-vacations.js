@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Layout from "../../../components/layout/layout"
-import MetaData from "../../../components/layout/header/mettadata"
+import Layout from "./components/layout/layout"
+import MetaData from "./components/layout/header/mettadata"
 
 const IfLiveURL = function (data) {
   if (data.allAirtable.nodes[0].data.Live_Web_Project_URL) {
