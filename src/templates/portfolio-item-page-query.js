@@ -34,7 +34,7 @@ const renderHeader = function (data) {
       <>
         <img
           className="fetched-header"
-          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:best/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_Slug}`}
+          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:best/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
           alt={data.allAirtable.nodes[0].data.Project_Title}
         ></img>
       </>
