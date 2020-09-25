@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-// Import relative to created page location at /src/components/pages/portfolio/$slug
 import Layout from "../components/layout/layout"
 import MetaData from "../components/layout/header/mettadata"
 
