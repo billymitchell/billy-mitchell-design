@@ -4,8 +4,8 @@ import { ParallaxProvider } from "react-scroll-parallax"
 import PortfolioContainer from "../../components/portfolio/portfolioContainer"
 
 export default function Portfolio() {
-  //Set default portfolio query to all
-  const [clickedValue, setClickedValue] = useState("all")
+  //Set default portfolio query to featured-work
+  const [clickedValue, setClickedValue] = useState("featured-work")
 
   //on btn click, set value = to button value
   const onButtonClick = event => {
@@ -19,31 +19,31 @@ export default function Portfolio() {
           <div className="outer-container">
             <div className="inner-width">
               <h1>Portfolio</h1>
-              <p>
-                Please be aware, this portfolio is still in development so not
-                all links will work.
-              </p>
+
               <div className="button-container">
-                <button value="all" onClick={onButtonClick}>
-                  All
+                <button value="featured-work" onClick={onButtonClick}>
+                  Featured Work
                 </button>
                 <button value="branding" onClick={onButtonClick}>
                   Branding
                 </button>
-                <button value="development" onClick={onButtonClick}>
-                  Development
+                <button
+                  value="ui-design-and-development"
+                  onClick={onButtonClick}
+                >
+                  UI Design & Development
                 </button>
                 <button value="illustration" onClick={onButtonClick}>
                   Illustration
                 </button>
-                <button value="publication" onClick={onButtonClick}>
-                  Publication
+                <button value="print-design" onClick={onButtonClick}>
+                  Print Design
                 </button>
-                <button value="ui-design" onClick={onButtonClick}>
-                  UI Design
-                </button>
-                <button value="Video-Production" onClick={onButtonClick}>
+                <button value="video-production" onClick={onButtonClick}>
                   Video Production
+                </button>
+                <button value="mural-art" onClick={onButtonClick}>
+                  Mural Art
                 </button>
               </div>
               {/* pass clicked value to portfolio */}

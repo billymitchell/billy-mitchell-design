@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
 const MainContainer = styled.div`
   flex-grow: 1;
+  padding-bottom: 15px;
 `
 
 const Layout = ({ children }) => {

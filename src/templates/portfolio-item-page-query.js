@@ -7,7 +7,9 @@ const IfLiveURL = function (data) {
   if (data.allAirtable.nodes[0].data.Live_Web_Project_URL) {
     return (
       <div>
-        <span>Live Project URL: </span>
+        <span>
+          <b>Live Project URL:</b>{" "}
+        </span>
         <a href={data.allAirtable.nodes[0].data.Live_Web_Project_URL}>
           {data.allAirtable.nodes[0].data.Live_Web_Project_URL}
         </a>
@@ -20,7 +22,9 @@ const IfPosition = function (data) {
   if (data.allAirtable.nodes[0].data.Position_on_Project) {
     return (
       <div>
-        <span>Position: </span>
+        <span>
+          <b>Position:</b>{" "}
+        </span>
         {data.allAirtable.nodes[0].data.Position_on_Project}
       </div>
     )
@@ -28,8 +32,23 @@ const IfPosition = function (data) {
 }
 
 const renderHeader = function (data) {
-  // If no custom html header, use featured image as header
-  if (!data.allAirtable.nodes[0].data.Custom_HTML) {
+  console.log(data.allAirtable.nodes[0].data.Hide_Featured_Image_In_Body)
+  // If  custom html header, show header
+  if (data.allAirtable.nodes[0].data.Custom_HTML) {
+    return (
+      <span
+        dangerouslySetInnerHTML={{
+          __html: data.allAirtable.nodes[0].data.Custom_HTML,
+        }}
+      ></span>
+    )
+  } else if (
+    // if no html header & hide featured image is true
+    data.allAirtable.nodes[0].data.Hide_Featured_Image_In_Body === true
+  ) {
+    return <></>
+  } else {
+    // if condition 1 & 2 are false
     return (
       <>
         <img
@@ -38,14 +57,6 @@ const renderHeader = function (data) {
           alt={data.allAirtable.nodes[0].data.Project_Title}
         ></img>
       </>
-    )
-  } else {
-    return (
-      <span
-        dangerouslySetInnerHTML={{
-          __html: data.allAirtable.nodes[0].data.Custom_HTML,
-        }}
-      ></span>
     )
   }
 }
@@ -84,6 +95,7 @@ export const query = graphql`
           Featured_Image_URL
           Body_Text
           Custom_HTML
+          Hide_Featured_Image_In_Body
         }
       }
     }
@@ -117,24 +129,33 @@ const Portfolio = ({ data }) => (
         <div className="outer-container-body">
           <div className="inner-text-width">
             <div className="portfolio-meta-data">
-              <div>Completed: {data.allAirtable.nodes[0].data.End_Date}</div>
-              <div>{IfLiveURL(data)}</div>
-              <div>
-                Creative Discipline:{" "}
-                {data.allAirtable.nodes[0].data.Creative_Discipline}
-              </div>
-              <div>Job Type: {data.allAirtable.nodes[0].data.Job_Type}</div>
-              <div>
-                Made for:{" "}
-                {data.allAirtable.nodes[0].data.Made_For.map(item => (
-                  <>
-                    <span className="Company"> | {item.data.Company_Name}</span>
-                  </>
-                ))}
-              </div>
-              <div>
-                <div>{IfPosition(data)}</div>
-              </div>
+              <p>
+                <div>
+                  <b>Completed:</b> {data.allAirtable.nodes[0].data.End_Date}
+                </div>
+                <div>{IfLiveURL(data)}</div>
+                <div>
+                  <b>Creative Discipline:</b>{" "}
+                  {data.allAirtable.nodes[0].data.Creative_Discipline}
+                </div>
+                <div>
+                  <b>Job Type:</b> {data.allAirtable.nodes[0].data.Job_Type}
+                </div>
+                <div>
+                  <b>Made for:</b>{" "}
+                  {data.allAirtable.nodes[0].data.Made_For.map(item => (
+                    <>
+                      <span className="Company">
+                        {" "}
+                        | {item.data.Company_Name}
+                      </span>
+                    </>
+                  ))}
+                </div>
+                <div>
+                  <div>{IfPosition(data)}</div>
+                </div>
+              </p>
             </div>
           </div>
           <div className="inner-width">{renderHeader(data)}</div>

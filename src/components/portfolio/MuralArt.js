@@ -10,6 +10,31 @@ const breakpointColumnsObj = {
   500: 1,
 }
 
+//Return an image if there is one, else just the title
+const IfFeaturedImage = function (node) {
+  if (node.data.Featured_Image_URL) {
+    return (
+      <>
+        <img
+          className="fluid"
+          id={node.recordId}
+          src={`https://res.cloudinary.com/billymitchell/image/upload/c_mfit,f_auto,q_auto:good,w_600/${node.data.Featured_Image_URL}`}
+          alt={node.data.Project_Title}
+        />
+        <p className="title">
+          <strong>{node.data.Project_Title}</strong>
+        </p>
+      </>
+    )
+  } else {
+    return (
+      <p className="title-no-featured-image">
+        <strong>{node.data.Project_Title}</strong>
+      </p>
+    )
+  }
+}
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -17,10 +42,7 @@ export default () => (
         allAirtable(
           filter: {
             table: { eq: "Project" }
-            data: {
-              Creative_Discipline: { eq: "Development" }
-              Published: { eq: true }
-            }
+            data: { Creative_Discipline: { eq: "Mural Art" } }
           }
         ) {
           nodes {
@@ -28,7 +50,6 @@ export default () => (
             data {
               Project_Title
               Featured_Image_URL
-
               End_Date(formatString: "MM-YYYY")
               slug
             }
@@ -50,15 +71,7 @@ export default () => (
               className="portfolio-item"
             >
               <Link to={`/portfolio/project/${node.data.slug}`}>
-                <img
-                  className="fluid"
-                  id={node.recordId}
-                  src={`https://res.cloudinary.com/billymitchell/image/upload/c_scale,q_auto:best,w_600/${node.data.Featured_Image_URL}`}
-                  alt={node.data.Project_Title}
-                />
-                <p className="title">
-                  <strong>{node.data.Project_Title}</strong>
-                </p>
+                {IfFeaturedImage(node)}
               </Link>
             </div>
           ))}

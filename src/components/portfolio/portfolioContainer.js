@@ -1,33 +1,33 @@
 import React from "react"
-import All from "../../components/portfolio/All"
+import FeaturedWork from "../../components/portfolio/Featured-Work"
 import Branding from "../../components/portfolio/Branding"
-import Development from "../../components/portfolio/Development"
+import UIDesignAndDevelopment from "../../components/portfolio/UIDesignAndDevelopment"
 import Illustration from "../../components/portfolio/Illustration"
-import Publication from "../../components/portfolio/Publication"
-import UiDesign from "../../components/portfolio/UiDesign"
+import PrintDesign from "../../components/portfolio/PrintDesign"
 import VideoProduction from "../../components/portfolio/Video-Production"
+import MuralArt from "../../components/portfolio/MuralArt"
 
 const portfolioContainer = ({ clickedValue }) => {
-  if (clickedValue === "all") {
-    return <All />
+  if (clickedValue === "featured-work") {
+    return <FeaturedWork />
   }
   if (clickedValue === "branding") {
     return <Branding />
   }
-  if (clickedValue === "development") {
-    return <Development />
+  if (clickedValue === "ui-design-and-development") {
+    return <UIDesignAndDevelopment />
   }
   if (clickedValue === "illustration") {
     return <Illustration />
   }
-  if (clickedValue === "publication") {
-    return <Publication />
+  if (clickedValue === "print-design") {
+    return <PrintDesign />
   }
-  if (clickedValue === "ui-design") {
-    return <UiDesign />
-  }
-  if (clickedValue === "Video-Production") {
+  if (clickedValue === "video-production") {
     return <VideoProduction />
+  }
+  if (clickedValue === "mural-art") {
+    return <MuralArt />
   }
 }
 export default portfolioContainer
