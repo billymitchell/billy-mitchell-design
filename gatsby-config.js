@@ -26,18 +26,12 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-rehype`,
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: `gatsby-rehype-prismjs`,
-    //         options: {
-    //           divClassNames: "dangerous",
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: "UA-179560174-1",
+      head: true,
+      anonymize: true,
+      respectDNT: true,
+    },
   ],
 }
