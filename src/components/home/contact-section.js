@@ -8,20 +8,11 @@ const FullStack = () => {
       <Parallax>
         <div className="outer-container">
           <div className="inner-text-width">
-            <h3>Contact Me</h3>
+            <h3>Contact</h3>
             <p>
-              <b>Work I'm Seaking</b>
+              Please contact me if your organization genuinely values design as
+              a core strategy in all aspects of business growth.
             </p>
-            <ul>
-              <li>Full-time, Part-time or Extended Contract</li>
-              <li>Remote or Partially Remote</li>
-              <li>Design Agencies or In-House Design Teams</li>
-              <li>Development Teams (Front-end)</li>
-              <li>
-                Organizations that genuinely value design as a core strategy to
-                grow the business
-              </li>
-            </ul>
             <ContactFrom />
           </div>
         </div>

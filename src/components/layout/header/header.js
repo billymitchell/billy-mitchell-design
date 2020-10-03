@@ -15,7 +15,7 @@ const Header = () => {
             </Link>
             <ul id="menu-items">
               <li>
-                <a data-scroll href="#contact">
+                <a data-scroll href="/#contact">
                   <small>Contact</small>
                 </a>
               </li>

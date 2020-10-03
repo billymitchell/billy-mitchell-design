@@ -69,10 +69,7 @@ const Footer = () => {
               <span className="block padding-5">
                 <small>
                   <a href="https://github.com/billymitchelldesign/gatsby">
-                    <i className="fab fa-osi"></i>
-                  </a>{" "}
-                  <a href="https://github.com/billymitchelldesign/gatsby">
-                    Open Source
+                    This code that powers this website is <b>Open Source</b>.
                   </a>
                 </small>
               </span>
