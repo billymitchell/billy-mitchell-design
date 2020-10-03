@@ -26,12 +26,14 @@ module.exports = {
         ],
       },
     },
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      trackingId: "UA-179560174-1",
-      head: true,
-      anonymize: true,
-      respectDNT: true,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-179560174-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+      },
     },
   ],
 }
