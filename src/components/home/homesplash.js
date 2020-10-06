@@ -75,6 +75,7 @@ const Homesplash = () => {
           muted="true"
           loop="true"
           id="homepage-video-file"
+          playsinline="true"
         >
           <source
             src="https://res.cloudinary.com/billymitchell/video/upload/v1600977112/home/Billy-Mitchell-Design-Home-Video_zgl0dp.mp4"
