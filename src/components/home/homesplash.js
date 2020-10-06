@@ -71,9 +71,9 @@ const Homesplash = () => {
         <video
           className="homepage-video-file"
           crossOrigin="anonymous"
-          autoPlay
-          muted
-          loop
+          autoPlay="true"
+          muted="true"
+          loop="true"
           id="homepage-video-file"
         >
           <source
