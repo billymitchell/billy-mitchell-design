@@ -69,7 +69,7 @@ const Footer = () => {
               <span className="block padding-5">
                 <small>
                   <a href="https://github.com/billymitchelldesign/gatsby">
-                    This code that powers this website is <b>Open Source</b>.
+                    The code that powers this website is Open Source.
                   </a>
                 </small>
               </span>
