@@ -2,6 +2,7 @@ import React from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
 import Parallax from "../utilities/Parallax"
+import { Link } from "gatsby"
 
 export default function Companies() {
   return (
@@ -51,14 +52,12 @@ export default function Companies() {
                 </InViewAnimation>
                 <div className="companies-container grid-container col-4 col-gap-15 small-col-2 small-col-gap-5">
                   {data.allAirtable.nodes.map(node => (
-                    <a
+                    <Link
                       key={node.recordId}
-                      href={`/portfolio/project/${node.data.Featured_Project[0]}`}
-                      target="_blank"
-                      rel="noreferrer"
+                      href={`/portfolio/${node.data.Featured_Project[0]}`}
                     >
                       <small>{node.data.Company_Name}</small>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
