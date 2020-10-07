@@ -19,8 +19,8 @@ const TeckStack = () => {
             >
               <h3>Tech Stack</h3>
               <p>
-                I use these technologies and applications to bring ideas to
-                life.
+                Here are some of the technologies and applications I use to
+                bring ideas to life.
               </p>
             </InViewAnimation>
 

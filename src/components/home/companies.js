@@ -10,7 +10,11 @@ export default function Companies() {
         query {
           allAirtable(
             filter: {
-              data: { Company_Name: { ne: null }, Feature: { eq: true } }
+              data: {
+                Company_Name: { ne: null }
+                Featured_Project: { ne: null }
+                Feature: { eq: true }
+              }
             }
             sort: { fields: data___Company_Name, order: ASC }
           ) {
@@ -19,6 +23,7 @@ export default function Companies() {
               data {
                 Company_Name
                 URL
+                Featured_Project
               }
             }
           }
@@ -48,7 +53,7 @@ export default function Companies() {
                   {data.allAirtable.nodes.map(node => (
                     <a
                       key={node.recordId}
-                      href={node.data.URL}
+                      href={`/portfolio/project/${node.data.Featured_Project[0]}`}
                       target="_blank"
                       rel="noreferrer"
                     >

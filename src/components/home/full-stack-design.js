@@ -4,7 +4,7 @@ import Parallax from "../utilities/Parallax"
 
 const FullStack = () => {
   return (
-    <section id="full-stack" className="v-h-center-100vh">
+    <section id="full-stack" className="v-h-center-100vh bg-black">
       <Parallax>
         <div className="outer-container">
           <div className="inner-text-width">
