@@ -35,6 +35,10 @@ body {
   background-color: $black;
 }
 
+#home {
+  overflow-x: hidden;
+}
+
 footer {
   padding-top: $space;
   padding-bottom: $space;

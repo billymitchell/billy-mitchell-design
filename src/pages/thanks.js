@@ -12,11 +12,13 @@ export default function Thanks() {
       >
         <video
           className="inline-video"
-          autoPlay
-          muted
-          loop
           width="100%"
           height="auto"
+          crossOrigin="anonymous"
+          autoPlay="true"
+          muted="true"
+          loop="true"
+          playsinline="true"
         >
           <source
             src="https://res.cloudinary.com/billymitchell/video/upload/v1600977044/form-submit/thanks_tsj4ng.mp4"
