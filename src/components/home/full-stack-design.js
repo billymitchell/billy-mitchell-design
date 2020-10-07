@@ -17,7 +17,7 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <h3>What is heck is "full-stack design"?</h3>
+              <h3>What is **** is "full-stack design"?</h3>
             </InViewAnimation>
             <InViewAnimation
               animation="fade-in-up"
@@ -32,7 +32,7 @@ const FullStack = () => {
                 A full-stack designer is an emerging term for someone who has a
                 broad skill set to do everything from pre-project planning, to
                 user-inferface design and front-end development. Some people
-                refer to them as unicorns{" "}
+                refer to them as a{" "}
                 <span role="img" aria-label="unicorn">
                   🦄
                 </span>
@@ -56,7 +56,11 @@ const FullStack = () => {
 
               <figcaption>
                 Image From:{" "}
-                <a href="https://uxdesign.cc/why-i-believe-in-full-stack-designers-a4a154f6bac2">
+                <a
+                  href="https://uxdesign.cc/why-i-believe-in-full-stack-designers-a4a154f6bac2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Why I believe in full stack designers by Damian Horn
                 </a>
               </figcaption>
