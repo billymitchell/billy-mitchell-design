@@ -74,7 +74,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={`/portfolio/project/${node.data.slug}`}>
+              <Link to={`/portfolio/${node.data.slug}`}>
                 {IfFeaturedImage(node)}
               </Link>
             </div>
