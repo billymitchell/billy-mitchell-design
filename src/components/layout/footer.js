@@ -27,7 +27,7 @@ const Footer = () => {
                   info@billymitchell.design
                 </a>
                 <br></br>
-                <a value="phone" href="callto:443-765-8265">
+                <a value="phone" href="tel:4437658265">
                   443-765-8265
                 </a>
               </p>
