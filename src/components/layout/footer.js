@@ -23,8 +23,8 @@ const Footer = () => {
           <div className="inner-width">
             <div className="primary-contact-info">
               <p>
-                <a value="email" href="mailto:hello@billymitchell.design">
-                  hello@billymitchell.design
+                <a value="email" href="mailto:info@billymitchell.design">
+                  info@billymitchell.design
                 </a>
                 <br></br>
                 <a value="phone" href="callto:443-765-8265">

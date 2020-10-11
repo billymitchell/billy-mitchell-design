@@ -17,7 +17,7 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <h3>What is **** is "full-stack design"?</h3>
+              <h3>What the **** is "full-stack design"?</h3>
             </InViewAnimation>
             <InViewAnimation
               animation="fade-in-up"
@@ -61,7 +61,8 @@ const FullStack = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Why I believe in full stack designers by Damian Horn
+                                    Why I believe in full-stack designers by Damian Horn
+
                 </a>
               </figcaption>
             </InViewAnimation>
