@@ -17,7 +17,7 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <h3>What the **** is "full-stack design"?</h3>
+              <h3>What the **** is a "full-stack designer"?</h3>
             </InViewAnimation>
             <InViewAnimation
               animation="fade-in-up"
