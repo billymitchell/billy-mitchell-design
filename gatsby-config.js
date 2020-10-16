@@ -35,5 +35,12 @@ module.exports = {
         // respectDNT: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "650102202342493",
+      },
+    },
   ],
 }
+
