@@ -1,17 +1,10 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import ReactPixel from 'react-facebook-pixel';
-
-const options = {
-  autoConfig: true, 
-  debug: false,
-};
-ReactPixel.init('650102202342493', options);
 
 export default function HeaderScripts() {
   return (
     <Helmet>
-      {ReactPixel.pageView()}
+      
       {/* Lottie Animation Loader */}
       <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
       {/* Smooth Scrolling */}
