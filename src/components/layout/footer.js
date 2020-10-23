@@ -34,27 +34,28 @@ const Footer = () => {
             </div>
             <div className="external-social-links">
               <a
+              target="_blank"
                 value="Instagram"
                 href="https://www.instagram.com/billymitchelldesign/"
               >
                 <i className="fab fa-instagram"></i>
               </a>
-              <a value="Twitter" href="https://twitter.com/designbilly">
+              <a target="_blank" value="Twitter" href="https://twitter.com/designbilly">
                 <i className="fab fa-twitter"></i>
               </a>
               <a
-                value="Linkedin"
+                target="_blank" value="Linkedin"
                 href="https://www.linkedin.com/in/billymitchelldesign/"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
               <a
-                value="Codepen"
+                target="_blank" value="Codepen"
                 href="https://codepen.io/Billymitchell/pens/popular/"
               >
                 <i className="fab fa-codepen"></i>
               </a>
-              <a value="github" href="https://github.com/billymitchelldesign">
+              <a target="_blank" value="github" href="https://github.com/billymitchell">
                 <i className="fab fa-github"></i>
               </a>
             </div>
