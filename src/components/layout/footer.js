@@ -37,25 +37,29 @@ const Footer = () => {
               target="_blank"
                 value="Instagram"
                 href="https://www.instagram.com/billymitchelldesign/"
+                rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>
               </a>
-              <a target="_blank" value="Twitter" href="https://twitter.com/designbilly">
+              <a target="_blank" value="Twitter" href="https://twitter.com/designbilly" rel="noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
               <a
                 target="_blank" value="Linkedin"
                 href="https://www.linkedin.com/in/billymitchelldesign/"
+                rel="noreferrer"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
               <a
                 target="_blank" value="Codepen"
                 href="https://codepen.io/Billymitchell/pens/popular/"
+                rel="noreferrer"
               >
                 <i className="fab fa-codepen"></i>
               </a>
-              <a target="_blank" value="github" href="https://github.com/billymitchell">
+              <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
+                
                 <i className="fab fa-github"></i>
               </a>
             </div>
