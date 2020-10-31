@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
 
@@ -35,31 +35,30 @@ const IfFeaturedImage = function (node) {
   }
 }
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allAirtable(
-          filter: {
-            table: { eq: "Project" }
-            data: { Published: { eq: true }, Featured_Work: { eq: true } }
-          }
-        ) {
-          nodes {
-            recordId
-            data {
-              Project_Title
-              Featured_Image_URL
-
-              End_Date(formatString: "MM-YYYY")
-              slug
-            }
-          }
-        }
+export const query = graphql`
+query ($Creative_Discipline: String!) {
+  allAirtable(
+    filter: {
+      table: { eq: "Project" }
+      data: { Creative_Discipline: { eq: $Creative_Discipline } }
+    }
+  ) {
+    nodes {
+      recordId
+      data {
+        Project_Title
+        Featured_Image_URL
+        Creative_Discipline
+        End_Date(formatString: "MM-YYYY")
+        slug
       }
-    `}
-    render={data => (
-      <div className="portfolio-item-container">
+    }
+  }
+}
+`
+
+const PortfolioDisplayALL = ({data}, clickedValue) => (
+    <div className="portfolio-item-container">
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
@@ -78,6 +77,6 @@ export default () => (
           ))}
         </Masonry>
       </div>
-    )}
-  />
 )
+
+export default PortfolioDisplayALL
