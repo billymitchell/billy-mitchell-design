@@ -3,6 +3,23 @@ import Layout from "../../components/layout/layout"
 import { ParallaxProvider } from "react-scroll-parallax"
 import PortfolioContainer from "../../components/portfolio/portfolioContainer"
 
+const categories = [
+  "Featured Work",
+  "Branding",
+  "UI Design & Development",
+  "Illustration",
+  "Print Design",
+  "Video Production",
+  "Mural Art",
+]
+
+const slugify = string => string
+  .toLowerCase()         // Make all lower case
+  .replace('&', 'and')   // Swap `&` for `and`
+  .replace(/\s/gi, '-'); // Swap all spaces for -
+
+const makeButton = category => `<button value="${slugify(category)}" onClick={onButtonClick}>${category}</button>`
+
 export default function Portfolio() {
   //Set default portfolio query to featured-work
   const [clickedValue, setClickedValue] = useState("featured-work")
@@ -21,30 +38,9 @@ export default function Portfolio() {
               <h1>Portfolio</h1>
 
               <div className="button-container">
-                <button value="featured-work" onClick={onButtonClick}>
-                  Featured Work
-                </button>
-                <button value="branding" onClick={onButtonClick}>
-                  Branding
-                </button>
-                <button
-                  value="ui-design-and-development"
-                  onClick={onButtonClick}
-                >
-                  UI Design & Development
-                </button>
-                <button value="illustration" onClick={onButtonClick}>
-                  Illustration
-                </button>
-                <button value="print-design" onClick={onButtonClick}>
-                  Print Design
-                </button>
-                <button value="video-production" onClick={onButtonClick}>
-                  Video Production
-                </button>
-                <button value="mural-art" onClick={onButtonClick}>
-                  Mural Art
-                </button>
+                
+                {categories.map( makeButton ).join('')}
+    
               </div>
               {/* pass clicked value to portfolio */}
               <PortfolioContainer clickedValue={clickedValue} />
