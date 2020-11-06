@@ -17,7 +17,7 @@ const HomesplashStyle = styled.div`
     overflow: hidden;
     position: relative;
     display: block;
-    background-image: url("https://res.cloudinary.com/billymitchell/image/upload/v1600977111/home/ezgif-1-4acdfd5cf4_opvc85.gif");
+    background-image: url("https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/ezgif-1-4acdfd5cf4_opvc85");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -78,8 +78,8 @@ const Homesplash = () => {
           playsinline="true"
         >
           <source
-            src="https://res.cloudinary.com/billymitchell/video/upload/v1600977112/home/Billy-Mitchell-Design-Home-Video_zgl0dp.mp4"
-            type="video/mp4"
+            src="https://res.cloudinary.com/billymitchell/video/upload/f_auto,dpr_auto,fl_lossy,q_auto,vc_auto/home/Billy-Mitchell-Design-Home-Video_zgl0dp"
+            
           ></source>
         </video>
         <lottie-player
