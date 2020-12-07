@@ -73,8 +73,10 @@ const ifCustomBodyHTML = function (data) {
   }
 }
 
-// const check = function (data) {
-//   console.log(data)
+// const checkData = function (data) {
+//   {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
+//     console.log({Creative_Discipline})
+//   ))}
 // }
 
 export const query = graphql`
@@ -142,15 +144,15 @@ const Portfolio = ({ data }) => (
                 <div>{IfLiveURL(data)}</div>
                 <div>
                   <b>Creative Discipline:</b>{" "}
-                  {/* {check(data)} */}
-                {/* {data.allAirtable.nodes[0].data.Creative_Discipline} */}
+                  
+                
                   {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
-                    <>
+                    
                     <span>
                     {" "}
                         | {Creative_Discipline}
                     </span>
-                    </>
+                    
                   ))}
                 </div>
                 <div>
@@ -159,12 +161,12 @@ const Portfolio = ({ data }) => (
                 <div>
                   <b>Made for:</b>{" "}
                   {data.allAirtable.nodes[0].data.Made_For.map(item => (
-                    <>
+                    
                       <span className="Company">
                         {" "}
                         | {item.data.Company_Name}
                       </span>
-                    </>
+                    
                   ))}
                 </div>
                 <div>
