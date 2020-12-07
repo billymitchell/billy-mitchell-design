@@ -4,7 +4,7 @@ import Parallax from "../utilities/Parallax"
 
 const FullStack = () => {
   return (
-    <section id="full-stack" className="v-h-center-100vh bg-black">
+    <section id="full-stack" className="v-h-center-100vh bg-black mobile-height-fluid">
       <Parallax>
         <div className="outer-container">
           <div className="inner-text-width">
@@ -30,13 +30,12 @@ const FullStack = () => {
             >
               <p>
                 A full-stack designer is an emerging term for someone who has a
-                broad skill set to do everything from pre-project planning, to
-                user-inferface design and front-end development. Some people
+                broad skill set to do Product Design, User-inferface Design, Front-end Development and more. Some people
                 refer to them as a{" "}
                 <span role="img" aria-label="unicorn">
                   🦄
                 </span>
-                considering their rarity.
+                considering the rarity.
               </p>
             </InViewAnimation>
             <InViewAnimation
@@ -48,23 +47,15 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <img
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977106/home/Morty-cut_yagbuw.png"
-                alt="morty"
-                className="fluid"
-              ></img>
-
-              <figcaption>
-                Image From:{" "}
-                <a
-                  href="https://uxdesign.cc/why-i-believe-in-full-stack-designers-a4a154f6bac2"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                                    Why I believe in full-stack designers by Damian Horn
-
-                </a>
-              </figcaption>
+              <img srcset="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
+              className="fluid mobile max-width-300 center"
+              alt="full-stack design"
+              >
+              </img>
+              <img src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-desktop-01_rdrqma"
+              className="fluid desktop"
+              alt="full-stack design">
+              </img>
             </InViewAnimation>
           </div>
         </div>

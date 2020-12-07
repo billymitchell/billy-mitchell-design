@@ -12,6 +12,7 @@
 @import "../styles/spacing";
 @import "../styles/header";
 @import "../styles/portfolio";
+@import "../styles/responsive";
 
 //Removes Scrollebar
 // ::-webkit-scrollbar {
@@ -70,6 +71,7 @@ section {
   align-items: center;
   overflow-x: hidden;
 }
+
 
 section {
   //Called Mixin function in _colors

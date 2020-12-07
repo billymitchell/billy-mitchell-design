@@ -38,28 +38,19 @@ const IfFeaturedImage = function (node) {
 export default () => (
   <StaticQuery
     query={graphql`
-      query {
-        allAirtable(
-          filter: {
-            table: { eq: "Project" }
-            data: {
-              Creative_Discipline: { eq: "Print Design" }
-              Published: { eq: true }
-            }
-          }
-        ) {
-          nodes {
-            recordId
-            data {
-              Project_Title
-              Featured_Image_URL
-
-              End_Date(formatString: "MM-YYYY")
-              slug
-            }
+    {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Print Design"}, Published: {eq: true}, Job_Type: {ne: "Educational"}}}) {
+        nodes {
+          recordId
+          data {
+            Project_Title
+            Featured_Image_URL
+            End_Date(formatString: "MM-YYYY")
+            slug
           }
         }
       }
+    }
     `}
     render={data => (
       <div className="portfolio-item-container">

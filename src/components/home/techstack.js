@@ -57,11 +57,6 @@ const TeckStack = () => {
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977113/tech-stack/nodejs-new-pantone-black_hbhgnd.svg"
-                alt="Node JS"
-              />
-              <img
-                className="fluid"
                 src="https://res.cloudinary.com/billymitchell/image/upload/v1600977117/tech-stack/Git-logo-01_vzwkrs.svg"
                 alt="Git Worflow"
               />

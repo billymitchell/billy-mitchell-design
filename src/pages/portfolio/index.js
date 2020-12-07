@@ -1,54 +1,56 @@
 import React, { useState } from "react"
+import { StaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout/layout"
 import { ParallaxProvider } from "react-scroll-parallax"
 import PortfolioContainer from "../../components/portfolio/portfolioContainer"
 
-const categories = [
-  "Featured Work",
-  "Branding",
-  "UI Design & Development",
-  "Illustration",
-  "Print Design",
-  "Video Production",
-  "Mural Art",
-]
-
-const slugify = (category) => {
-  // Make all lower case
-  // Swap `&` for `and`
-  // Swap all spaces for -
-  return (category.toLowerCase().replace('&', 'and').replace(/\s/gi, '-') )
-}
-
-
 export default function Portfolio() {
   //Set default portfolio query to featured-work
-  const [clickedValue, setClickedValue] = useState("featured-work")
+  const [clickedValue, setClickedValue] = useState("featured")
 
-  //on btn click, set value = to button value
+  //on btn click, set state value = to button value
   const onButtonClick = event => {
     setClickedValue(event.target.value)
   }
 
   return (
-    <div id="portfolio" className="bg-black">
-      <ParallaxProvider>
-        <Layout>
-          <div className="outer-container">
-            <div className="inner-width">
-              <h1>Portfolio</h1>
-              <div className="button-container">
-              {categories.map(category => (
-                <button value={slugify(category)} onClick={onButtonClick}>{category}</button>
-              ))
-              }
+    <StaticQuery
+      // Get distinct catagories 
+      query={graphql`
+      query categories {
+        allAirtable(filter: {data: {Published: {eq: true}, Job_Type: {ne: "Educational"}}}) {
+          distinct(field: data___Creative_Discipline)
+        }
+      }     
+      `}
+      render={data => (
+      <div id="portfolio" className="bg-black">
+        <ParallaxProvider>
+          <Layout>
+            <div className="outer-container">
+              <div className="inner-width">
+                <h1>Portfolio</h1>
+                <div className="button-container">
+                {data.allAirtable.distinct.map(distinct => (
+                  // For each category
+                  <button 
+                    // Make all lower case
+                    // Swap `&` for `and`
+                    // Swap all spaces for -
+                  value={distinct.toLowerCase().replace('&', 'and').replace(/\s/gi, '-')}
+                  onClick={onButtonClick}>{distinct}</button>
+                ))
+                }
+                </div>
+                {/* pass clicked value to portfolio */}
+                <PortfolioContainer clickedValue={clickedValue} />
               </div>
-              {/* pass clicked value to portfolio */}
-              <PortfolioContainer clickedValue={clickedValue} />
             </div>
-          </div>
-        </Layout>
-      </ParallaxProvider>
-    </div>
-  )
-}
+          </Layout>
+        </ParallaxProvider>
+      </div>
+      )}
+      />
+    )
+  }
+  

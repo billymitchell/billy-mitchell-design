@@ -73,6 +73,10 @@ const ifCustomBodyHTML = function (data) {
   }
 }
 
+// const check = function (data) {
+//   console.log(data)
+// }
+
 export const query = graphql`
   query($slug: String!) {
     allAirtable(
@@ -101,6 +105,8 @@ export const query = graphql`
     }
   }
 `
+
+
 
 const Portfolio = ({ data }) => (
   <>
@@ -136,7 +142,16 @@ const Portfolio = ({ data }) => (
                 <div>{IfLiveURL(data)}</div>
                 <div>
                   <b>Creative Discipline:</b>{" "}
-                  {data.allAirtable.nodes[0].data.Creative_Discipline}
+                  {/* {check(data)} */}
+                {/* {data.allAirtable.nodes[0].data.Creative_Discipline} */}
+                  {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
+                    <>
+                    <span>
+                    {" "}
+                        | {Creative_Discipline}
+                    </span>
+                    </>
+                  ))}
                 </div>
                 <div>
                   <b>Job Type:</b> {data.allAirtable.nodes[0].data.Job_Type}

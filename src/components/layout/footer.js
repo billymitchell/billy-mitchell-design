@@ -33,14 +33,14 @@ const Footer = () => {
               </p>
             </div>
             <div className="external-social-links">
-              <a
+              {/* <a
               target="_blank"
                 value="Instagram"
                 href="https://www.instagram.com/billymitchelldesign/"
                 rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>
-              </a>
+              </a> */}
               <a target="_blank" value="Twitter" href="https://twitter.com/designbilly" rel="noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
@@ -51,13 +51,13 @@ const Footer = () => {
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a
+              {/* <a
                 target="_blank" value="Codepen"
                 href="https://codepen.io/Billymitchell/pens/popular/"
                 rel="noreferrer"
               >
                 <i className="fab fa-codepen"></i>
-              </a>
+              </a> */}
               <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
                 
                 <i className="fab fa-github"></i>
@@ -68,13 +68,13 @@ const Footer = () => {
                 Made with <span style={{ color: "red" }}>♥</span> on a rock in
                 space
                 <br />
-                Copyright © <GetCurrentDate /> Billy Mitchell Design Co.
+                Copyright © <GetCurrentDate /> Billy Mitchell Design LLC
                 <br />
               </small>
               <span className="block padding-5">
                 <small>
-                  <a href="https://github.com/billymitchelldesign/gatsby">
-                    The code that powers this website is Open Source.
+                  <a href="https://github.com/billymitchell/main-website">
+                    The code that powers this website is Open Source!
                   </a>
                 </small>
               </span>
