@@ -102,6 +102,7 @@ export const query = graphql`
           Body_Text
           Custom_HTML
           Hide_Featured_Image_In_Body
+          Made_With
         }
       }
     }
@@ -171,6 +172,17 @@ const Portfolio = ({ data }) => (
                 </div>
                 <div>
                   <div>{IfPosition(data)}</div>
+                </div>
+                <div>
+                <b>Made With:</b>{" "}
+                  {data.allAirtable.nodes[0].data.Made_With.map(Made_With => (
+                    
+                      <span className="Company">
+                        {" "}
+                        | {Made_With}
+                      </span>
+                    
+                  ))}
                 </div>
               </p>
             </div>
