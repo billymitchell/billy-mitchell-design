@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import GetCurrentDate from "../utilities/getcurrentdate"
+import resume from "../../../static/downloads/Billy-Mitchell-Resume-2020.pdf"
 
 const FooterStyle = styled.div`
   text-align: center;
@@ -29,18 +30,12 @@ const Footer = () => {
                 <br></br>
                 <a value="phone" href="tel:4437658265">
                   443-765-8265
-                </a>
+                </a><br></br>
+                <a href={resume}>Resume</a>
               </p>
             </div>
             <div className="external-social-links">
-              {/* <a
-              target="_blank"
-                value="Instagram"
-                href="https://www.instagram.com/billymitchelldesign/"
-                rel="noreferrer"
-              >
-                <i className="fab fa-instagram"></i>
-              </a> */}
+
               <a target="_blank" value="Twitter" href="https://twitter.com/designbilly" rel="noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
@@ -51,13 +46,7 @@ const Footer = () => {
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              {/* <a
-                target="_blank" value="Codepen"
-                href="https://codepen.io/Billymitchell/pens/popular/"
-                rel="noreferrer"
-              >
-                <i className="fab fa-codepen"></i>
-              </a> */}
+
               <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
                 
                 <i className="fab fa-github"></i>
