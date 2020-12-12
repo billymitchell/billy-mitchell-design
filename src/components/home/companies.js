@@ -2,33 +2,21 @@ import React from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
 import Parallax from "../utilities/Parallax"
-import { Link } from "gatsby"
 
 export default function Companies() {
   return (
     <StaticQuery
       query={graphql`
-        query {
-          allAirtable(
-            filter: {
-              data: {
-                Company_Name: { ne: null }
-                Featured_Project: { ne: null }
-                Feature: { eq: true }
-              }
-            }
-            sort: { fields: data___Company_Name, order: ASC }
-          ) {
-            nodes {
-              recordId
-              data {
-                Company_Name
-                URL
-                Featured_Project
-              }
+      {
+        allAirtable(filter: {data: {Company_Name: {ne: null}, Feature: {eq: true}}}, sort: {fields: data___Company_Name, order: ASC}) {
+          nodes {
+            recordId
+            data {
+              Company_Name
             }
           }
         }
+      }
       `}
       render={data => (
         <section id="companies" className="v-h-center-100vh bg-blue">
@@ -52,12 +40,9 @@ export default function Companies() {
                 </InViewAnimation>
                 <div className="companies-container grid-container col-4 col-gap-15 small-col-2 small-col-gap-5">
                   {data.allAirtable.nodes.map(node => (
-                    <Link
-                      key={node.recordId}
-                      href={`/portfolio/${node.data.Featured_Project[0]}`}
-                    >
+                    
                       <small>{node.data.Company_Name}</small>
-                    </Link>
+
                   ))}
                 </div>
               </div>

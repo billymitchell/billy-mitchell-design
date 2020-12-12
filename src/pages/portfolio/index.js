@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link  } from "gatsby"
 import Layout from "../../components/layout/layout"
 import { ParallaxProvider } from "react-scroll-parallax"
 import PortfolioContainer from "../../components/portfolio/portfolioContainer"
@@ -30,6 +30,7 @@ export default function Portfolio() {
             <div className="outer-container">
               <div className="inner-width">
                 <h1>Portfolio</h1>
+                <h3>Selected Works</h3>
                 <div className="button-container">
                 {data.allAirtable.distinct.map(distinct => (
                   // For each category
@@ -44,6 +45,9 @@ export default function Portfolio() {
                 </div>
                 {/* pass clicked value to portfolio */}
                 <PortfolioContainer clickedValue={clickedValue} />
+                <div className="text-center">
+                <Link to="/portfolio/all" >View All Works</Link>
+                </div>
               </div>
             </div>
           </Layout>

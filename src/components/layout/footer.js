@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import GetCurrentDate from "../utilities/getcurrentdate"
-import resume from "../../../static/downloads/Billy-Mitchell-Resume-2020.pdf"
+import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2020.pdf"
 
 const FooterStyle = styled.div`
   text-align: center;
@@ -31,7 +31,7 @@ const Footer = () => {
                 <a value="phone" href="tel:4437658265">
                   443-765-8265
                 </a><br></br>
-                <a href={resume}>Resume</a>
+                <a href={Resume}>Resume</a>
               </p>
             </div>
             <div className="external-social-links">
@@ -63,7 +63,7 @@ const Footer = () => {
               <span className="block padding-5">
                 <small>
                   <a href="https://github.com/billymitchell/main-website">
-                    The code that powers this website is Open Source!
+                    This website code is Open Source!
                   </a>
                 </small>
               </span>

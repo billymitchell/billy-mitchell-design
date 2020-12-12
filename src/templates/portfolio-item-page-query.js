@@ -73,46 +73,46 @@ const ifCustomBodyHTML = function (data) {
   }
 }
 
-// const checkData = function (data) {
-//   {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
-//     console.log({Creative_Discipline})
-//   ))}
-// }
+const checkData = function (data) {
+  console.log(data)
+  // {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
+  //   console.log({Creative_Discipline})
+  // ))}
+}
 
 export const query = graphql`
-  query($slug: String!) {
-    allAirtable(
-      filter: { table: { eq: "Project" }, data: { slug: { eq: $slug } } }
-    ) {
-      nodes {
-        data {
-          Project_Title
-          End_Date(formatString: "MMMM DD, YYYY")
-          Live_Web_Project_URL
-          Creative_Discipline
-          Job_Type
-          Made_For {
-            recordId
-            data {
-              Company_Name
-            }
+query ($Project_Title: String) {
+  allAirtable (filter: {table: {eq: "Project"}, data: {Project_Title: {eq: $Project_Title}}}) {
+    nodes {
+      data {
+        Project_Title
+        End_Date(formatString: "MMMM DD, YYYY")
+        Live_Web_Project_URL
+        Creative_Discipline
+        Job_Type
+        Made_For {
+          recordId
+          data {
+            Company_Name
           }
-          Position_on_Project
-          Featured_Image_URL
-          Body_Text
-          Custom_HTML
-          Hide_Featured_Image_In_Body
-          Made_With
         }
+        Position_on_Project
+        Featured_Image_URL
+        Body_Text
+        Custom_HTML
+        Hide_Featured_Image_In_Body
+        Made_With
       }
     }
   }
+}
 `
 
 
 
 const Portfolio = ({ data }) => (
   <>
+  {checkData(data)}
     <div id="portfolio">
       <MetaData
         title={data.allAirtable.nodes[0].data.Project_Title}

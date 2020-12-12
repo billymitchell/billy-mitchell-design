@@ -46,7 +46,6 @@ export default () => (
             Project_Title
             Featured_Image_URL
             End_Date(formatString: "MM-YYYY")
-            slug
           }
         }
       }
@@ -66,7 +65,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={`/portfolio/${node.data.slug}`}>
+              <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/","").replace(" / ","")}`}>
                 {IfFeaturedImage(node)}
               </Link>
             </div>

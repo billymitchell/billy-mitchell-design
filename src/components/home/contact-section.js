@@ -10,8 +10,7 @@ const FullStack = () => {
           <div className="inner-text-width">
             <h3>Contact</h3>
             <p>
-              Please contact me if your organization genuinely values design as
-              a core strategy in all aspects of business growth.
+              Please contact me and I'll get back to you as soon as I can.
             </p>
             <ContactFrom />
           </div>

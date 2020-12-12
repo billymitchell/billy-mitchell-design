@@ -35,31 +35,23 @@ const IfFeaturedImage = function (node) {
   }
 }
 
+
+
 export default () => (
   <StaticQuery
     query={graphql`
-      query {
-        allAirtable(
-          filter: {
-            table: { eq: "Project" }
-            data: {
-              Creative_Discipline: { eq: "Illustration" }
-              Published: { eq: true }
-            }
-          }
-        ) {
-          nodes {
-            recordId
-            data {
-              Project_Title
-              Featured_Image_URL
-
-              End_Date(formatString: "MM-YYYY")
-              slug
-            }
+    {
+      allAirtable(filter: {table: {eq: "Project"}}) {
+        nodes {
+          recordId
+          data {
+            Project_Title
+            Featured_Image_URL
+            End_Date(formatString: "MM-YYYY")
           }
         }
       }
+    }
     `}
     render={data => (
       <div className="portfolio-item-container">
@@ -69,15 +61,17 @@ export default () => (
           columnClassName="my-masonry-grid_column"
         >
           {data.allAirtable.nodes.map(node => (
+
             <div
               key={node.recordId}
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={`/portfolio/${node.data.slug}`}>
+              <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/","").replace(" / ","")}`}>
                 {IfFeaturedImage(node)}
               </Link>
             </div>
+
           ))}
         </Masonry>
       </div>
