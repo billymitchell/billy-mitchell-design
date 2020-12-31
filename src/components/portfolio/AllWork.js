@@ -18,7 +18,7 @@ const IfFeaturedImage = function (node) {
         <img
           className="fluid"
           id={node.recordId}
-          src={`https://res.cloudinary.com/billymitchell/image/upload/c_mfit,f_auto,q_auto:good,w_600,fl_progressive/${node.data.Featured_Image_URL}`}
+          src={`https://res.cloudinary.com/billymitchell/image/upload/c_mfit,f_auto,q_auto:good,w_600,fl_progressive/portfolio/${node.data.Featured_Image_URL}`}
           alt={node.data.Project_Title}
         />
         <p className="title">
@@ -67,7 +67,7 @@ export default () => (
               id={node.recordId}
               className="portfolio-item"
             >
-              <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/","").replace(" / ","")}`}>
+              <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/", "").replace(" / ", "")}`}>
                 {IfFeaturedImage(node)}
               </Link>
             </div>

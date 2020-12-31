@@ -53,7 +53,7 @@ const renderHeader = function (data) {
       <>
         <img
           className="fetched-header"
-          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:best/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
+          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:best/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
           alt={data.allAirtable.nodes[0].data.Project_Title}
         ></img>
       </>
@@ -112,7 +112,7 @@ query ($Project_Title: String) {
 
 const Portfolio = ({ data }) => (
   <>
-  {checkData(data)}
+    {checkData(data)}
     <div id="portfolio">
       <MetaData
         title={data.allAirtable.nodes[0].data.Project_Title}
@@ -122,14 +122,14 @@ const Portfolio = ({ data }) => (
           </>
         ))}
         url={`/portfolio/project/${data.allAirtable.nodes[0].data.slug}`}
-        socialimg={data.allAirtable.nodes[0].data.Featured_Image_URL}
+        socialimg={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
       />
       <Layout>
         <div className="portfolio-header-container">
           <div className="image-container">
             <img
               className="portfolio-header"
-              src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
+              src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
               alt={data.allAirtable.nodes[0].data.Project_Title}
             ></img>
           </div>
@@ -145,15 +145,15 @@ const Portfolio = ({ data }) => (
                 <div>{IfLiveURL(data)}</div>
                 <div>
                   <b>Creative Discipline:</b>{" "}
-                  
-                
+
+
                   {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
-                    
+
                     <span>
-                    {" "}
+                      {" "}
                         | {Creative_Discipline}
                     </span>
-                    
+
                   ))}
                 </div>
                 <div>
@@ -162,26 +162,26 @@ const Portfolio = ({ data }) => (
                 <div>
                   <b>Made for:</b>{" "}
                   {data.allAirtable.nodes[0].data.Made_For.map(item => (
-                    
-                      <span className="Company">
-                        {" "}
+
+                    <span className="Company">
+                      {" "}
                         | {item.data.Company_Name}
-                      </span>
-                    
+                    </span>
+
                   ))}
                 </div>
                 <div>
                   <div>{IfPosition(data)}</div>
                 </div>
                 <div>
-                <b>Made With:</b>{" "}
+                  <b>Made With:</b>{" "}
                   {data.allAirtable.nodes[0].data.Made_With.map(Made_With => (
-                    
-                      <span className="Company">
-                        {" "}
+
+                    <span className="Company">
+                      {" "}
                         | {Made_With}
-                      </span>
-                    
+                    </span>
+
                   ))}
                 </div>
               </p>
