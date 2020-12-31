@@ -14,7 +14,7 @@
 }
 
 /* Style your items */
-.my-masonry-grid_column > .portfolio-item {
+.my-masonry-grid_column>.portfolio-item {
   /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 15px;
 }
@@ -140,4 +140,13 @@
 .customHTML {
   width: 100%;
   padding: 15px;
+}
+
+.title-no-featured-image {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .16);
+  height: 75px;
 }
