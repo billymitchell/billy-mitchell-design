@@ -72,11 +72,6 @@ const TeckStack = () => {
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977118/tech-stack/adobe-xd-logo-svg-vector-01_zw1khl.svg"
-                alt="Adobe ID"
-              />
-              <img
-                className="fluid"
                 src="https://res.cloudinary.com/billymitchell/image/upload/v1600977117/tech-stack/Adobe_After_Effects_CC_icon_ej67ez.svg"
                 alt="Adobe AE"
               />
@@ -95,6 +90,11 @@ const TeckStack = () => {
                 src="https://res.cloudinary.com/billymitchell/image/upload/v1600977118/tech-stack/Figma-logo_hpsrgq.svg"
                 alt="Figma"
               />
+              <img
+                className="fluid"
+                src="https://res.cloudinary.com/billymitchell/image/upload/v1610402539/tech-stack/google-icon.svg"
+                alt="Google"
+              />
             </div>
           </div>
         </div>
@@ -104,3 +104,4 @@ const TeckStack = () => {
 }
 
 export default TeckStack
+

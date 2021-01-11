@@ -32,16 +32,16 @@ export default function Companies() {
                   iteration="loop-1"
                   className="init-invisible"
                 >
+
                   <h3>Businesses I've Worked With</h3>
                   <p>
-                    Here are some of the businesses I've worked with, including
-                    direct employment, agency work, freelance, and B2B services.
+                    Direct employment, agency work, contract, and B2B services.
                   </p>
                 </InViewAnimation>
                 <div className="companies-container grid-container col-4 col-gap-15 small-col-2 small-col-gap-5">
                   {data.allAirtable.nodes.map(node => (
-                    
-                      <small>{node.data.Company_Name}</small>
+
+                    <small>{node.data.Company_Name}</small>
 
                   ))}
                 </div>
