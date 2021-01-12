@@ -39,7 +39,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Print Design"}, Published: {eq: true}, Job_Type: {ne: "Educational"}}}) {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Published: {eq: true}, Featured: {eq: true}}}) {
         nodes {
           recordId
           data {
@@ -49,8 +49,7 @@ export default () => (
           }
         }
       }
-    }
-    
+    }    
     `}
     render={data => (
       <div className="portfolio-item-container">
