@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import GetCurrentDate from "../utilities/getcurrentdate"
-import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2020.pdf"
+import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2021.pdf"
 
 const FooterStyle = styled.div`
   text-align: center;
@@ -48,7 +48,7 @@ const Footer = () => {
               </a>
 
               <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
-                
+
                 <i className="fab fa-github"></i>
               </a>
             </div>

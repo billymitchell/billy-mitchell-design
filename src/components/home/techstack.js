@@ -27,72 +27,77 @@ const TeckStack = () => {
             <div className="teck-stack-container grid-container col-5 col-gap-30 small-col-4 small-col-gap-">
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977118/tech-stack/HTML5_logo_and_wordmark_hpthcm.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/HTML5_logo_and_wordmark_hpthcm"
                 alt="HTML"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977113/tech-stack/CSS3_logo_and_wordmark_mkbbgs.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/CSS3_logo_and_wordmark_mkbbgs"
                 alt="CSS"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977113/tech-stack/Unofficial_JavaScript_logo_2_fetebo.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Unofficial_JavaScript_logo_2_fetebo"
                 alt="Javascript"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977116/tech-stack/React-icon_sppngx.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/React-icon_sppngx"
                 alt="React"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977116/tech-stack/Gatsby-Monogram_otocnt.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Gatsby-Monogram_otocnt"
                 alt="Gatsby"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977113/tech-stack/sass-1_bkguwu.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/sass-1_bkguwu"
                 alt="Sass"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977117/tech-stack/Git-logo-01_vzwkrs.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Git-logo-01_vzwkrs"
                 alt="Git Worflow"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977114/tech-stack/photoshop-cc_tudva9.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/photoshop-cc_tudva9"
                 alt="Adobe PS"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977113/tech-stack/Adobe_Illustrator_CC_icon_rp6dnl.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Adobe_Illustrator_CC_icon_rp6dnl"
                 alt="Adobe IL"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977117/tech-stack/Adobe_After_Effects_CC_icon_ej67ez.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Adobe_After_Effects_CC_icon_ej67ez"
                 alt="Adobe AE"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977119/tech-stack/Adobe_Premiere_Pro_Logo_ceowzq.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Adobe_Premiere_Pro_Logo_ceowzq"
                 alt="Adobe PP"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977118/tech-stack/adobe-xd-logo-svg-vector-01_zw1khl.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/adobe-xd-logo-svg-vector-01_zw1khl"
                 alt="Adobe XD"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1600977118/tech-stack/Figma-logo_hpsrgq.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/Figma-logo_hpsrgq"
                 alt="Figma"
               />
               <img
                 className="fluid"
-                src="https://res.cloudinary.com/billymitchell/image/upload/v1610402539/tech-stack/google-icon.svg"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/wordpress"
+                alt="Wordpress"
+              />
+              <img
+                className="fluid"
+                src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/tech-stack/google-icon"
                 alt="Google"
               />
             </div>

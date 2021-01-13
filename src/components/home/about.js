@@ -19,7 +19,7 @@ const FullStack = () => {
             >
               <div className="container">
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
-                  <img className="border-box fluid clip-circular padding-8 border-r-full bg-gradient" src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/PhotoByMicahEWood-156-web.jpg" />
+                  <img className="border-box fluid clip-circular padding-8 border-r-full bg-gradient" src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/PhotoByMicahEWood-156-web.jpg" alt="billy mitchell head shot" />
                   <p>
                     I am a designer and developer with 7+ years of experience who operates Billy Mitchell Design in Baltimore, Maryland. I contract on an ongoing basis in addition to availability as a full-time employee. I've worked with everyone from small businesses to fortune 500 companies to apply design thinking, leverage human-centered design principles, and build solutions to complex problems. In addition to numerous web development courses, I've obtained a BFA in Design from the University of Maryland, Baltimore County.
                   </p>
