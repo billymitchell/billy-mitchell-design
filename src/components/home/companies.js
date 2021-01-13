@@ -3,6 +3,7 @@ import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
 import Parallax from "../utilities/Parallax"
 
+
 export default function Companies() {
   return (
     <StaticQuery
