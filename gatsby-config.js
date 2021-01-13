@@ -23,6 +23,10 @@ module.exports = {
             baseId: `appvr5KrgKiJo1E7M`,
             tableName: `Companies`,
           },
+          {
+            baseId: `appvr5KrgKiJo1E7M`,
+            tableName: `Services`,
+          },
         ],
       },
     },

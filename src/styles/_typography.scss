@@ -124,6 +124,7 @@ li {
   font-size: $peragraph-font-size;
   line-height: $peragraph-line-height;
 }
+
 blockquote {
   font-size: $blockquote-font-size;
   line-height: $blockquote-line-height;
@@ -163,8 +164,8 @@ sup {
 small {
   font-size: $small-font-size;
   line-height: $small-line-height;
-  margin-top: $space;
-  margin-bottom: $space;
+  margin-top: $space * .5;
+  margin-bottom: $space * .5;
 }
 
 // Definitions
@@ -179,17 +180,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght"800;
 }
 
 footer,
 footer small {
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght"400;
 }
 
 p,
 blockquote {
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght"400;
   letter-spacing: 0.25px;
 }
 
@@ -202,22 +203,22 @@ s {
 
 //Inserted text
 ins {
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght"800;
 }
 
 //Stong, Bold, Emphisise
 strong,
 b {
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght"800;
 }
 
 blockquote {
-  font-variation-settings: "ital" 1;
+  font-variation-settings: "ital"1;
 }
 
 //Inline quote
 q {
-  font-variation-settings: "ital" 1;
+  font-variation-settings: "ital"1;
 }
 
 ul,
@@ -238,11 +239,10 @@ ol {
 
 i,
 em {
-  font-variation-settings: "ital" 1;
+  font-variation-settings: "ital"1;
 }
 
-code {
-}
+code {}
 
 //Heighlight
 mark {
@@ -263,7 +263,7 @@ address {
 
 //Links
 a {
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght"800;
   transition: all ease-in-out 0.3s;
   text-decoration-line: underline;
   text-decoration-skip-ink: auto;

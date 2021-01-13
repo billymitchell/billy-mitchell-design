@@ -13,6 +13,7 @@
 @import "../styles/header";
 @import "../styles/portfolio";
 @import "../styles/responsive";
+@import "../styles/borders";
 
 //Removes Scrollebar
 // ::-webkit-scrollbar {
@@ -86,4 +87,8 @@ section {
   width: 100%;
   overflow-x: hidden;
   background: $brand-gradient;
+}
+
+.border-box {
+  box-sizing: border-box;
 }

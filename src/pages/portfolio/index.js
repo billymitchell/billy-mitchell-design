@@ -43,7 +43,7 @@ export default function Portfolio() {
                 </div>
                 {/* pass clicked value to portfolio */}
                 <PortfolioContainerFeatured clickedValue={clickedValue} />
-                <div className="text-center">
+                <div className="text-center padding-top-15 padding-bottom-15">
                   <Link to="/portfolio/all" >View All Published Portfolio Works</Link>
                 </div>
               </div>

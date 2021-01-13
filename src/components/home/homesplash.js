@@ -110,7 +110,7 @@ const Homesplash = () => {
                 iteration="loop-1"
                 className="init-invisible"
               >
-                <h2 className="text-center">Full-Stack Design</h2>
+                <h2 className="text-center">Full-Stack Designer</h2>
               </InViewAnimation>
             </div>
           </div>

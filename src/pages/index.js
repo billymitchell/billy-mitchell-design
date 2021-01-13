@@ -10,6 +10,10 @@ import ContactSection from "../components/home/contact-section"
 import TechStack from "../components/home/techstack"
 import Companies from "../components/home/companies"
 
+
+import About from "../components/home/about"
+import Services from "../components/home/services"
+
 import Separator from "../components/separator"
 
 export default function IndexPage() {
@@ -29,6 +33,10 @@ export default function IndexPage() {
             <TechStack />
             <Separator className="bg-blue" />
             <Companies />
+            <Separator className="bg-green-dark" />
+            <Services />
+            <Separator className="bg-gray-1" />
+            <About />
             <Separator className="bg-black" />
             <ContactSection />
           </Layout>

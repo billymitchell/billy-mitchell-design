@@ -1,8 +1,6 @@
-$brand-gradient: linear-gradient(
-  90deg,
+$brand-gradient: linear-gradient(90deg,
   hsla(141, 76%, 38%, 1) 0%,
-  hsla(201, 95%, 39%, 1) 100%
-);
+  hsla(201, 95%, 39%, 1) 100%);
 
 $blue-dark: hsla(206, 35%, 28%, 1);
 $blue: hsla(201, 95%, 39%, 1);
@@ -33,16 +31,21 @@ $gray-4: hsla(340, 2%, 70%, 1);
 $white: hsla(0, 0%, 97%, 1);
 
 $transparent: hsla(0, 0%, 0%, 0);
+
 .bg-transparent {
-  background-color: $transparent;
+  background: $transparent;
 }
+
 //Set text color based on bg color
 @function set-text-color($bg-color) {
+
   //if bg is lighter then 69%
   @if (lightness($bg-color) > 69) {
     //Set to black
     @return $black;
-  } @else {
+  }
+
+  @else {
     //Set to white
     @return $white;
   }
@@ -50,11 +53,14 @@ $transparent: hsla(0, 0%, 0%, 0);
 
 //Set link hover color
 @function set-link-toggle($bg-color) {
+
   //if bg color is lighter then 19%
   @if (lightness($bg-color) > 19) {
     //bring color closer to max dark by - 50%
     @return scale-color($bg-color, $lightness: -50%);
-  } @else {
+  }
+
+  @else {
     //bring color closer to max light by - 25%
     @return scale-color($bg-color, $lightness: 25%);
   }
@@ -62,32 +68,45 @@ $transparent: hsla(0, 0%, 0%, 0);
 
 //Set bg color, text color and link hover state
 @mixin set-background($bg-color) {
-  background-color: $bg-color;
+  background: $bg-color;
   color: set-text-color($bg-color);
+
   & a {
     color: set-text-color($bg-color);
   }
+
   & a:hover {
     color: set-link-toggle($bg-color);
   }
 }
 
+
+.bg-gradient {
+  background: $brand-gradient
+}
+
+
 //Blue Color
 .bg-blue-dark {
   @include set-background($blue-dark);
 }
+
 .bg-blue {
   @include set-background($blue);
 }
+
 .bg-blue-2 {
   @include set-background($blue-2);
 }
+
 .bg-blue-3 {
   @include set-background($blue-3);
 }
+
 .bg-blue-4 {
   @include set-background($blue-4);
 }
+
 .bg-blue-5 {
   @include set-background($blue-5);
 }
@@ -96,18 +115,23 @@ $transparent: hsla(0, 0%, 0%, 0);
 .bg-brand-dark {
   @include set-background($brand-dark);
 }
+
 .bg-brand {
   @include set-background($brand);
 }
+
 .bg-brand-2 {
   @include set-background($brand-2);
 }
+
 .bg-brand-3 {
   @include set-background($brand-3);
 }
+
 .bg-brand-4 {
   @include set-background($brand-4);
 }
+
 .bg-brand-5 {
   @include set-background($brand-5);
 }
@@ -116,18 +140,23 @@ $transparent: hsla(0, 0%, 0%, 0);
 .bg-green-dark {
   @include set-background($green-dark);
 }
+
 .bg-green {
   @include set-background($green);
 }
+
 .bg-green-2 {
   @include set-background($brand-2);
 }
+
 .bg-green-3 {
   @include set-background($brand-3);
 }
+
 .bg-green-4 {
   @include set-background($brand-4);
 }
+
 .bg-green-5 {
   @include set-background($brand-5);
 }
@@ -136,18 +165,23 @@ $transparent: hsla(0, 0%, 0%, 0);
 .bg-black {
   @include set-background($black);
 }
+
 .bg-gray-1 {
   @include set-background($gray-1);
 }
+
 .bg-gray-2 {
   @include set-background($gray-2);
 }
+
 .bg-gray-3 {
   @include set-background($gray-3);
 }
+
 .bg-gray-4 {
   @include set-background($gray-4);
 }
+
 .bg-white {
   @include set-background($white);
 }
