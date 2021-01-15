@@ -41,6 +41,10 @@ export default function Portfolio() {
                   ))
                   }
                 </div>
+              </div>
+            </div>
+            <div className="outer-container">
+              <div className="inner-width-full">
                 {/* pass clicked value to portfolio */}
                 <PortfolioContainerFeatured clickedValue={clickedValue} />
                 <div className="text-center padding-top-15 padding-bottom-15">
@@ -48,8 +52,9 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
+
           </Layout>
-        </div>
+        </ div>
       )}
     />
   )

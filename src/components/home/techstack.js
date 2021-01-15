@@ -7,7 +7,7 @@ const TeckStack = () => {
     <section id="tech-stack" className="v-h-center-100vh bg-white">
       <Parallax>
         <div className="outer-container">
-          <div className="inner-text-width">
+          <div className="inner-width-800">
             <InViewAnimation
               animation="fade-in-up"
               duration="time-1000ms"

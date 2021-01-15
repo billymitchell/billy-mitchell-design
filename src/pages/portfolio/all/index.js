@@ -41,12 +41,16 @@ export default function Portfolio() {
                   ))
                   }
                 </div>
+              </div>
+            </div>
+            <div className="outer-container">
+              <div className="inner-width-full">
                 {/* pass clicked value to portfolio */}
                 <PortfolioContainerAll clickedValue={clickedValue} />
               </div>
             </div>
           </Layout>
-        </div>
+        </ div>
       )}
     />
   )

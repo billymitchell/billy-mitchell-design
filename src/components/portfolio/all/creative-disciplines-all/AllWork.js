@@ -39,7 +39,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Published: {eq: true}}}) {
+      allAirtable(filter: {table: {eq: "Project"}}) {
         nodes {
           recordId
           data {

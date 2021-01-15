@@ -9,7 +9,7 @@ const FullStack = () => {
       <Parallax>
 
         <div className="outer-container">
-          <div className="inner-text-width">
+          <div className="inner-width-600">
 
             <h3>Contact</h3>
             <p>

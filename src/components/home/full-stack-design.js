@@ -7,7 +7,7 @@ const FullStack = () => {
     <section id="full-stack" className="v-h-center-100vh bg-black mobile-height-fluid">
       <Parallax>
         <div className="outer-container">
-          <div className="inner-text-width">
+          <div className="inner-width-1000">
             <InViewAnimation
               animation="fade-in-up"
               duration="time-1000ms"

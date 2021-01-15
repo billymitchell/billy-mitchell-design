@@ -10,8 +10,9 @@ button {
   box-sizing: content-box;
   transition: all 0.25s ease-in-out;
   text-transform: uppercase;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "wght"600;
   letter-spacing: 1px;
+
   &:hover {
     background-color: $gray-1;
     color: $white;
@@ -21,8 +22,9 @@ button {
 button.primary {
   background-color: $brand;
   border: 1px solid $white;
+
   &:hover {
-    background-color: $brand-dark;
+    background-color: $brand-dark-5;
     color: $white;
   }
 }

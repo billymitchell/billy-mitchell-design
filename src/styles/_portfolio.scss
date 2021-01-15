@@ -1,4 +1,5 @@
 @import "../styles/animations";
+@import "../styles/colors";
 
 .my-masonry-grid {
   display: flex;
@@ -25,7 +26,7 @@
   height: auto;
 
   a {
-    &:hover {
+    &:hover .title {
       color: $white;
     }
   }

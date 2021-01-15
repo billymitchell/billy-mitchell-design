@@ -168,6 +168,13 @@ small {
   margin-bottom: $space * .5;
 }
 
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
 // Definitions
 
 body {

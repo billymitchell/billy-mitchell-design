@@ -19,7 +19,7 @@ const FooterStyle = styled.div`
 const Footer = () => {
   return (
     <FooterStyle>
-      <footer className="bg-brand-dark">
+      <footer className="bg-brand-dark-5">
         <div className="outer-container">
           <div className="inner-width">
             <div className="primary-contact-info">
