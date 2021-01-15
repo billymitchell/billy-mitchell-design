@@ -35,7 +35,7 @@ export default function Companies() {
                 >
                   <h3>Services Offered</h3>
                 </InViewAnimation>
-                <div className="services-container grid-container col-5 small-col-4">
+                <div className="services-container grid-container col-5 small-col-2">
                   {data.allAirtable.nodes.map(service => (
                     <div className="block service padding-top-30 padding-bottom-30 padding-left-20 padding-right-20 border border-solid border-width-1 border-color-white bg-green-dark-4">
                       <img className="block center w-25" src={`https://res.cloudinary.com/billymitchell/image/upload/q_auto:best/${service.data["Services_Image"]}`} alt={service.data["Services_Name"]}></img>
