@@ -56,7 +56,7 @@ const FullStack = () => {
               iteration="loop-1"
               className="init-invisible"
             >
-              <img srcset="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
+              <img srcSet="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
                 className="fluid mobile max-width-210 center"
                 alt="full-stack design"
               >

@@ -71,11 +71,11 @@ const Homesplash = () => {
         <video
           className="homepage-video-file"
           crossOrigin="anonymous"
-          autoPlay="true"
-          muted="true"
-          loop="true"
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
           id="homepage-video-file"
-          playsInline="true"
         >
           <source
             src="https://res.cloudinary.com/billymitchell/video/upload/f_auto,vc_auto/home/Billy-Mitchell-Design-Home-Video_zgl0dp"
