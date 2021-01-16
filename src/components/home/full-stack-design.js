@@ -16,7 +16,8 @@ const FullStack = () => {
     } else {
       console.log("Parallax Enabled On Desktop")
     }
-  }, [])
+    // when the state changes, re-render
+  }, [parallaxDisabledState])
   return (
     <section id="full-stack" className="v-h-center-100vh bg-black mobile-height-fluid small-padding-top-100 small-padding-bottom-100">
       <div className="outer-container">

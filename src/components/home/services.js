@@ -21,7 +21,8 @@ export default function Companies() {
     } else {
       console.log("Parallax Enabled On Desktop")
     }
-  }, [])
+    // when the state changes, re-render
+  }, [parallaxDisabledState])
   return (
     <StaticQuery
       query={graphql`
