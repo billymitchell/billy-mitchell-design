@@ -44,4 +44,47 @@ $units: (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
   .padding-bottom-#{$spacer} {
     padding-bottom: calc(#{$spacer} * 1px);
   }
+
+  @media only screen and (max-width: 650px) {
+    .small-margin-#{$spacer} {
+      margin: #{$spacer}px;
+    }
+
+    .small-margin-top-#{$spacer} {
+      margin-top: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-margin-left-#{$spacer} {
+      margin-left: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-margin-right-#{$spacer} {
+      margin-right: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-margin-bottom-#{$spacer} {
+      margin-bottom: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-padding-#{$spacer} {
+      padding: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-padding-top-#{$spacer} {
+      padding-top: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-padding-left-#{$spacer} {
+      padding-left: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-padding-right-#{$spacer} {
+      padding-right: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-padding-bottom-#{$spacer} {
+      padding-bottom: calc(#{$spacer} * 1px) !important;
+    }
+
+  }
 }

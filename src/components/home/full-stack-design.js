@@ -2,12 +2,25 @@ import React from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import Parallax from "../utilities/Parallax"
 
+
+const DisableParallaxMobile = () => {
+  if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+    console.log("Parallax Disabled On Mobile");
+    return true
+  } else {
+    console.log("Parallax Enabled On Desktop");
+    return false
+  }
+}
+
+
+
 const FullStack = () => {
   return (
-    <section id="full-stack" className="v-h-center-100vh bg-black mobile-height-fluid">
-      <Parallax>
-        <div className="outer-container">
-          <div className="inner-width-1000">
+    <section id="full-stack" className="v-h-center-100vh bg-black mobile-height-fluid small-padding-top-100 small-padding-bottom-100">
+      <div className="outer-container">
+        <div className="inner-width-1000">
+          <Parallax disabled={DisableParallaxMobile()}>
             <InViewAnimation
               animation="fade-in-up"
               duration="time-1000ms"
@@ -42,7 +55,7 @@ const FullStack = () => {
               className="init-invisible"
             >
               <img srcset="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
-                className="fluid mobile max-width-300 center"
+                className="fluid mobile max-width-210 center"
                 alt="full-stack design"
               >
               </img>
@@ -51,9 +64,9 @@ const FullStack = () => {
                 alt="full-stack design">
               </img>
             </InViewAnimation>
-          </div>
+          </Parallax>
         </div>
-      </Parallax>
+      </div>
     </section>
   )
 }
