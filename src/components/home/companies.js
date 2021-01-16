@@ -1,21 +1,25 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
 import Parallax from "../utilities/Parallax"
 import Separator from "../../components/separator"
 
-const DisableParallaxMobile = () => {
-  if (window.innerWidth <= 800 || window.innerHeight <= 600) {
-    console.log("Parallax Disabled On Mobile");
-    return true
-  } else {
-    console.log("Parallax Enabled On Desktop");
-    return false
-  }
-}
 
 
 export default function Companies() {
+  // Set default state of parallax to enabled  
+  const [parallaxDisabledState, setparallaxDisabledState] = useState(false);
+  // since no .window is available until after the render, useEffect
+  useEffect(() => {
+    // check for small windows
+    if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+      console.log("Parallax Disabled On Mobile")
+      // Set true for small screens
+      setparallaxDisabledState(true)
+    } else {
+      console.log("Parallax Enabled On Desktop")
+    }
+  }, [])
   return (
     <StaticQuery
       query={graphql`
@@ -38,7 +42,7 @@ export default function Companies() {
           <section id="companies" className="v-h-center-100vh bg-blue small-padding-top-100 small-padding-bottom-100">
             <div className="outer-container">
               <div className="inner-width-1000">
-                <Parallax disabled={DisableParallaxMobile()}>
+                <Parallax disabled={parallaxDisabledState}>
                   <InViewAnimation
                     animation="fade-in-up"
                     duration="time-1000ms"

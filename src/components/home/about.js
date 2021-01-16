@@ -1,29 +1,34 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import Parallax from "../utilities/Parallax"
 import Tilt from 'react-tilt'
 // https://github.com/jonathandion/react-tilt
 import Separator from "../../components/separator"
 
-const DisableParallaxMobile = () => {
-  if (window.innerWidth <= 800 || window.innerHeight <= 600) {
-    console.log("Parallax Disabled On Mobile");
-    return true
-  } else {
-    console.log("Parallax Enabled On Desktop");
-    return false
-  }
-}
+
 
 
 const About = () => {
+  // Set default state of parallax to enabled  
+  const [parallaxDisabledState, setparallaxDisabledState] = useState(false);
+  // since no .window is available until after the render, useEffect
+  useEffect(() => {
+    // check for small windows
+    if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+      console.log("Parallax Disabled On Mobile")
+      // Set true for small screens
+      setparallaxDisabledState(true)
+    } else {
+      console.log("Parallax Enabled On Desktop")
+    }
+  }, [])
   return (
     <>
       <Separator className="bg-gray-1" />
       <section id="about" className="v-h-center-100vh bg-gray-1 mobile-height-fluid small-padding-top-100 small-padding-bottom-100">
         <div className="outer-container">
           <div className="inner-width-700">
-            <Parallax disabled={DisableParallaxMobile()}>
+            <Parallax disabled={parallaxDisabledState}>
               <div className="container">
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
                   <InViewAnimation

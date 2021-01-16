@@ -1,28 +1,32 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import InViewAnimation from "../../components/utilities/InViewAnimation"
 import Parallax from "../../components/utilities/Parallax"
 import Separator from "../../components/separator"
 
 
-const DisableParallaxMobile = () => {
-  if (window.innerWidth <= 800 || window.innerHeight <= 600) {
-    console.log("Parallax Disabled On Mobile");
-    return true
-  } else {
-    console.log("Parallax Enabled On Desktop");
-    return false
-  }
-}
 
 
 const TechStack = () => {
+  // Set default state of parallax to enabled  
+  const [parallaxDisabledState, setparallaxDisabledState] = useState(false);
+  // since no .window is available until after the render, useEffect
+  useEffect(() => {
+    // check for small windows
+    if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+      console.log("Parallax Disabled On Mobile")
+      // Set true for small screens
+      setparallaxDisabledState(true)
+    } else {
+      console.log("Parallax Enabled On Desktop")
+    }
+  }, [])
   return (
     <>
       <Separator className="bg-white" />
       <section id="tech-stack" className="v-h-center-100vh bg-white small-padding-top-100 small-padding-bottom-100">
         <div className="outer-container">
           <div className="inner-width-1000">
-            <Parallax disabled={DisableParallaxMobile()}>
+            <Parallax disabled={parallaxDisabledState}>
               <InViewAnimation
                 animation="fade-in-up"
                 duration="time-1000ms"
