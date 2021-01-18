@@ -34,12 +34,6 @@ const About = () => {
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
                   <div className="align-self-center">
                     <InViewAnimation
-                      animation="fade-in-up"
-                      duration="time-1000ms"
-                      delay="delay-0ms"
-                      fillmode="forwards"
-                      easing="ease-in-out-quad"
-                      iteration="loop-1"
                       className="init-invisible"
                     >
                       <Tilt className="Tilt"
@@ -57,12 +51,7 @@ const About = () => {
                     </InViewAnimation>
                   </div>
                   <InViewAnimation
-                    animation="fade-in-up"
-                    duration="time-1000ms"
-                    delay="delay-250ms"
-                    fillmode="forwards"
-                    easing="ease-in-out-quad"
-                    iteration="loop-1"
+                    delay="delay-500ms"
                     className="init-invisible"
                   >
                     <p>
@@ -76,7 +65,6 @@ const About = () => {
                   </InViewAnimation>
                 </div>
               </div>
-
             </Parallax>
           </div>
         </div>

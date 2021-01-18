@@ -91,23 +91,12 @@ const Homesplash = () => {
           <div className="outer-container">
             <div className="inner-width">
               <InViewAnimation
-                animation="fade-in-up"
-                duration="time-1000ms"
-                delay="delay-0ms"
-                fillmode="forwards"
-                easing="ease-in-out-quad"
-                iteration="loop-1"
                 className="init-invisible"
               >
                 <h1 className="text-center">Billy Mitchell</h1>
               </InViewAnimation>
               <InViewAnimation
-                animation="fade-in-up"
-                duration="time-1000ms"
                 delay="delay-250ms"
-                fillmode="forwards"
-                easing="ease-in-out-quad"
-                iteration="loop-1"
                 className="init-invisible"
               >
                 <h2 className="text-center">Full-Stack Designer</h2>

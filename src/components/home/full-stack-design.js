@@ -24,23 +24,12 @@ const FullStack = () => {
         <div className="inner-width-1000">
           <Parallax disabled={parallaxDisabledState}>
             <InViewAnimation
-              animation="fade-in-up"
-              duration="time-1000ms"
-              delay="delay-0ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
               className="init-invisible"
             >
               <h3>What the heck is a "full-stack designer"?</h3>
             </InViewAnimation>
             <InViewAnimation
-              animation="fade-in-up"
-              duration="time-1000ms"
               delay="delay-250ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
               className="init-invisible"
             >
               <p>
@@ -48,12 +37,7 @@ const FullStack = () => {
               </p>
             </InViewAnimation>
             <InViewAnimation
-              animation="fade-in-up"
-              duration="time-1000ms"
               delay="delay-500ms"
-              fillmode="forwards"
-              easing="ease-in-out-quad"
-              iteration="loop-1"
               className="init-invisible"
             >
               <img srcSet="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"

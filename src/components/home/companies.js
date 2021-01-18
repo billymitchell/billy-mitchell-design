@@ -45,18 +45,22 @@ export default function Companies() {
               <div className="inner-width-1000">
                 <Parallax disabled={parallaxDisabledState}>
                   <InViewAnimation
-                    animation="fade-in-up"
-                    duration="time-1000ms"
-                    delay="delay-0ms"
-                    fillmode="forwards"
-                    easing="ease-in-out-quad"
-                    iteration="loop-1"
                     className="init-invisible"
                   >
                     <h3 className="margin-top-0">Businesses I've Worked With</h3>
+                  </InViewAnimation>
+                  <InViewAnimation
+                    className="init-invisible"
+                    delay="delay-250ms"
+                  >
                     <p>
                       Direct employment, agency work, contract, and B2B services.
                   </p>
+                  </InViewAnimation>
+                  <InViewAnimation
+                    delay="delay-500ms"
+                    className="init-invisible"
+                  >
                     <div className="bg-white padding-40 border-r-7 border-width-4 border-solid border-color-gray-1 small-padding-25" >
                       <div className="companies-container grid-container col-5 col-gap-40 small-col-3 small-col-gap-25">
                         {data.allAirtable.nodes.map(node => (
