@@ -18,7 +18,7 @@ const IfFeaturedImage = function (node) {
         <img
           className="fluid"
           id={node.recordId}
-          src={`https://res.cloudinary.com/billymitchell/image/upload/c_mfit,f_auto,q_auto:good,w_600,fl_progressive/portfolio/${node.data.Featured_Image_URL}`}
+          src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,f_auto,q_auto:good/portfolio/${node.data.Featured_Image_URL}`}
           alt={node.data.Project_Title}
         />
         <p className="title">
