@@ -22,8 +22,11 @@ const InViewAnimation = ({
   iteration,
   // class
   className,
+  // percent visible before event triggers
+  threshold,
   // Contents within
   children,
+
 }) => {
   return (
     // react-intersection-observer component 

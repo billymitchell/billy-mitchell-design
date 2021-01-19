@@ -2,6 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
+import InViewAnimation from "../../../../components/utilities/InViewAnimation"
+
+
+
+
 
 const breakpointColumnsObj = {
   default: 4,
@@ -39,7 +44,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Illustration"}, Published: {eq: true},Featured: {eq: true}}}) {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Illustration"}, Published: {eq: true},Featured: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
         nodes {
           recordId
           data {
@@ -59,16 +64,21 @@ export default () => (
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          {data.allAirtable.nodes.map(node => (
-            <div
-              key={node.recordId}
-              id={node.recordId}
-              className="portfolio-item"
+          {data.allAirtable.nodes.map((node, index) => (
+            <InViewAnimation
+              delay={`delay-${((index * 50) + 200)}ms`}
+              className="init-invisible"
             >
-              <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/", "").replace(" / ", "")}`}>
-                {IfFeaturedImage(node)}
-              </Link>
-            </div>
+              <div
+                key={node.recordId}
+                id={node.recordId}
+                className="portfolio-item"
+              >
+                <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/", "").replace(" / ", "")}`}>
+                  {IfFeaturedImage(node)}
+                </Link>
+              </div>
+            </InViewAnimation>
           ))}
         </Masonry>
       </div>
