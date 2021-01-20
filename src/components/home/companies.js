@@ -2,24 +2,41 @@ import React, { useEffect, useState } from "react"
 import InViewAnimation from "../utilities/InViewAnimation"
 import { StaticQuery, graphql } from "gatsby"
 import Parallax from "../utilities/Parallax"
-import Separator from "../../components/separator"
+// import Separator from "../../components/separator"
+import SeparatorTop from "../../components/separator-top"
+import SeparatorBottom from "../../components/separator-bottom"
 
 
 
 export default function Companies() {
-  // Set default state of parallax to enabled  
+  // Set default state of parallax to enabled / not disabled
   const [parallaxDisabledState, setparallaxDisabledState] = useState(false);
-  // since no .window is available until after the render, useEffect
+
+  // .window is not available until after the render - useEffect needed
   useEffect(() => {
-    // check for small windows
-    if (window.innerWidth <= 800 || window.innerHeight <= 600) {
-      console.log("Parallax Disabled On Mobile")
-      // Set true for small screens
-      setparallaxDisabledState(true)
-    } else {
-      console.log("Parallax Enabled On Desktop")
+
+    function handleResize() {
+      // check for small windows
+      if (window.innerWidth <= 800 || window.innerHeight <= 600) {
+        // Set true for small screens
+        setparallaxDisabledState(true)
+        // log state
+        console.log("Parallax Disabled", parallaxDisabledState)
+      } else {
+        // log state
+        console.log("Parallax Disabled", parallaxDisabledState)
+      }
     }
-    // when the state changes, re-render
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // When the window resizes, call handleResize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+
   }, [parallaxDisabledState])
   return (
     <StaticQuery
@@ -39,8 +56,8 @@ export default function Companies() {
       `}
       render={data => (
         <>
-          <Separator className="bg-blue" />
-          <section id="companies" className="v-h-center-100vh bg-blue small-padding-top-100 small-padding-bottom-100">
+          <SeparatorTop className="bg-blue" />
+          <section id="companies" className="home-page-section bg-blue small-padding-top-50 small-padding-bottom-50">
             <div className="outer-container">
               <div className="inner-width-1000">
                 <Parallax disabled={parallaxDisabledState}>
@@ -73,6 +90,7 @@ export default function Companies() {
               </div>
             </div>
           </section>
+          <SeparatorBottom className="bg-blue" />
         </>
       )}
     />
