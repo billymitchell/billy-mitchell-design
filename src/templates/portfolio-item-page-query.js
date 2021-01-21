@@ -50,9 +50,11 @@ const renderHeader = function (data) {
     // if no html header & hide featured image is true
     data.allAirtable.nodes[0].data.Hide_Featured_Image_In_Body === true
   ) {
+    // Don't show anything
     return <></>
   } else {
     // if condition 1 & 2 are false
+    // Show featured image
     return (
       <>
         <img
@@ -116,7 +118,7 @@ query ($Project_Title: String) {
 
 const Portfolio = ({ data }) => (
   <>
-    {checkData(data)}
+    {/* {checkData(data)} */}
     <div id="portfolio">
       <MetaData
         title={data.allAirtable.nodes[0].data.Project_Title}
@@ -126,10 +128,12 @@ const Portfolio = ({ data }) => (
           </>
         ))}
         url={`/portfolio/project/${data.allAirtable.nodes[0].data.slug}`}
+        // To Do: Add Fallback Meta Image If No Featured Image
         socialimg={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
       />
       <Layout>
         <div className="portfolio-header-container">
+          {/* To Do: Add Fallback Header If No Featured Image*/}
           <div className="image-container">
 
             <img
