@@ -79,9 +79,9 @@ export default function Companies() {
                     className="init-invisible"
                   >
                     <div className="bg-white padding-40 border-r-7 border-width-4 border-solid border-color-gray-1 small-padding-25" >
-                      <div className="companies-container grid-container col-5 col-gap-40 small-col-3 small-col-gap-25">
+                      <div className="companies-container grid-container col-5 col-gap-60 small-col-3 small-col-gap-25">
                         {data.allAirtable.nodes.map(node => (
-                          <img key={node.recordId} className="companies fluid justify-self-center align-self-center" src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/${node.data.Company_Logo}`} alt={node.data.Company_Name} />
+                          <img key={node.recordId} className={`companies fluid justify-self-center align-self-center ${node.data.Company_Name.toLowerCase().replace('&', 'and').replace(/\s/gi, '-')}`} src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/${node.data.Company_Logo}`} alt={node.data.Company_Name} />
                         ))}
                       </div>
                     </div>

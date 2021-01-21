@@ -127,11 +127,13 @@ const Portfolio = ({ data }) => (
       <Layout>
         <div className="portfolio-header-container">
           <div className="image-container">
+
             <img
               className="portfolio-header"
               src={`https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/portfolio/${data.allAirtable.nodes[0].data.Featured_Image_URL}`}
               alt={data.allAirtable.nodes[0].data.Project_Title}
             ></img>
+
           </div>
           <h2>{data.allAirtable.nodes[0].data.Project_Title}</h2>
         </div>

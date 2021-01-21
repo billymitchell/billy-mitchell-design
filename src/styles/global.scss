@@ -94,12 +94,7 @@ section {
   box-sizing: border-box;
 }
 
-// .separator {
 
-//   display: block;
-//   position: relative;
-//   width: auto;
-//   height: auto;
 
 //   #skewed {
 //     position: absolute;
@@ -116,7 +111,6 @@ section {
 //       height: 8vh;
 //     }
 //   }
-// }
 
 
 .separator-top {
@@ -157,4 +151,20 @@ section {
 // When parallax item goes outside its container
 .parallax-outer {
   overflow-y: visible;
+}
+
+
+.companies {
+  filter: grayscale(100%) contrast(200%);
+  opacity: 80%;
+  transition: all .5s ease-in-out;
+}
+
+.companies:hover {
+  filter: grayscale(0%) contrast(100%);
+  opacity: 100%;
+}
+
+.american-express {
+  max-width: 80%;
 }

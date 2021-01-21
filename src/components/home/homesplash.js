@@ -99,7 +99,7 @@ const Homesplash = () => {
                 delay="delay-250ms"
                 className="init-invisible"
               >
-                <h2 className="text-center">Full-Stack Designer</h2>
+                <h2 className="text-center">Full Stack Design</h2>
               </InViewAnimation>
             </div>
           </div>

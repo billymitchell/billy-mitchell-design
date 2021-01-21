@@ -41,18 +41,18 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Published: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Published: {eq: true}, Featured: {ne: true}}}, sort: {order: DESC, fields: data___End_Date}) {
         nodes {
           recordId
           data {
             Project_Title
             Featured_Image_URL
             End_Date(formatString: "MM-YYYY")
+            Featured
           }
         }
       }
     }
-    
     `}
     render={data => (
       <div className="portfolio-item-container">

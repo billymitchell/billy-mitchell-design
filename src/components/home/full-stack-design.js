@@ -44,14 +44,14 @@ const FullStack = () => {
               <InViewAnimation
                 className="init-invisible"
               >
-                <h3>What the heck is a "full-stack designer"?</h3>
+                <h3>What is Full Stack Design?</h3>
               </InViewAnimation>
               <InViewAnimation
                 delay="delay-250ms"
                 className="init-invisible"
               >
                 <p>
-                  A full-stack designer is an emerging term for an individual with a broad skill set who can handle Product Design, User-interface Design, Front-end Development and more.
+                  Full Stack design is an emerging term for a set of skills that include User-experience Design, User-interface Design, Front-end Development and more.
               </p>
               </InViewAnimation>
               <InViewAnimation

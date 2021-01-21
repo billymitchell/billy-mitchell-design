@@ -46,6 +46,11 @@ $units: (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
   }
 
   // width
+
+  .w-#{$spacer} {
+    width: #{$spacer}px;
+  }
+
   .max-width-#{$spacer}px {
     max-width: calc((#{$spacer} * 1px))
   }
@@ -53,6 +58,16 @@ $units: (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
   .max-width-#{$spacer}vw {
     max-width: calc((#{$spacer} * 1vw))
   }
+
+
+  // Col Gap
+
+
+  .col-gap-#{$spacer} {
+    gap: #{$spacer}px;
+  }
+
+
 
   @media only screen and (max-width: 650px) {
     .small-margin-#{$spacer} {
@@ -93,6 +108,10 @@ $units: (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
 
     .small-padding-bottom-#{$spacer} {
       padding-bottom: calc(#{$spacer} * 1px) !important;
+    }
+
+    .small-col-gap-#{$spacer} {
+      gap: #{$spacer}px;
     }
 
   }
