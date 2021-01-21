@@ -6,14 +6,15 @@ import MetaData from "../components/layout/header/mettadata"
 const IfLiveURL = function (data) {
   if (data.allAirtable.nodes[0].data.Live_Web_Project_URL) {
     return (
-      <div>
+      <>
         <span>
           <b>Live Project URL:</b>{" "}
         </span>
         <a href={data.allAirtable.nodes[0].data.Live_Web_Project_URL}>
           {data.allAirtable.nodes[0].data.Live_Web_Project_URL}
         </a>
-      </div>
+        <br />
+      </>
     )
   }
 }
@@ -21,12 +22,15 @@ const IfLiveURL = function (data) {
 const IfPosition = function (data) {
   if (data.allAirtable.nodes[0].data.Position_on_Project) {
     return (
-      <div>
+      <>
         <span>
           <b>Position:</b>{" "}
         </span>
-        {data.allAirtable.nodes[0].data.Position_on_Project}
-      </div>
+        <span>
+          {data.allAirtable.nodes[0].data.Position_on_Project}
+        </span>
+        <br />
+      </>
     )
   }
 }
@@ -36,11 +40,11 @@ const renderHeader = function (data) {
   // If  custom html header, show header
   if (data.allAirtable.nodes[0].data.Custom_HTML) {
     return (
-      <span
+      <div
         dangerouslySetInnerHTML={{
           __html: data.allAirtable.nodes[0].data.Custom_HTML,
         }}
-      ></span>
+      ></div>
     )
   } else if (
     // if no html header & hide featured image is true
@@ -64,11 +68,11 @@ const renderHeader = function (data) {
 const ifCustomBodyHTML = function (data) {
   if (data.allAirtable.nodes[0].data.Body_Text) {
     return (
-      <span
+      <div
         dangerouslySetInnerHTML={{
           __html: data.allAirtable.nodes[0].data.Body_Text,
         }}
-      ></span>
+      ></div>
     )
   }
 }
@@ -141,11 +145,11 @@ const Portfolio = ({ data }) => (
           <div className="inner-text-width">
             <div className="portfolio-meta-data">
               <p>
-                <div>
+                <span>
                   <b>Completed:</b> {data.allAirtable.nodes[0].data.End_Date}
-                </div>
-                <div>{IfLiveURL(data)}</div>
-                <div>
+                </span><br />
+                {IfLiveURL(data)}
+                <span>
                   <b>Creative Discipline:</b>{" "}
 
 
@@ -157,11 +161,11 @@ const Portfolio = ({ data }) => (
                     </span>
 
                   ))}
-                </div>
-                <div>
+                </span><br />
+                <span>
                   <b>Job Type:</b> {data.allAirtable.nodes[0].data.Job_Type}
-                </div>
-                <div>
+                </span><br />
+                <span>
                   <b>Made for:</b>{" "}
                   {data.allAirtable.nodes[0].data.Made_For.map(item => (
 
@@ -171,11 +175,9 @@ const Portfolio = ({ data }) => (
                     </span>
 
                   ))}
-                </div>
-                <div>
-                  <div>{IfPosition(data)}</div>
-                </div>
-                <div>
+                </span><br />
+                {IfPosition(data)}
+                <span>
                   <b>Made With:</b>{" "}
                   {data.allAirtable.nodes[0].data.Made_With.map(Made_With => (
 
@@ -185,7 +187,7 @@ const Portfolio = ({ data }) => (
                     </span>
 
                   ))}
-                </div>
+                </span><br />
               </p>
             </div>
           </div>
