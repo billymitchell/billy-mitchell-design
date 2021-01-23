@@ -58,7 +58,7 @@ const FullStack = () => {
                 delay="delay-500ms"
                 className="init-invisible"
               >
-                <img srcSet="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
+                {/* <img srcSet="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
                   className="fluid mobile center"
                   alt="full-stack design"
                 >
@@ -66,7 +66,48 @@ const FullStack = () => {
                 <img src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-desktop-01_rdrqma"
                   className="fluid desktop"
                   alt="full-stack design">
-                </img>
+                </img> */}
+
+
+                <div className="fullstack-container">
+                  <div className="ux">
+                    <div className="l-bar"></div>
+                    <h4>
+                      UX Design
+                      </h4>
+                    <p>
+                      Strategy<br />
+                          Research<br />
+                            Testing
+                          </p>
+                    <div className="b-bar"></div>
+                  </div>
+                  <div className="ui">
+                    <div className="l-bar"></div>
+                    <h4>
+                      UI Design
+                          </h4>
+                    <p>
+                      Visuals<br />
+                              Prototypes<br />
+                                Design Systems
+                              </p>
+                    <div className="b-bar"></div>
+                  </div>
+                  <div className="front-end-dev">
+                    <div className="l-bar"></div>
+                    <h4>
+                      Front End Development
+                              </h4>
+                    <p>
+                      HTML<br />
+                                  CSS<br />
+                                    Javascript
+                              </p>
+                    <div className="b-bar"></div>
+                  </div>
+                </div>
+
               </InViewAnimation>
             </Parallax>
           </div>

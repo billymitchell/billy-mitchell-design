@@ -3,6 +3,8 @@
 
 /*Values from
 https://www.layoutgridcalculator.com/typographic-scale/
+// http://spencermortensen.com/articles/typographic-scale/
+// https://type-scale.com/
 Base: 13pt = 17px
 Increment Ratio: The "Classic Ratio" 1:2
 No. of sizes in the scale: Pentatonic Scale (x5)
@@ -11,7 +13,7 @@ Presets: Fibonacci Series
 */
 
 //https://sass-lang.com/documentation/modules/math
-//http://spencermortensen.com/articles/typographic-scale/
+
 
 $base-font-size: 16px;
 $space: 1.35 * $base-font-size;
