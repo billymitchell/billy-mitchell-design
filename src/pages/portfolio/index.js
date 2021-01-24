@@ -27,7 +27,7 @@ export default function Portfolio() {
           <Layout>
             <div className="outer-container">
               <div className="inner-width">
-                <h1>Featured Works</h1>
+                <h1>Featured Work</h1>
                 <div className="button-container">
                   {data.allAirtable.distinct.map(distinct => (
                     // For each category

@@ -1,11 +1,14 @@
 import React from "react"
 import Branding from "./creative-disciplines-all/Branding"
-import UIDesignAndDevelopment from "./creative-disciplines-all/UIDesignAndDevelopment"
+// import UIDesignAndDevelopment from "./creative-disciplines-all/UIDesignAndDevelopment"
 import VideoProduction from "./creative-disciplines-all/Video-Production"
 import PrintDesign from "./creative-disciplines-all/PrintDesign"
 import Illustration from "./creative-disciplines-all/Illustration"
 import MuralArt from "./creative-disciplines-all/MuralArt"
 import AllWork from "./creative-disciplines-all/AllWork"
+import UIDesign from "././creative-disciplines-all/UIDesign"
+import UXDesign from "././creative-disciplines-all/UXDesign"
+import WebDevelopment from "././creative-disciplines-all/WebDevelopment"
 
 
 const portfolioContainer = ({ clickedValue }) => {
@@ -19,9 +22,19 @@ const portfolioContainer = ({ clickedValue }) => {
       <Branding clickedValue={clickedValue} />
     )
   }
-  if (clickedValue === "ui-design-and-development") {
+  if (clickedValue === "ui-design") {
     return (
-      <UIDesignAndDevelopment clickedValue={clickedValue} />
+      <UIDesign clickedValue={clickedValue} />
+    )
+  }
+  if (clickedValue === "ux-design") {
+    return (
+      <UXDesign clickedValue={clickedValue} />
+    )
+  }
+  if (clickedValue === "web-development") {
+    return (
+      <WebDevelopment clickedValue={clickedValue} />
     )
   }
   if (clickedValue === "print-design") {

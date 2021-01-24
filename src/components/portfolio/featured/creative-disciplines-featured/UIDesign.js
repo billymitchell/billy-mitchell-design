@@ -2,13 +2,14 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
-import InViewAnimation from "../../../../components/utilities/InViewAnimation"
+import InViewAnimation from "../../../utilities/InViewAnimation"
+
 
 
 
 const breakpointColumnsObj = {
-  default: 3,
-  1100: 3,
+  default: 5,
+  1100: 4,
   700: 2,
   500: 1,
 }
@@ -42,7 +43,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Published: {eq: true}, Featured: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "UI Design"}, Published: {eq: true}, Featured: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
         nodes {
           recordId
           data {
@@ -52,7 +53,8 @@ export default () => (
           }
         }
       }
-    }    
+    }
+    
     `}
     render={data => (
       <div className="portfolio-item-container">
@@ -71,7 +73,6 @@ export default () => (
                 id={node.recordId}
                 className="portfolio-item"
               >
-
                 <Link to={`/portfolio/${node.data.Project_Title.toLowerCase().replace('&', 'and').replace(/\s/gi, '-').replace("/", "").replace(" / ", "")}`}>
                   {IfFeaturedImage(node)}
                 </Link>

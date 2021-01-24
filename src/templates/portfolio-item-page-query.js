@@ -10,7 +10,7 @@ const IfLiveURL = function (data) {
         <span>
           <b>Live Project URL:</b>{" "}
         </span>
-        <a href={data.allAirtable.nodes[0].data.Live_Web_Project_URL}>
+        <a target="_blank" rel="noreferrer" href={data.allAirtable.nodes[0].data.Live_Web_Project_URL}>
           {data.allAirtable.nodes[0].data.Live_Web_Project_URL}
         </a>
         <br />
@@ -79,12 +79,28 @@ const ifCustomBodyHTML = function (data) {
   }
 }
 
-const checkData = function (data) {
-  console.log(data)
-  // {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
-  //   console.log({Creative_Discipline})
-  // ))}
+
+const ifIntroText = function (data) {
+  if (data.allAirtable.nodes[0].data.Intro_Text) {
+    return (
+
+      <p style={{ marginTop: 0 }}>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.allAirtable.nodes[0].data.Intro_Text,
+          }}
+        ></div>
+      </p>
+    )
+  }
 }
+
+// const checkData = function (data) {
+//   console.log(data)
+//   {data.allAirtable.nodes[0].data.Creative_Discipline.map(Creative_Discipline => (
+//     console.log({Creative_Discipline})
+//   ))}
+// }
 
 export const query = graphql`
 query ($Project_Title: String) {
@@ -108,6 +124,7 @@ query ($Project_Title: String) {
         Custom_HTML
         Hide_Featured_Image_In_Body
         Made_With
+        Intro_Text
       }
     }
   }
@@ -119,7 +136,7 @@ query ($Project_Title: String) {
 const Portfolio = ({ data }) => (
   <>
     {/* {checkData(data)} */}
-    <div id="portfolio">
+    <div id="portfolio" className="bg-black">
       <MetaData
         title={data.allAirtable.nodes[0].data.Project_Title}
         description={data.allAirtable.nodes[0].data.Made_For.map(item => (
@@ -193,6 +210,9 @@ const Portfolio = ({ data }) => (
                   ))}
                 </span><br />
               </p>
+            </div>
+            <div className="intro-text">
+              {ifIntroText(data)}
             </div>
           </div>
           <div className="inner-width">{renderHeader(data)}</div>

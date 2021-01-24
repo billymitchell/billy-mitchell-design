@@ -47,8 +47,10 @@ const About = () => {
           <div className="inner-width-800">
             <Parallax disabled={parallaxDisabledState}>
               <div className="container">
+                <h3>I'm Billy Mitchell, a multidisciplinary designer from Baltimore Maryland.</h3>
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
                   <div className="align-self-center">
+
                     <InViewAnimation
                       className="init-invisible"
                     >
@@ -71,7 +73,7 @@ const About = () => {
                     className="init-invisible"
                   >
                     <p>
-                      I am a designer and developer with 7+ years of experience who operates the agency Billy Mitchell Design in Baltimore, Maryland. I contract on an ongoing basis in addition to availability as a full-time employee. I've worked with everyone from small businesses to fortune 500 companies. I apply design thinking, leverage human-centered design principles, and build solutions to complex problems. In addition to numerous web development courses, I've obtained a BFA in Design from the University of Maryland, Baltimore County.<br />
+                      I am a designer and developer with 7+ years of experience who operates the agency Billy Mitchell Design. I contract on an ongoing basis in addition to availability as a full-time employee. I've worked with everyone from small businesses to fortune 500 companies. I apply design thinking, leverage human-centered design principles, and build solutions to complex problems. In addition to numerous web development courses, I've obtained a BFA in Design from the University of Maryland, Baltimore County.<br />
                       <br />
                       Accomplishments Include:<br />
                       Publication of the Baltimore Love Project Book<br />

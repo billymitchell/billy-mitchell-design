@@ -1,9 +1,9 @@
-h4 {
+.fullstack-container h4 {
   margin-top: 0;
 }
 
-h4,
-p {
+.fullstack-container h4,
+.fullstack-container p {
   opacity: 0;
   animation: fade-in-up;
   animation-fill-mode: forwards;
@@ -204,7 +204,7 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-  h4 {
+  .fullstack-container h4 {
     margin-top: revert;
   }
 
