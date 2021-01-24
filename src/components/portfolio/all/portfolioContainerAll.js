@@ -1,7 +1,7 @@
 import React from "react"
 import Branding from "./creative-disciplines-all/Branding"
 // import UIDesignAndDevelopment from "./creative-disciplines-all/UIDesignAndDevelopment"
-import VideoProduction from "./creative-disciplines-all/Video-Production"
+import MotionDesign from "./creative-disciplines-all/MotionDesign"
 import PrintDesign from "./creative-disciplines-all/PrintDesign"
 import Illustration from "./creative-disciplines-all/Illustration"
 import MuralArt from "./creative-disciplines-all/MuralArt"
@@ -42,9 +42,9 @@ const portfolioContainer = ({ clickedValue }) => {
       <PrintDesign clickedValue={clickedValue} />
     )
   }
-  if (clickedValue === "video-production") {
+  if (clickedValue === "motion-design") {
     return (
-      <VideoProduction clickedValue={clickedValue} />
+      <MotionDesign clickedValue={clickedValue} />
     )
   }
   if (clickedValue === "illustration") {

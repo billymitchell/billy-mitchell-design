@@ -28,7 +28,7 @@ export default function Portfolio() {
             <div className="outer-container">
               <div className="inner-width">
                 <h1>All Portfolio Work</h1>
-                <p>This work may not contain supporting information that you would expect. Some of this work is educational or personal in nature. If you would like more information about the work you see here, please request it. </p>
+                <p>This work may not contain compleat supporting documentation to help you understand the background of the project. If you would like more information about the work you see here, please request it. </p>
                 <div className="button-container">
                   {data.allAirtable.distinct.map(distinct => (
                     // For each category

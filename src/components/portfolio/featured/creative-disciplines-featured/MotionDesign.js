@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
-import InViewAnimation from "../../../../components/utilities/InViewAnimation"
+import InViewAnimation from "../../../utilities/InViewAnimation"
 
 
 
@@ -43,7 +43,7 @@ export default () => (
   <StaticQuery
     query={graphql`
     {
-      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Video Production"}, Published: {eq: true},Featured: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
+      allAirtable(filter: {table: {eq: "Project"}, data: {Creative_Discipline: {eq: "Motion Design"}, Published: {eq: true},Featured: {eq: true}}}, sort: {order: DESC, fields: data___End_Date}) {
         nodes {
           recordId
           data {
