@@ -8,8 +8,8 @@ import InViewAnimation from "../../../utilities/InViewAnimation"
 
 
 const breakpointColumnsObj = {
-  default: 5,
-  1100: 4,
+  default: 3,
+  1100: 3,
   700: 2,
   500: 1,
 }
