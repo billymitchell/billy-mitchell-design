@@ -64,7 +64,8 @@ export default function Companies() {
               <div className="inner-width-1000">
                 <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
                   <InViewAnimationTwo
-                    animationDelay="animation-delay-0ms"
+                    rootMargin="-25% 0%"
+                    animationdelay="delay-0ms"
                     className="init-invisible"
                   >
                     <h3>Services Offered</h3>
@@ -74,7 +75,8 @@ export default function Companies() {
                     {data.allAirtable.nodes.map((service, index) => (
                       <div key={service.data["Services_Order"]}>
                         <InViewAnimationTwo
-                          animationDelay={`delay-${(index * 50) + 200}ms`}
+                          rootMargin="-25% 0%"
+                          animationdelay={`delay-${(index * 50) + 200}ms`}
                           className="init-invisible"
                         >
                           <div className="block service padding-top-30 padding-bottom-30 padding-left-20 padding-right-20 border border-solid border-width-1 border-color-white bg-green-dark-4 small-padding-top-20 mall-padding-bottom-20 small-padding-left-18 small-padding-right-18">

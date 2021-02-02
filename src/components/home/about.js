@@ -47,11 +47,18 @@ const About = () => {
           <div className="inner-width-800">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
               <div className="container">
-                <h3>I'm Billy Mitchell, a multidisciplinary designer from Baltimore Maryland.</h3>
+                <InViewAnimationTwo
+                  rootMargin="-25% 0%"
+                  className="init-invisible"
+                >
+                  <h3>I'm Billy Mitchell, a multidisciplinary designer from Baltimore Maryland.</h3>
+                </InViewAnimationTwo>
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
                   <div className="align-self-center">
 
                     <InViewAnimationTwo
+
+                      rootMargin="-25% 0%"
                       className="init-invisible"
                     >
                       <Tilt className="Tilt"
@@ -69,7 +76,8 @@ const About = () => {
                     </InViewAnimationTwo>
                   </div>
                   <InViewAnimationTwo
-                    animationDelay="animation-delay-500ms"
+                    rootMargin="-25% 0%"
+                    animationdelay="delay-500ms"
                     className="init-invisible"
                   >
                     <p>

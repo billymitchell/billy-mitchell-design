@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
-import InViewAnimation from "../../../utilities/InViewAnimation"
+import InViewAnimationTwo from "../../../utilities/InViewAnimationTwo"
 
 
 
@@ -64,8 +64,8 @@ export default () => (
           columnClassName="my-masonry-grid_column"
         >
           {data.allAirtable.nodes.map((node, index) => (
-            <InViewAnimation
-              delay={`delay-${((index * 50) + 200)}ms`}
+            <InViewAnimationTwo rootMargin="-8% 0%"
+              animationdelay={`delay-${((index * 50) + 200)}ms`}
               className="init-invisible"
             >
               <div
@@ -77,7 +77,7 @@ export default () => (
                   {IfFeaturedImage(node)}
                 </Link>
               </div>
-            </InViewAnimation>
+            </InViewAnimationTwo>
           ))}
         </Masonry>
       </div>

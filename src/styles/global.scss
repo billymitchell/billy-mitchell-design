@@ -122,6 +122,11 @@ section {
   margin-bottom: -1px;
 }
 
+.separator-bottom {
+  // Removes Chrome Bug Showing white line
+  margin-top: -1px;
+}
+
 .separator-top,
 .separator-bottom {
   display: block;

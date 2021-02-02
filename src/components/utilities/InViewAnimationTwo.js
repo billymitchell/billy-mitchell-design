@@ -1,11 +1,12 @@
 import React from "react"
 // Intersection Observer 
-import { InView, useInView } from "react-intersection-observer"
+import { InView } from "react-intersection-observer"
 
 const Defaults = {
   animation: "fade-in-up",
   duration: "time-1000ms",
-  animationDelay: "delay-0ms",
+  // "delay" is InView prop
+  animationdelay: "delay-0ms",
   fillmode: "forwards",
   easing: "ease-in-out-quad",
   iteration: "loop-1",
@@ -16,40 +17,43 @@ const InViewAnimation = ({
   // 6 Animation Attributes
   animation,
   duration,
-  animationDelay,
+  // "delay" is InView prop
+  animationdelay,
   fillmode,
   easing,
   iteration,
-  // percent visible before event triggers
+  // InView Props
+  rootMargin,
   threshold,
-  // Contents within
+  // Contents
   children,
 
 }) => {
-  // const [ref, inView, entry] = useInView({ trackVisibility: true, delay: 100 });
   return (
     // react-intersection-observer component 
     <InView
+      as="div"
       // Animation Props
       className={className}
       animation={animation}
       duration={duration}
-      animationDelay={animationDelay}
+      animationdelay={animationdelay}
       fillmode={fillmode}
       easing={easing}
       iteration={iteration}
       // inView Props
-      // What % in view before onChange event 0 - 1
+      rootMargin={rootMargin}
       threshold={threshold}
+      // track change
       onChange={(inView, entry) => {
         // When in view
-        if (entry.isIntersecting === true) {
-          // if custom animation values are passed 
+        if (inView === true) {
+          // if animation value
           if (entry.target.attributes["animation"] !== undefined) {
-            // add them to the class 
+            // add if animation value to class 
             entry.target.classList.add(entry.target.attributes["animation"].value)
           } else {
-            // use default values
+            // else add default values to class
             entry.target.classList.add(Defaults["animation"])
           }
           if (entry.target.attributes["duration"] !== undefined) {
@@ -57,10 +61,10 @@ const InViewAnimation = ({
           } else {
             entry.target.classList.add(Defaults["duration"])
           }
-          if (entry.target.attributes["delay"] !== undefined) {
-            entry.target.classList.add(entry.target.attributes["delay"].value)
+          if (entry.target.attributes["animationdelay"] !== undefined) {
+            entry.target.classList.add(entry.target.attributes["animationdelay"].value)
           } else {
-            entry.target.classList.add(Defaults["delay"])
+            entry.target.classList.add(Defaults["animationdelay"])
           }
           if (entry.target.attributes["fillmode"] !== undefined) {
             entry.target.classList.add(entry.target.attributes["fillmode"].value)
@@ -77,15 +81,9 @@ const InViewAnimation = ({
           } else {
             entry.target.classList.add(Defaults["iteration"])
           }
-          if (entry.target.attributes["iteration"] !== undefined) {
-            entry.target.classList.add(entry.target.attributes["iteration"].value)
-          } else {
-            entry.target.classList.add(Defaults["iteration"])
-          }
         }
       }
       }
-    // end onChange div
     >
       {children}
     </InView>
