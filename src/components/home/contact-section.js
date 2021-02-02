@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ContactFrom from "../home/contact-form"
-import Parallax from "../utilities/Parallax"
+// import Parallax from "../../components/utilities/Parallax"
+import { Parallax } from "react-scroll-parallax"
 import SeparatorTop from "../../components/separator-top"
 // import SeparatorBottom from "../../components/separator-bottom"
 
@@ -40,7 +41,7 @@ const FullStack = () => {
       <section id="contact" className="home-page-section small-padding-top-50 small-padding-bottom-50">
         <div className="outer-container">
           <div className="inner-width-600">
-            <Parallax disabled={parallaxDisabledState}>
+            <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
               <h3>Contact</h3>
               <p>
                 Please contact me and I'll get back to you as soon as I can.

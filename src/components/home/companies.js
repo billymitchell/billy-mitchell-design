@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import InViewAnimation from "../utilities/InViewAnimation"
+import InViewAnimationTwo from "../utilities/InViewAnimationTwo"
 import { StaticQuery, graphql } from "gatsby"
-import Parallax from "../utilities/Parallax"
+import { Parallax } from "react-scroll-parallax"
 // import Separator from "../../components/separator"
 import SeparatorTop from "../../components/separator-top"
 import SeparatorBottom from "../../components/separator-bottom"
@@ -60,22 +60,22 @@ export default function Companies() {
           <section id="companies" className="home-page-section bg-blue small-padding-top-50 small-padding-bottom-50">
             <div className="outer-container">
               <div className="inner-width-1000">
-                <Parallax disabled={parallaxDisabledState}>
-                  <InViewAnimation
+                <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
+                  <InViewAnimationTwo
                     className="init-invisible"
                   >
                     <h3 className="margin-top-0">Businesses I've Worked With</h3>
-                  </InViewAnimation>
-                  <InViewAnimation
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
                     className="init-invisible"
-                    delay="delay-250ms"
+                    animationDelay="animation-delay-250ms"
                   >
                     <p>
                       Direct employment, agency work, contract, and B2B services.
                   </p>
-                  </InViewAnimation>
-                  <InViewAnimation
-                    delay="delay-500ms"
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    animationDelay="animation-delay-500ms"
                     className="init-invisible"
                   >
                     <div className="bg-white padding-40 border-r-7 border-width-4 border-solid border-color-gray-1 small-padding-25" >
@@ -85,7 +85,7 @@ export default function Companies() {
                         ))}
                       </div>
                     </div>
-                  </InViewAnimation>
+                  </InViewAnimationTwo>
                 </Parallax>
               </div>
             </div>

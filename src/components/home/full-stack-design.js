@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
-import InViewAnimation from "../utilities/InViewAnimation"
-import Parallax from "../utilities/Parallax"
+import InViewAnimationTwo from "../utilities/InViewAnimationTwo"
+
+// import Parallax from "../../components/utilities/Parallax"
+import { Parallax } from "react-scroll-parallax"
 import SeparatorBottom from "../../components/separator-bottom"
 
 
@@ -40,22 +42,23 @@ const FullStack = () => {
       <section id="full-stack" className="home-page-section bg-black mobile-height-fluid small-padding-top-100 small-padding-bottom-100">
         <div className="outer-container">
           <div className="inner-width-1000">
-            <Parallax disabled={parallaxDisabledState}>
-              <InViewAnimation
+            <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
+              <InViewAnimationTwo
                 className="init-invisible"
               >
                 <h3>What is Full Stack Design?</h3>
-              </InViewAnimation>
-              <InViewAnimation
-                delay="delay-250ms"
+              </InViewAnimationTwo>
+              <InViewAnimationTwo
+                threshold={.5}
+                animationDelay="animation-delay-250ms"
                 className="init-invisible"
               >
                 <p>
                   Full Stack design is an emerging term for a set of skills that include User-experience Design, User-interface Design, Front-end Development and more.
               </p>
-              </InViewAnimation>
-              <InViewAnimation
-                delay="delay-500ms"
+              </InViewAnimationTwo>
+              <InViewAnimationTwo
+                animationDelay="animation-delay-500ms"
                 className="init-invisible"
               >
                 {/* <img srcSet="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/home-graph-mobile-01_v121wc"
@@ -108,7 +111,7 @@ const FullStack = () => {
                   </div>
                 </div>
 
-              </InViewAnimation>
+              </InViewAnimationTwo>
             </Parallax>
           </div>
         </div>

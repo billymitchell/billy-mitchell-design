@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import InViewAnimation from "../utilities/InViewAnimation"
-import Parallax from "../utilities/Parallax"
+import InViewAnimationTwo from "../utilities/InViewAnimationTwo"
+import { Parallax } from "react-scroll-parallax"
 import Tilt from 'react-tilt'
 // https://github.com/jonathandion/react-tilt
 // import Separator from "../../components/separator"
@@ -45,13 +45,13 @@ const About = () => {
       <section id="about" className="home-page-section bg-gray-1 mobile-height-fluid small-padding-top-50 small-padding-bottom-50">
         <div className="outer-container">
           <div className="inner-width-800">
-            <Parallax disabled={parallaxDisabledState}>
+            <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
               <div className="container">
                 <h3>I'm Billy Mitchell, a multidisciplinary designer from Baltimore Maryland.</h3>
                 <div className="grid-container col-1-2 col-gap-30 small-col-1">
                   <div className="align-self-center">
 
-                    <InViewAnimation
+                    <InViewAnimationTwo
                       className="init-invisible"
                     >
                       <Tilt className="Tilt"
@@ -66,10 +66,10 @@ const About = () => {
                       >
                         <img className="border-box fluid clip-circular padding-6 border-r-full bg-gradient max-width-60vw center" src="https://res.cloudinary.com/billymitchell/image/upload/dpr_auto,fl_lossy,q_auto/home/PhotoByMicahEWood-156-web.jpg" alt="billy mitchell head shot" />
                       </Tilt>
-                    </InViewAnimation>
+                    </InViewAnimationTwo>
                   </div>
-                  <InViewAnimation
-                    delay="delay-500ms"
+                  <InViewAnimationTwo
+                    animationDelay="animation-delay-500ms"
                     className="init-invisible"
                   >
                     <p>
@@ -80,7 +80,7 @@ const About = () => {
                       Illustration published in the Baltimore City Paper<br />
                       Obtaining the Baltimore Midtown Development Award
                     </p>
-                  </InViewAnimation>
+                  </InViewAnimationTwo>
                 </div>
               </div>
             </Parallax>

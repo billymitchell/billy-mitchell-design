@@ -122,6 +122,11 @@ p {
   margin-bottom: $space;
 }
 
+div {
+  font-size: $peragraph-font-size;
+  line-height: $peragraph-line-height;
+}
+
 li {
   font-size: $peragraph-font-size;
   line-height: $peragraph-line-height;

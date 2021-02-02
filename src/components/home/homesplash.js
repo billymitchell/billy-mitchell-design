@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import InViewAnimation from "../utilities/InViewAnimation"
+import InViewAnimationTwo from "../utilities/InViewAnimationTwo"
 
 const fadein = keyframes`
     0% {
@@ -90,17 +90,17 @@ const Homesplash = () => {
         <div className="overlay-content">
           <div className="outer-container">
             <div className="inner-width">
-              <InViewAnimation
+              <InViewAnimationTwo
                 className="init-invisible"
               >
                 <h1 className="text-center">Billy Mitchell</h1>
-              </InViewAnimation>
-              <InViewAnimation
-                delay="delay-250ms"
+              </InViewAnimationTwo>
+              <InViewAnimationTwo
+                animationDelay="animation-delay-250ms"
                 className="init-invisible"
               >
                 <h2 className="text-center">Full Stack Design</h2>
-              </InViewAnimation>
+              </InViewAnimationTwo>
             </div>
           </div>
         </div>

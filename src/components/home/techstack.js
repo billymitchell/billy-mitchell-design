@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import InViewAnimation from "../../components/utilities/InViewAnimation"
-import Parallax from "../../components/utilities/Parallax"
+// import Parallax from "../../components/utilities/Parallax"
+import { Parallax } from "react-scroll-parallax"
 // import Separator from "../../components/separator"
 import SeparatorTop from "../../components/separator-top"
 import SeparatorBottom from "../../components/separator-bottom"
@@ -41,14 +42,14 @@ const TechStack = () => {
       <section id="tech-stack" className="home-page-section bg-white small-padding-top-50 small-padding-bottom-50">
         <div className="outer-container">
           <div className="inner-width-1000">
-            <Parallax disabled={parallaxDisabledState}>
+            <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
               <InViewAnimation
                 className="init-invisible"
               >
                 <h3>Tech Stack</h3>
               </InViewAnimation>
               <InViewAnimation
-                delay="delay-250ms"
+                delay="animation-delay-250ms"
                 className="init-invisible"
               >
                 <p>
@@ -59,7 +60,7 @@ const TechStack = () => {
 
               <div className="teck-stack-container grid-container col-7 col-gap-30 small-col-4 small-col-gap-20">
                 <InViewAnimation
-                  delay="delay-500ms"
+                  delay="animation-delay-500ms"
                   className="init-invisible"
                 >
                   <img
@@ -69,7 +70,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-550ms"
+                  delay="animation-delay-550ms"
                   className="init-invisible"
                 >
                   <img
@@ -79,7 +80,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-600ms"
+                  delay="animation-delay-600ms"
                   className="init-invisible"
                 >
                   <img
@@ -89,7 +90,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-650ms"
+                  delay="animation-delay-650ms"
                   className="init-invisible"
                 >
                   <img
@@ -99,7 +100,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-700ms"
+                  delay="animation-delay-700ms"
                   className="init-invisible"
                 >
                   <img
@@ -109,7 +110,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-750ms"
+                  delay="animation-delay-750ms"
                   className="init-invisible"
                 >
                   <img
@@ -119,7 +120,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-800ms"
+                  delay="animation-delay-800ms"
                   className="init-invisible"
                 >
                   <img
@@ -129,7 +130,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-850ms"
+                  delay="animation-delay-850ms"
                   className="init-invisible"
                 >
                   <img
@@ -139,7 +140,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-900ms"
+                  delay="animation-delay-900ms"
                   className="init-invisible"
                 >
                   <img
@@ -149,7 +150,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-950ms"
+                  delay="animation-delay-950ms"
                   className="init-invisible"
                 >
                   <img
@@ -159,7 +160,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-1000ms"
+                  delay="animation-delay-1000ms"
                   className="init-invisible"
                 >
 
@@ -170,7 +171,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-1050ms"
+                  delay="animation-delay-1050ms"
                   className="init-invisible"
                 >
                   <img
@@ -179,7 +180,7 @@ const TechStack = () => {
                     alt="Adobe XD"
                   /></InViewAnimation>
                 <InViewAnimation
-                  delay="delay-1100ms"
+                  delay="animation-delay-1100ms"
                   className="init-invisible"
                 >
                   <img
@@ -189,7 +190,7 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
                 <InViewAnimation
-                  delay="delay-1150ms"
+                  delay="animation-delay-1150ms"
                   className="init-invisible"
                 >
                   <img
@@ -199,7 +200,6 @@ const TechStack = () => {
                   />
                 </InViewAnimation>
               </div>
-
             </Parallax>
           </div>
         </div>

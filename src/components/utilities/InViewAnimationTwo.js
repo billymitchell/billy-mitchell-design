@@ -5,41 +5,42 @@ import { InView, useInView } from "react-intersection-observer"
 const Defaults = {
   animation: "fade-in-up",
   duration: "time-1000ms",
-  delay: "delay-0ms",
+  animationDelay: "delay-0ms",
   fillmode: "forwards",
   easing: "ease-in-out-quad",
   iteration: "loop-1",
 }
 
 const InViewAnimation = ({
-  // Props
+  className,
   // 6 Animation Attributes
   animation,
   duration,
-  delay,
+  animationDelay,
   fillmode,
   easing,
   iteration,
-  // class
-  className,
   // percent visible before event triggers
   threshold,
   // Contents within
   children,
 
 }) => {
-  const [ref, inView, entry] = useInView({ trackVisibility: true, delay: 100 });
+  // const [ref, inView, entry] = useInView({ trackVisibility: true, delay: 100 });
   return (
     // react-intersection-observer component 
-    <div
-      ref={ref}
+    <InView
+      // Animation Props
+      className={className}
       animation={animation}
       duration={duration}
-      delay={delay}
+      animationDelay={animationDelay}
       fillmode={fillmode}
       easing={easing}
       iteration={iteration}
-      className={className}
+      // inView Props
+      // What % in view before onChange event 0 - 1
+      threshold={threshold}
       onChange={(inView, entry) => {
         // When in view
         if (entry.isIntersecting === true) {
@@ -83,10 +84,11 @@ const InViewAnimation = ({
           }
         }
       }
+      }
+    // end onChange div
     >
-      {/* Return Any Child Elements */}
       {children}
-    </div>
+    </InView>
   )
 }
 

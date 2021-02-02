@@ -83,14 +83,11 @@ const ifCustomBodyHTML = function (data) {
 const ifIntroText = function (data) {
   if (data.allAirtable.nodes[0].data.Intro_Text) {
     return (
-
-      <p style={{ marginTop: 0 }}>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.allAirtable.nodes[0].data.Intro_Text,
-          }}
-        ></div>
-      </p>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.allAirtable.nodes[0].data.Intro_Text,
+        }}
+      ></div>
     )
   }
 }
