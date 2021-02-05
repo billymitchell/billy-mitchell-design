@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import GetCurrentDate from "../utilities/getcurrentdate"
 import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2021.pdf"
+import Obfuscate from 'react-obfuscate';
 
 const FooterStyle = styled.div`
   text-align: center;
@@ -24,14 +25,12 @@ const Footer = () => {
           <div className="inner-width">
             <div className="primary-contact-info">
               <p>
-                <a value="email" href="mailto:info@billymitchell.design">
-                  info@billymitchell.design
-                </a>
+                <Obfuscate
+                  email="hello@billymitchell.design"
+                />
                 <br></br>
-                <a value="phone" href="tel:4437658265">
-                  443-765-8265
-                </a><br></br>
-                <a href={Resume}>Resume</a>
+                <Obfuscate tel="443-765-8265" /><br></br>
+                <a href={Resume}>PDF Resume</a>
               </p>
             </div>
             <div className="external-social-links">
