@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout"
 import MetaData from "../components/layout/header/mettadata"
 
 const IfLiveURL = function (data) {
-  if (data.allAirtable.nodes[0].data.Live_Web_Project_URL) {
+  if (data.allAirtable.nodes[0].data.Live_Web_Project_URL !== null) {
     return (
       <>
         <span>
@@ -19,8 +19,23 @@ const IfLiveURL = function (data) {
   }
 }
 
+const IfGitHubURL = function (data) {
+  if (data.allAirtable.nodes[0].data.Github_URL !== null) {
+    return (
+      <>
+        <span><b>GitHub Code Repository:</b>{" "}
+        </span>
+        <a target="_blank" rel="noreferrer" href={data.allAirtable.nodes[0].data.GitHub_URL}>
+          {data.allAirtable.nodes[0].data.GitHub_URL}
+        </a>
+        <br />
+      </>
+    )
+  }
+}
+
 const IfPosition = function (data) {
-  if (data.allAirtable.nodes[0].data.Position_on_Project) {
+  if (data.allAirtable.nodes[0].data.Position_on_Project !== null) {
     return (
       <>
         <span>
@@ -107,6 +122,7 @@ query ($Project_Title: String) {
         Project_Title
         End_Date(formatString: "MMMM DD, YYYY")
         Live_Web_Project_URL
+        GitHub_URL
         Creative_Discipline
         Job_Type
         Made_For {
@@ -167,6 +183,9 @@ const Portfolio = ({ data }) => (
                   <b>Completed:</b> {data.allAirtable.nodes[0].data.End_Date}
                 </span><br />
                 {IfLiveURL(data)}
+                <span>
+                  {IfGitHubURL(data)}
+                </span>
                 <span>
                   <b>Creative Discipline:</b>{" "}
 

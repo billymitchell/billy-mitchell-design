@@ -1,6 +1,5 @@
 import React from "react"
 import Branding from "./creative-disciplines-featured/Branding"
-// import UIDesignAndDevelopment from "./creative-disciplines-featured/UIDesignAndDevelopment"
 import MotionDesign from "./creative-disciplines-featured/MotionDesign"
 import PrintDesign from "./creative-disciplines-featured/PrintDesign"
 import Illustration from "./creative-disciplines-featured/Illustration"
