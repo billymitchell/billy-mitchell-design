@@ -38,7 +38,7 @@ const IfFeaturedImage = function (node) {
   }
 }
 
-export default () => (
+const PrintDesign = () => (
   <StaticQuery
     query={graphql`
     {
@@ -83,3 +83,6 @@ export default () => (
     )}
   />
 )
+
+
+export default PrintDesign;

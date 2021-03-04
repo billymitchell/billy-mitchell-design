@@ -37,7 +37,7 @@ const IfFeaturedImage = function (node) {
   }
 }
 
-export default () => (
+const AllWork = () => (
   <StaticQuery
     query={graphql`
     {
@@ -82,3 +82,5 @@ export default () => (
     )}
   />
 )
+
+export default AllWork;

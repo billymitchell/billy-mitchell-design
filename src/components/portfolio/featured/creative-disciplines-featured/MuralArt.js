@@ -38,7 +38,7 @@ const IfFeaturedImage = function (node) {
   }
 }
 
-export default () => (
+const MuralArt = () => (
   <StaticQuery
     query={graphql`
     {
@@ -83,3 +83,5 @@ export default () => (
     )}
   />
 )
+
+export default MuralArt;
