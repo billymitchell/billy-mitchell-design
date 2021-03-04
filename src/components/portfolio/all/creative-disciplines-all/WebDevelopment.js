@@ -4,9 +4,6 @@ import { Link } from "gatsby"
 import Masonry from "react-masonry-css"
 import InViewAnimationTwo from "../../../utilities/InViewAnimationTwo"
 
-
-
-
 const breakpointColumnsObj = {
   default: 3,
   1100: 3,
