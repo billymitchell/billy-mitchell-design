@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Billy Mitchell Design & Development`,
-    authour: `Billy Mitchell`,
+    author: `Billy Mitchell`,
   },
   plugins: [
     `gatsby-plugin-gatsby-cloud`,
