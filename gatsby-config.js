@@ -6,6 +6,7 @@ module.exports = {
     authour: `Billy Mitchell`,
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
