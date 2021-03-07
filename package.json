@@ -1,72 +1,37 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "billy-mithell-design",
+  "version": "1.0.0",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "MIT",
+  "description": "Billy Mithell Design",
+  "author": "BillyMitchellDesign",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "animate.css": "^4.1.1",
-    "babel-plugin-styled-components": "^1.12.0",
-    "cloudinary-react": "^1.7.0",
-    "gatsby": "^3.0.3",
-    "gatsby-plugin-facebook-pixel": "^1.0.5",
+    "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-google-analytics": "^3.0.0",
-    "gatsby-plugin-mdx": "^2.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sass": "^4.0.2",
-    "gatsby-plugin-styled-components": "^4.0.0",
-    "gatsby-plugin-typography": "^3.0.0",
-    "gatsby-rehype-prismjs": "^2.0.0",
-    "gatsby-remark-prismjs": "^4.0.0",
+    "gatsby-plugin-sitemap": "^3.0.0",
     "gatsby-source-airtable": "^2.1.1",
     "gatsby-source-contentful": "^5.0.1",
-    "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-transformer-rehype": "^2.0.0",
-    "gatsby-transformer-remark": "^3.0.0",
-    "magic-grid": "^3.2.4",
-    "markdown-to-jsx": "^7.1.1",
-    "node-sass": "^5.0.0",
-    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-facebook-pixel": "^1.0.4",
-    "react-ga": "^3.3.0",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.31.0",
-    "react-magic-grid": "^1.2.0",
-    "react-markdown": "^5.0.3",
     "react-masonry-css": "^1.0.14",
     "react-obfuscate": "^3.6.8",
-    "react-responsive-carousel": "^3.2.11",
     "react-scroll-parallax": "^2.3.5",
     "react-tilt": "^0.1.4",
-    "react-typography": "^0.16.19",
-    "styled-components": "^5.2.1",
-    "vanilla-tilt": "^1.7.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-hello-world.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
-  "main": "gatsby-config.js",
-  "author": ""
+    "sass": "^1.32.8",
+    "styled-components": "^5.2.1"
+  }
 }

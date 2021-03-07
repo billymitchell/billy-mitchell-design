@@ -2,14 +2,16 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Billy Mitchell Design & Development`,
-    author: `Billy Mitchell`,
+    title: "Billy Mithell Design",
   },
   plugins: [
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: "nma0fhb4tf2r",
+      },
+    },
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -31,29 +33,15 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-gatsby-cloud",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-179560174-1",
-        head: true,
-        // anonymize: true,
-        // respectDNT: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: "650102202342493",
-        head: true,
-      },
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `nma0fhb4tf2r`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
   ],
-}
-
+};
