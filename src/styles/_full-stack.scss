@@ -1,51 +1,8 @@
+@import "../styles/animations";
+
+// Static Styling
 .fullstack-container h4 {
   margin-top: 0;
-}
-
-.fullstack-container h4,
-.fullstack-container p {
-  opacity: 0;
-  animation: fade-in-up;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  transform: translateY(10px);
-}
-
-.ux h4 {
-  animation-delay: 0s;
-}
-
-.ux p {
-  animation-delay: .25s;
-}
-
-.ui h4 {
-  animation-delay: 1s;
-}
-
-.ui p {
-  animation-delay: 1.25s;
-}
-
-.front-end-dev h4 {
-  animation-delay: 2s;
-}
-
-.front-end-dev p {
-  animation-delay: 2.25s;
-}
-
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
 }
 
 .fullstack-container {
@@ -63,7 +20,6 @@
   position: relative;
 }
 
-
 // Dots
 .ux::after,
 .ui::after,
@@ -77,55 +33,6 @@
   left: -10px;
   border-radius: 50%;
   border: 1px solid #ffffff;
-
-}
-
-.l-bar {
-  height: 0%;
-  width: 1px;
-  position: absolute;
-  background-color: #307842;
-  left: 0;
-  bottom: 0;
-  animation-name: grow-up;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.ux .l-bar {
-  animation-delay: 0s;
-}
-
-.ui .l-bar {
-  animation-delay: 1s;
-}
-
-.front-end-dev .l-bar {
-  animation-delay: 2s;
-}
-
-@keyframes grow-up {
-  0% {
-    height: 0%;
-  }
-
-  100% {
-    height: 100%;
-  }
-}
-
-.b-bar {
-  height: 1px;
-  width: 0%;
-  position: absolute;
-  background-color: #307842;
-  bottom: 0;
-  left: 0;
-  animation-name: grow-right;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 .front-end-dev .b-bar {
@@ -135,46 +42,50 @@
   max-width: 50%;
 }
 
-.front-end-dev .b-bar {
-  animation-duration: 2s;
+.l-bar {
+  width: 1px;
+  position: absolute;
+  background-color: #307842;
+  left: 0;
+  bottom: 0;
 }
 
 .b-bar {
-  animation-name: grow-right;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.ux .b-bar {
-  animation-delay: 0s;
-}
-
-.ui .b-bar {
-  animation-delay: 1s;
-}
-
-.front-end-dev .b-bar {
-  animation-delay: 2s;
-}
-
-@keyframes grow-right {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-  }
+  height: 1px;
+  position: absolute;
+  background-color: #307842;
+  bottom: 0;
+  left: 0;
 }
 
 // Arrow
+.front-end-dev .l-bar::after,
+.front-end-dev .b-bar::after {
+  content: "";
+  position: absolute;
+}
+
 .front-end-dev .b-bar::after {
   bottom: -10px;
   right: -1px;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 20px solid #307842;
+}
+
+// Arrow Animation
+.front-end-dev .l-bar::after,
+.front-end-dev .b-bar::after {
+  // initial state
+  opacity: 0;
+  // Animation Props
+  animation-name: fade-in;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.front-end-dev .b-bar::after {
   animation-duration: 2s;
 }
 
@@ -182,26 +93,7 @@
   animation-duration: 1s;
 }
 
-.front-end-dev .l-bar::after,
-.front-end-dev .b-bar::after {
-  content: "";
-  position: absolute;
-  opacity: 0;
-  animation-name: fade-in;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
+// Mobile Styling
 
 @media only screen and (max-width: 650px) {
   .fullstack-container h4 {

@@ -43,64 +43,155 @@ const FullStack = () => {
           <div className="inner-width-1000">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
               <InViewAnimationTwo
+                rootMargin="-25% 0%"
                 className="init-invisible"
+                animation="fade-in-up-small"
+                duration="time-1000ms"
+                animationdelay="delay-0ms"
               >
                 <h3>What is Full Stack Design?</h3>
               </InViewAnimationTwo>
               <InViewAnimationTwo
                 rootMargin="-25% 0%"
-                animationdelay="delay-250ms"
                 className="init-invisible"
+                animation="fade-in-up-small"
+                duration="time-1000ms"
+                animationdelay="delay-0ms"
               >
                 <p>
                   Full Stack design is an emerging term for a set of skills that include User-experience Design, User-interface Design, Front-end Development and more.
               </p>
               </InViewAnimationTwo>
-              <InViewAnimationTwo
-                rootMargin="-25% 0%"
-                animationdelay="delay-500ms"
-                className="init-invisible"
-              >
-                <div className="fullstack-container">
-                  <div className="ux">
-                    <div className="l-bar"></div>
+
+              <div className="fullstack-container">
+                <div className="ux">
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-height-none l-bar"
+                    animation="grow-height"
+                    duration="time-1500ms"
+                    animationdelay="delay-0ms"
+                  >
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-0ms"
+                  >
                     <h4>
                       UX Design
-                      </h4>
+                    </h4>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-250ms"
+                  >
                     <p>
                       Strategy<br />
-                          Research<br />
-                            Testing
-                          </p>
-                    <div className="b-bar"></div>
-                  </div>
-                  <div className="ui">
-                    <div className="l-bar"></div>
+                        Research<br />
+                        Testing
+                      </p>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-width-none b-bar"
+                    animation="grow-width"
+                    duration="time-2000ms"
+                    animationdelay="delay-0ms"
+                  >
+                  </InViewAnimationTwo>
+                </div>
+                <div className="ui">
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-height-none l-bar"
+                    animation="grow-height"
+                    duration="time-1500ms"
+                    animationdelay="delay-1000ms"
+                  >
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-1000ms"
+                  >
                     <h4>
                       UI Design
-                          </h4>
+                    </h4>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-1250ms"
+                  >
                     <p>
                       Visuals<br />
-                              Prototypes<br />
-                                Design Systems
-                              </p>
-                    <div className="b-bar"></div>
-                  </div>
-                  <div className="front-end-dev">
-                    <div className="l-bar"></div>
+                      Prototypes<br />
+                      Design Systems
+                    </p>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-width-none b-bar"
+                    animation="grow-width"
+                    duration="time-2000ms"
+                    animationdelay="delay-1000ms"
+                  >
+                  </InViewAnimationTwo>
+                </div>
+                <div className="front-end-dev">
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-height-none l-bar"
+                    animation="grow-height"
+                    duration="time-1500ms"
+                    animationdelay="delay-2000ms"
+                  >
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-2000ms"
+                  >
                     <h4>
                       Front End Development
-                              </h4>
+                    </h4>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-25% 0%"
+                    className="init-invisible"
+                    animation="fade-in-up-small"
+                    duration="time-1000ms"
+                    animationdelay="delay-2250ms"
+                  >
                     <p>
                       HTML<br />
-                                  CSS<br />
-                                    Javascript
-                              </p>
-                    <div className="b-bar"></div>
-                  </div>
+                      CSS<br />
+                      Javascript
+                    </p>
+                  </InViewAnimationTwo>
+                  <InViewAnimationTwo
+                    rootMargin="-20% 0%"
+                    className="init-width-none b-bar"
+                    animation="grow-width"
+                    duration="time-2000ms"
+                    animationdelay="delay-2000ms"
+                  >
+                  </InViewAnimationTwo>
                 </div>
+              </div>
 
-              </InViewAnimationTwo>
             </Parallax>
           </div>
         </div>
