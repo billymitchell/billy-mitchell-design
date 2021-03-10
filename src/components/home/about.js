@@ -83,10 +83,12 @@ const About = () => {
                     <p>
                       I am a designer and developer with 7+ years of experience who operates the agency Billy Mitchell Design. I contract on an ongoing basis in addition to availability as a full-time employee. I've worked with everyone from small businesses to fortune 500 companies. I apply design thinking, leverage human-centered design principles, and build solutions to complex problems. In addition to numerous web development courses, I've obtained a BFA in Design from the University of Maryland, Baltimore County.<br />
                       <br />
-                      Accomplishments Include:<br />
-                      Publication of the Baltimore Love Project Book<br />
-                      Illustration published in the Baltimore City Paper<br />
-                      Obtaining the Baltimore Midtown Development Award
+                      Accomplishments Include<br />
+                      <ul>
+                        <li>Publication of the Baltimore Love Project Book</li>
+                        <li>Illustration published in the Baltimore City Paper</li>
+                        <li>Obtaining the Baltimore Midtown Development Award</li>
+                      </ul>
                     </p>
                   </InViewAnimationTwo>
                 </div>

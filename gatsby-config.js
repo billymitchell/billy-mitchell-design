@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.billymitchell.design`,
-    title: "Billy Mithell Design",
+    title: "Billy Mitchell Design",
   },
   plugins: [
     {
@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: process.env.AIRTABEL_API_KEY,
+        apiKey: process.env.AIRTABLE_API_KEY,
         tables: [
           {
             baseId: `appvr5KrgKiJo1E7M`,

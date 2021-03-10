@@ -107,19 +107,19 @@
 
 @media only screen and (max-width: 650px) {
   .small-col-1 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .small-col-2 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
   }
 
   .small-col-3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr !important;
   }
 
   .small-col-4 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
   }
 
 }

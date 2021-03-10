@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 export default function HeaderScripts() {
   return (
     <Helmet>
-      
       {/* Lottie Animation Loader */}
       <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
       {/* Smooth Scrolling */}
@@ -16,8 +15,6 @@ export default function HeaderScripts() {
         Secure
         crossorigin="anonymous"
       ></script>
-      {/* <link rel="stylesheet" href="../../../styles/prism/prism.css"></link> */}
-      
     </Helmet>
   )
 }
