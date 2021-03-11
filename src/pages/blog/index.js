@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 
 export const query = graphql`
 {
-  allContentfulBlog {
+  allContentfulBlog(sort: {order: DESC, fields: createdAt}) {
     nodes {
       title
       slug
@@ -16,39 +16,60 @@ export const query = graphql`
         }
         title
       }
+      createdAt(formatString: "MM/DD/YYYY")
     }
   }
 }
 `
 
 const renderBlog = (data) => {
-  data.allContentfulBlog.nodes.forEach(blog => {
-    console.log(blog)
-    return (
-      <div className="blog-item">
-        <Link to={`blog/${blog.slug}`}>
-          <div className="title">
-            {blog.title}
+  return (
+    data.allContentfulBlog.nodes.map(blog => (
+      <div className="blog-item" >
+        <Link to={`${blog.slug}`}>
+          <div className="blog-container">
+            <div className="blog-image-container">
+              {renderImage(blog)}
+            </div>
+            <div className="info">
+              <h4 className="title" style={titleStyle(blog)}>
+                {blog.title}
+              </h4>
+              <div className="date">{blog.createdAt}</div>
+            </div>
           </div>
         </Link>
-        <div className="image-container">
-          {renderImage(blog)}
-        </div>
       </div>
-    )
-  })
+    ))
+  )
 }
+
+const titleStyle = (blog) => {
+  // if no image
+  if (blog.featuredImage === null) {
+    return (
+      { marginTop: "0px", }
+    )
+  } else {
+    return (
+      null
+    )
+  }
+}
+
 
 const renderImage = (blog) => {
   // if no image
   if (blog.featuredImage === null) {
     return (
-      <div className="default-img">
-      </div>
+      <>
+        <div className="default-img">
+        </div>
+      </>
     )
   } else {
     return (
-      <img src={blog.featuredImage.file.url} alt={blog.featuredImage.title} />
+      <img className="fluid" src={blog.featuredImage.file.url} alt={blog.featuredImage.title} />
     )
   }
 }
