@@ -4,6 +4,19 @@
   display: block;
 }
 
+
+.outer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex-grow: 1;
+  padding-bottom: 15px;
+}
+
 .outer-container {
   display: flex;
   flex-direction: row;

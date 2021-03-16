@@ -1,76 +1,64 @@
 import React from "react"
-import styled from "styled-components"
 import GetCurrentDate from "../utilities/getcurrentdate"
 import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2021.pdf"
 import Obfuscate from 'react-obfuscate';
 
-const FooterStyle = styled.div`
-  text-align: center;
-  .external-social-links {
-    font-size: 35px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .external-social-links a {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-`
+
 
 const Footer = () => {
   return (
-    <FooterStyle>
-      <footer className="bg-brand-dark-5">
-        <div className="outer-container">
-          <div className="inner-width">
-            <div className="primary-contact-info">
-              <p>
-                <Obfuscate
-                  email="hello@billymitchell.design"
-                />
-                <br></br>
-                <Obfuscate tel="443-765-8265" /><br></br>
-                <a href={Resume}>PDF Resume</a>
-              </p>
-            </div>
-            <div className="external-social-links">
 
-              <a target="_blank" value="Twitter" href="https://twitter.com/designbilly" rel="noreferrer">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                target="_blank" value="Linkedin"
-                href="https://www.linkedin.com/in/billymitchelldesign/"
-                rel="noreferrer"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
+    <footer className="bg-brand-dark-5">
+      <div className="outer-container">
+        <div className="inner-width">
+          <div className="primary-contact-info">
+            <p>
+              <Obfuscate
+                email="hello@billymitchell.design"
+              />
+              <br></br>
+              <Obfuscate tel="443-765-8265" /><br></br>
+              <a href={Resume}>PDF Resume</a>
+            </p>
+          </div>
+          <div className="external-social-links">
 
-              <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
+            <a target="_blank" value="Twitter" href="https://twitter.com/designbilly" rel="noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a
+              target="_blank" value="Linkedin"
+              href="https://www.linkedin.com/in/billymitchelldesign/"
+              rel="noreferrer"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
 
-                <i className="fab fa-github"></i>
-              </a>
-            </div>
-            <div className="footer-bottom">
-              <small>
-                Made with <span style={{ color: "red" }}>♥</span> on a rock in
+            <a target="_blank" value="github" href="https://github.com/billymitchell" rel="noreferrer">
+
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+          <div className="footer-bottom">
+            <small>
+              Made with <span style={{ color: "red" }}>♥</span> on a rock in
                 space
                 <br />
                 Copyright © <GetCurrentDate /> Billy Mitchell Design LLC
                 <br />
-              </small>
-              <span className="block padding-5">
-                <small>
-                  <a href="https://github.com/billymitchell/main-website">
-                    This website code is Open Source!
+            </small>
+            <span className="block padding-5">
+              <small>
+                <a href="https://github.com/billymitchell/main-website">
+                  This website code is Open Source!
                   </a>
-                </small>
-              </span>
-            </div>
+              </small>
+            </span>
           </div>
         </div>
-      </footer>
-    </FooterStyle>
+      </div>
+    </footer>
+
   )
 }
 export default Footer

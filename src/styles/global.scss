@@ -49,6 +49,18 @@ footer {
   padding-bottom: 50px;
   width: 100%;
   overflow-x: hidden;
+  text-align: center;
+}
+
+footer .external-social-links {
+  font-size: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer .external-social-links a {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .hidden {
