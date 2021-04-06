@@ -65,7 +65,7 @@ const Blog = ({ data }) => (
       title={data.title}
       description={data.title}
       url={`/blog/${data.slug}`}
-      socialimg={data.featuredImage.file.url}
+      // socialimg={data.featuredImage.file.url}
     />
     <Layout>
       <div className="portfolio-header-container">
