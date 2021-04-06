@@ -27,24 +27,24 @@ query ($contentful_id: String!) {
 }
 `
 
-const renderHeader = function ({ data }) {
-  if (data.featuredImage.file.url) {
-    return (
-      <>
-        <img
-          className="fetched-header"
-          src={data.featuredImage.file.url}
-          alt={data.featuredImage.title}
-        ></img>
-        <h2>{data.title}</h2>
-      </>
-    )
-  } else {
-    <div>
+// const renderHeader = function ({ data }) {
+//   if (data.featuredImage.file.url) {
+//     return (
+//       <>
+//         <img
+//           className="fetched-header"
+//           src={data.featuredImage.file.url}
+//           alt={data.featuredImage.title}
+//         ></img>
+//         <h2>{data.title}</h2>
+//       </>
+//     )
+//   } else {
+//     <div>
 
-    </div>
-  }
-}
+//     </div>
+//   }
+// }
 
 
 const renderBody = function (data) {
@@ -70,7 +70,7 @@ const Blog = ({ data }) => (
     <Layout>
       <div className="portfolio-header-container">
         <div className="image-container">
-          {renderHeader(data)}
+          {/* {renderHeader(data)} */}
         </div>
       </div>
       <div className="outer-container-body">
