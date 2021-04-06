@@ -47,17 +47,17 @@ query ($contentful_id: String!) {
 // }
 
 
-const renderBody = function (data) {
-  if (data.allAirtable.nodes[0].data.Body_Text) {
-    return (
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.allAirtable.nodes[0].data.Body_Text,
-        }}
-      ></div>
-    )
-  }
-}
+// const renderBody = function (data) {
+//   if (data.allAirtable.nodes[0].data.Body_Text) {
+//     return (
+//       <div
+//         dangerouslySetInnerHTML={{
+//           __html: data.allAirtable.nodes[0].data.Body_Text,
+//         }}
+//       ></div>
+//     )
+//   }
+// }
 
 const Blog = ({ data }) => (
   <div id="blog" className="bg-black">
@@ -75,7 +75,7 @@ const Blog = ({ data }) => (
       </div>
       <div className="outer-container-body">
         <div className="inner-text-width imported-text">
-          {renderBody(data)}
+          {/* {renderBody(data)} */}
         </div>
       </div>
     </Layout>
