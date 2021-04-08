@@ -16,6 +16,8 @@ const IfLiveURL = function (data) {
         <br />
       </>
     )
+  }else {
+    return (<></>)
   }
 }
 
@@ -31,6 +33,8 @@ const IfGitHubURL = function (data) {
         <br />
       </>
     )
+  } else {
+    return (<></>)
   }
 }
 
@@ -91,6 +95,8 @@ const ifCustomBodyHTML = function (data) {
         }}
       ></div>
     )
+  }else {
+    return (<></>)
   }
 }
 
@@ -104,6 +110,8 @@ const ifIntroText = function (data) {
         }}
       ></div>
     )
+  }else {
+    return (<></>)
   }
 }
 
