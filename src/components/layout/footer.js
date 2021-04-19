@@ -13,12 +13,12 @@ const Footer = () => {
         <div className="inner-width">
           <div className="primary-contact-info">
             <p>
-              <Obfuscate
+            <i class="fas fa-paper-plane"></i><Obfuscate
                 email="hello@billymitchell.design"
               />
               <br></br>
-              <Obfuscate tel="443-765-8265" /><br></br>
-              <a href={Resume}>PDF Resume</a>
+              <i class="fas fa-phone-alt"></i><Obfuscate tel="4437658265" /><br></br>
+              <i class="fas fa-file-alt"></i><a href={Resume}>Resume</a>
             </p>
           </div>
           <div className="external-social-links">
