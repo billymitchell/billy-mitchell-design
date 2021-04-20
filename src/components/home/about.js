@@ -85,9 +85,9 @@ const About = () => {
                       <br />
                       Accomplishments Include<br />
                       <ul>
-                        <li>Publication of the Baltimore Love Project Book</li>
+                        <li>Publication of the Baltimore Love Project Book (Layout Designer)</li>
                         <li>Illustration published in the Baltimore City Paper</li>
-                        <li>Obtaining the Baltimore Midtown Development Award</li>
+                        <li>Obtaining the Baltimore Midtown Development Award (Assistant Muralist)</li>
                       </ul>
                     </p>
                   </InViewAnimationTwo>

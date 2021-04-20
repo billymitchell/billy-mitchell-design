@@ -35,7 +35,7 @@ const Homesplash = () => {
               animationdelay="delay-250ms"
               className="init-invisible"
             >
-              <h2 className="text-center">Full Stack Design</h2>
+              <h2 className="text-center">UI/UX Designer<br />Frontend Developer</h2>
             </InViewAnimationTwo>
           </div>
         </div>

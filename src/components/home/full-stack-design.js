@@ -49,7 +49,7 @@ const FullStack = () => {
                 duration="time-1000ms"
                 animationdelay="delay-0ms"
               >
-                <h3>What is Full Stack Design?</h3>
+                <h3>My Specialty</h3>
               </InViewAnimationTwo>
               <InViewAnimationTwo
                 rootMargin="-25% 0%"
@@ -59,7 +59,7 @@ const FullStack = () => {
                 animationdelay="delay-0ms"
               >
                 <p>
-                  Full Stack design is an emerging term for a set of skills that include User-experience Design, User-interface Design, Front-end Development and more.
+                I have a breadth of design skills in many areas with a depth of skills in User Experience Design, User Interface Design, and Frontend Development. I also enjoy taking on projects in Branding, Illustration, Photography, and Motion Graphics. 
               </p>
               </InViewAnimationTwo>
 
@@ -165,7 +165,7 @@ const FullStack = () => {
                     animationdelay="delay-2000ms"
                   >
                     <h4>
-                      Front End Development
+                      Frontend Development
                     </h4>
                   </InViewAnimationTwo>
                   <InViewAnimationTwo
