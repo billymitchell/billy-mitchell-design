@@ -38,7 +38,7 @@ const FullStack = () => {
   }, [parallaxDisabledState])
   return (
     <>
-      <section id="full-stack" className="home-page-section bg-black mobile-height-fluid small-padding-top-100 small-padding-bottom-100">
+      <section id="full-stack" className="home-page-section bg-black mobile-height-fluid small-padding-top-100 small-padding-bottom-100 midsize-padding-bottom-100 midsize-padding-top-100">
         <div className="outer-container">
           <div className="inner-width-1000">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>

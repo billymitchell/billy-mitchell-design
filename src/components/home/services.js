@@ -59,7 +59,7 @@ export default function Companies() {
         <>
           <SeparatorTop className="bg-green-dark-3" />
 
-          <section id="services" className="home-page-section bg-green-dark-3 small-padding-top-50 small-padding-bottom-50">
+          <section id="services" className="home-page-section bg-green-dark-3 small-padding-top-50 small-padding-bottom-50 midsize-padding-bottom-100 midsize-padding-top-100">
             <div className="outer-container">
               <div className="inner-width-1000">
                 <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>

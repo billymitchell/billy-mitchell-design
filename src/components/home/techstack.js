@@ -37,7 +37,7 @@ const TechStack = () => {
   return (
     <>
       <SeparatorTop className="bg-white" />
-      <section id="tech-stack" className="home-page-section bg-white small-padding-top-50 small-padding-bottom-50">
+      <section id="tech-stack" className="home-page-section bg-white small-padding-top-50 small-padding-bottom-50 midsize-padding-bottom-100 midsize-padding-top-100">
         <div className="outer-container">
           <div className="inner-width-1000">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>

@@ -42,7 +42,7 @@ const About = () => {
   return (
     <>
       <SeparatorTop className="bg-gray-1" />
-      <section id="about" className="home-page-section bg-gray-1 mobile-height-fluid small-padding-top-50 small-padding-bottom-50">
+      <section id="about" className="home-page-section bg-gray-1 mobile-height-fluid small-padding-top-50 small-padding-bottom-50 midsize-padding-bottom-100 midsize-padding-top-100">
         <div className="outer-container">
           <div className="inner-width-800">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>

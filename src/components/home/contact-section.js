@@ -38,7 +38,7 @@ const FullStack = () => {
   return (
     <>
       <SeparatorTop className="bg-black" />
-      <section id="contact" className="home-page-section small-padding-top-50 small-padding-bottom-50">
+      <section id="contact" className="home-page-section small-padding-top-50 small-padding-bottom-50 midsize-padding-bottom-100 midsize-padding-top-100">
         <div className="outer-container">
           <div className="inner-width-600">
             <Parallax disabled={parallaxDisabledState} y={[-30, 30]} x={[0, 0]}>
