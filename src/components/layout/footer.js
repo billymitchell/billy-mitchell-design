@@ -1,6 +1,6 @@
 import React from "react"
 import GetCurrentDate from "../utilities/getcurrentdate"
-import Resume from "../../../static/downloads/Billy-Mitchell-Resume-2021.pdf"
+import Resume from "../layout/header/Billy-Mitchell-Resume-2022.pdf"
 import Obfuscate from 'react-obfuscate';
 
 

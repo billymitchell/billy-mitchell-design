@@ -2,6 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import Gradient from "./Gradient"
 import Logo from "../header/logo"
+// import Resume from "../../../../static/downloads/Billy-Mitchell-Resume-2022.pdf"
+import Resume from "./Billy-Mitchell-Resume-2022.pdf"
+
 
 const Header = () => {
   return (
@@ -23,6 +26,11 @@ const Header = () => {
                 <Link to="/portfolio">
                   <small>Portfolio</small>
                 </Link>
+              </li>
+              <li>
+                <a href={Resume}>
+                  <small>Resume</small>
+                </a>
               </li>
               <li className="hidden">
                 <Link to="/blog">
